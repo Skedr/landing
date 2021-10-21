@@ -5,7 +5,6 @@
   <main-testimonial />
   <main-features />
   <main-cta />
-  <main-blog />
   <main-footer />
 </template>
 

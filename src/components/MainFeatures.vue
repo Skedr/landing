@@ -1,94 +1,28 @@
 <!-- This example requires Tailwind CSS v2.0+ -->
 <template>
-  <div class="py-16 bg-white overflow-hidden lg:py-24">
-    <div class="relative max-w-xl mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-7xl">
-      <svg
-        class="
-          hidden
-          lg:block
-          absolute
-          left-full
-          transform
-          -translate-x-1/2 -translate-y-1/4
-        "
-        width="404"
-        height="784"
-        fill="none"
-        viewBox="0 0 404 784"
-        aria-hidden="true"
-      >
-        <defs>
-          <pattern
-            id="b1e6e422-73f8-40a6-b5d9-c8586e37e0e7"
-            x="0"
-            y="0"
-            width="20"
-            height="20"
-            patternUnits="userSpaceOnUse"
-          >
-            <rect
-              x="0"
-              y="0"
-              width="4"
-              height="4"
-              class="text-gray-200"
-              fill="currentColor"
-            />
-          </pattern>
-        </defs>
-        <rect
-          width="404"
-          height="784"
-          fill="url(#b1e6e422-73f8-40a6-b5d9-c8586e37e0e7)"
-        />
-      </svg>
-
-      <div class="relative">
-        <h2
-          class="
-            text-center text-3xl
-            leading-8
-            font-extrabold
-            tracking-tight
-            text-gray-900
-            sm:text-4xl
-          "
-        >
-          A better way to send money
-        </h2>
-        <p class="mt-4 max-w-3xl mx-auto text-center text-xl text-gray-500">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus
-          magnam voluptatum cupiditate veritatis in, accusamus quisquam.
-        </p>
-      </div>
-
+  <div class="relative bg-white pt-16 pb-32 overflow-hidden">
+    <div
+      class="
+        lg:mx-auto
+        lg:max-w-7xl
+        lg:px-8
+        lg:grid
+        lg:grid-cols-2
+        lg:grid-flow-col-dense
+        lg:gap-24
+      "
+    >
       <div
         class="
-          relative
-          mt-12
-          lg:mt-24 lg:grid lg:grid-cols-2 lg:gap-8 lg:items-center
+          px-4
+          max-w-xl
+          mx-auto
+          sm:px-6
+          lg:py-32 lg:max-w-none lg:mx-0 lg:px-0 lg:col-start-2
         "
       >
-        <div class="relative">
-          <h3
-            class="
-              text-2xl
-              font-extrabold
-              text-gray-900
-              tracking-tight
-              sm:text-3xl
-            "
-          >
-            Transfer funds world-wide
-          </h3>
-          <p class="mt-3 text-lg text-gray-500">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur
-            minima sequi recusandae, porro maiores officia assumenda aliquam
-            laborum ab aliquid veritatis impedit odit adipisci optio iste
-            blanditiis facere. Totam, velit.
-          </p>
-
-          <dl class="mt-10 space-y-10">
+        <div>
+          <dl class="space-y-10">
             <div
               v-for="item in transferFeatures"
               :key="item.id"
@@ -124,146 +58,62 @@
             </div>
           </dl>
         </div>
-
-        <div class="mt-10 -mx-4 relative lg:mt-0" aria-hidden="true">
-          <svg
-            class="
-              absolute
-              left-1/2
-              transform
-              -translate-x-1/2
-              translate-y-16
-              lg:hidden
-            "
-            width="784"
-            height="404"
-            fill="none"
-            viewBox="0 0 784 404"
-          >
-            <defs>
-              <pattern
-                id="ca9667ae-9f92-4be7-abcb-9e3d727f2941"
-                x="0"
-                y="0"
-                width="20"
-                height="20"
-                patternUnits="userSpaceOnUse"
-              >
-                <rect
-                  x="0"
-                  y="0"
-                  width="4"
-                  height="4"
-                  class="text-gray-200"
-                  fill="currentColor"
-                />
-              </pattern>
-            </defs>
-            <rect
-              width="784"
-              height="404"
-              fill="url(#ca9667ae-9f92-4be7-abcb-9e3d727f2941)"
-            />
-          </svg>
+      </div>
+      <div class="mt-12 sm:mt-16 lg:mt-0 lg:col-start-1">
+        <div
+          class="
+            pr-4
+            -ml-48
+            sm:pr-6
+            md:-ml-16
+            lg:px-0 lg:m-0 lg:relative lg:h-full
+          "
+        >
           <img
-            class="relative mx-auto"
-            width="490"
-            src="https://tailwindui.com/img/features/feature-example-1.png"
-            alt=""
+            class="
+              w-full
+              rounded-xl
+              shadow-xl
+              ring-1 ring-black ring-opacity-5
+              lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-none
+            "
+            src="/screenshot_manage_tags.png"
+            alt="Customer profile user interface"
           />
         </div>
       </div>
-
-      <svg
-        class="
-          hidden
-          lg:block
-          absolute
-          right-full
-          transform
-          translate-x-1/2 translate-y-12
-        "
-        width="404"
-        height="784"
-        fill="none"
-        viewBox="0 0 404 784"
-        aria-hidden="true"
-      >
-        <defs>
-          <pattern
-            id="64e643ad-2176-4f86-b3d7-f2c5da3b6a6d"
-            x="0"
-            y="0"
-            width="20"
-            height="20"
-            patternUnits="userSpaceOnUse"
-          >
-            <rect
-              x="0"
-              y="0"
-              width="4"
-              height="4"
-              class="text-gray-200"
-              fill="currentColor"
-            />
-          </pattern>
-        </defs>
-        <rect
-          width="404"
-          height="784"
-          fill="url(#64e643ad-2176-4f86-b3d7-f2c5da3b6a6d)"
-        />
-      </svg>
     </div>
   </div>
 </template>
 
 <script>
   import {
-    AnnotationIcon,
-    GlobeAltIcon,
-    LightningBoltIcon,
-    MailIcon,
-    ScaleIcon,
+    GlobeIcon,
+    LightBulbIcon,
+    PhotographIcon,
   } from "@heroicons/vue/outline";
 
   const transferFeatures = [
     {
       id: 1,
-      name: "Competitive exchange rates",
+      name: "For professionals",
       description:
-        "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.",
-      icon: GlobeAltIcon,
+        "Share your work easily with any group at any time. Focus on finding new clients. We will share your photos.",
+      icon: GlobeIcon,
     },
     {
       id: 2,
-      name: "No hidden fees",
+      name: "For enthusiasts",
       description:
-        "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.",
-      icon: ScaleIcon,
+        "Gain views and likes by easily sharing your pictures in lots of groups. Don't waste your time and improve your photography skills.",
+      icon: LightBulbIcon,
     },
     {
       id: 3,
-      name: "Transfers are instant",
+      name: "For beginners",
       description:
-        "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.",
-      icon: LightningBoltIcon,
-    },
-  ];
-  const communicationFeatures = [
-    {
-      id: 1,
-      name: "Mobile notifications",
-      description:
-        "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.",
-      icon: AnnotationIcon,
-    },
-    {
-      id: 2,
-      name: "Reminder emails",
-      description:
-        "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.",
-      icon: MailIcon,
+        "Improve your shots and photography through other photographer’s eyes. Share and discover. And always have fun.",
+      icon: PhotographIcon,
     },
   ];
 
@@ -271,7 +121,6 @@
     setup() {
       return {
         transferFeatures,
-        communicationFeatures,
       };
     },
   };

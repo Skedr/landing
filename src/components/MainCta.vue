@@ -61,8 +61,8 @@
               sm:translate-x-16
               lg:translate-y-20
             "
-            src="/screenshot.png"
-            alt="App screenshot"
+            src="/screenshot_scheduled.png"
+            alt="Skedr scheduled view"
           />
         </div>
       </div>
