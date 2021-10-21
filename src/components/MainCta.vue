@@ -56,11 +56,12 @@
               transform
               translate-x-6 translate-y-6
               rounded-md
+              shadow-lg
               object-cover object-left-top
               sm:translate-x-16
               lg:translate-y-20
             "
-            src="https://tailwindui.com/img/component-images/full-width-with-sidebar.jpg"
+            src="/screenshot.png"
             alt="App screenshot"
           />
         </div>

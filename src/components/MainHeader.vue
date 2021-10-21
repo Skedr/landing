@@ -408,7 +408,7 @@
                         ring-1 ring-black ring-opacity-5
                         lg:h-full lg:w-auto lg:max-w-none
                       "
-                      src="https://tailwindui.com/img/component-images/top-nav-with-multi-column-layout-screenshot.jpg"
+                      src="/screenshot.png"
                       alt=""
                     />
                   </div>
