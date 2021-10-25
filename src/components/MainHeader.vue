@@ -298,42 +298,27 @@
                   experience can be way better.<br />
                   We, as users, have taken the time to improve that part.
                 </p>
-                <p
-                  class="
-                    mt-8
-                    text-sm text-white
-                    uppercase
-                    tracking-wide
-                    font-semibold
-                    sm:mt-10
-                  "
-                >
-                  Used by
-                </p>
-                <div class="mt-5 w-full sm:mx-auto sm:max-w-lg lg:ml-0">
-                  <div class="flex flex-wrap items-start justify-between">
-                    <div class="flex justify-center px-1">
-                      <img
-                        class="h-9 sm:h-10"
-                        src="https://tailwindui.com/img/logos/tuple-logo-gray-400.svg"
-                        alt="Tuple"
-                      />
-                    </div>
-                    <div class="flex justify-center px-1">
-                      <img
-                        class="h-9 sm:h-10"
-                        src="https://tailwindui.com/img/logos/workcation-logo-gray-400.svg"
-                        alt="Workcation"
-                      />
-                    </div>
-                    <div class="flex justify-center px-1">
-                      <img
-                        class="h-9 sm:h-10"
-                        src="https://tailwindui.com/img/logos/statickit-logo-gray-400.svg"
-                        alt="StaticKit"
-                      />
-                    </div>
-                  </div>
+                <div class="mt-5 w-full sm:mx-auto sm:max-w-lg lg:ml-0 flex">
+                   <a
+              href="#"
+              class="
+              mx-auto
+                bg-yellow-500
+                hover:bg-yellow-400
+                border border-yellow-800
+                rounded-md
+                shadow
+                px-5
+                py-3
+                inline-flex
+                items-center
+                text-base
+                font-medium
+                text-white
+              "
+              >Try it for free
+            </a>
+                  
                 </div>
               </div>
             </div>

@@ -3,7 +3,7 @@
     <div class="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
       <div
         class="
-          bg-indigo-700
+          bg-gradient-to-r from-purple-800 via-violet-900 to-purple-800
           rounded-lg
           shadow-xl
           overflow-hidden
@@ -33,8 +33,9 @@
               href="#"
               class="
                 mt-8
-                bg-white
-                border border-transparent
+                bg-yellow-500
+                hover:bg-yellow-400
+                border border-yellow-800
                 rounded-md
                 shadow
                 px-5
@@ -43,8 +44,7 @@
                 items-center
                 text-base
                 font-medium
-                text-indigo-600
-                hover:bg-indigo-50
+                text-white
               "
               >Try it for free
             </a>
