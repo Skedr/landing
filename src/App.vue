@@ -7,5 +7,3 @@
   <main-cta />
   <main-footer />
 </template>
-
-

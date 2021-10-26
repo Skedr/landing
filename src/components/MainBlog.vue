@@ -1,40 +1,20 @@
 <!-- This example requires Tailwind CSS v2.0+ -->
 <template>
-  <div
-    class="
-      relative
-      bg-gray-50
-      pt-16
-      pb-20
-      px-4
-      sm:px-6
-      lg:pt-24 lg:pb-28 lg:px-8
-    "
-  >
+  <div class="relative bg-gray-50 pt-16 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8">
     <div class="absolute inset-0">
       <div class="bg-white h-1/3 sm:h-2/3" />
     </div>
     <div class="relative max-w-7xl mx-auto">
       <div class="text-center">
-        <h2
-          class="
-            text-3xl
-            tracking-tight
-            font-extrabold
-            text-gray-900
-            sm:text-4xl
-          "
-        >
+        <h2 class="text-3xl tracking-tight font-extrabold text-gray-900 sm:text-4xl">
           From the blog
         </h2>
         <p class="mt-3 max-w-2xl mx-auto text-xl text-gray-500 sm:mt-4">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa libero
-          labore natus atque, ducimus sed.
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa libero labore natus atque,
+          ducimus sed.
         </p>
       </div>
-      <div
-        class="mt-12 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none"
-      >
+      <div class="mt-12 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none">
         <div
           v-for="post in posts"
           :key="post.title"
@@ -63,11 +43,7 @@
               <div class="flex-shrink-0">
                 <a :href="post.author.href">
                   <span class="sr-only">{{ post.author.name }}</span>
-                  <img
-                    class="h-10 w-10 rounded-full"
-                    :src="post.author.imageUrl"
-                    alt=""
-                  />
+                  <img class="h-10 w-10 rounded-full" :src="post.author.imageUrl" alt="" />
                 </a>
               </div>
               <div class="ml-3">
@@ -109,8 +85,8 @@
         name: "Roel Aufderehar",
         href: "#",
         imageUrl:
-          "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-      },
+          "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+      }
     },
     {
       title: "How to use search engine optimization to drive sales",
@@ -127,8 +103,8 @@
         name: "Brenna Goyette",
         href: "#",
         imageUrl:
-          "https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-      },
+          "https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+      }
     },
     {
       title: "Improve your customer experience",
@@ -145,16 +121,16 @@
         name: "Daniela Metz",
         href: "#",
         imageUrl:
-          "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-      },
-    },
-  ];
+          "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+      }
+    }
+  ]
 
   export default {
     setup() {
       return {
-        posts,
-      };
-    },
-  };
+        posts
+      }
+    }
+  }
 </script>

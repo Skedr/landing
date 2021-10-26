@@ -10,35 +10,19 @@
           Spending less time sharing photos to Flickr groups.
         </p>
       </div>
-      <dl
-        class="
-          mt-10
-          text-center
-          sm:max-w-3xl sm:mx-auto sm:grid sm:grid-cols-3 sm:gap-8
-        "
-      >
+      <dl class="mt-10 text-center sm:max-w-3xl sm:mx-auto sm:grid sm:grid-cols-3 sm:gap-8">
         <div class="flex flex-col">
-          <dt
-            class="order-2 mt-2 text-lg leading-6 font-medium text-indigo-200"
-          >
-            tagged groups
-          </dt>
+          <dt class="order-2 mt-2 text-lg leading-6 font-medium text-indigo-200">tagged groups</dt>
           <dd class="order-1 text-5xl font-extrabold text-white">40.989</dd>
         </div>
         <div class="flex flex-col mt-10 sm:mt-0">
-          <dt
-            class="order-2 mt-2 text-lg leading-6 font-medium text-indigo-200"
-          >
+          <dt class="order-2 mt-2 text-lg leading-6 font-medium text-indigo-200">
             scheduled images
           </dt>
           <dd class="order-1 text-5xl font-extrabold text-white">750.671</dd>
         </div>
         <div class="flex flex-col mt-10 sm:mt-0">
-          <dt
-            class="order-2 mt-2 text-lg leading-6 font-medium text-indigo-200"
-          >
-            shared images
-          </dt>
+          <dt class="order-2 mt-2 text-lg leading-6 font-medium text-indigo-200">shared images</dt>
           <dd class="order-1 text-5xl font-extrabold text-white">4.629.348</dd>
         </div>
       </dl>

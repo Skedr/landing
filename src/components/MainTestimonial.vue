@@ -1,17 +1,10 @@
 <template>
   <div class="bg-white pt-16 lg:py-24">
     <div class="pb-16 bg-indigo-600 lg:pb-0 lg:z-10 lg:relative">
-      <div
-        class="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-3 lg:gap-8"
-      >
+      <div class="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-3 lg:gap-8">
         <div class="relative lg:-my-8">
-          <div
-            aria-hidden="true"
-            class="absolute inset-x-0 top-0 h-1/2 bg-white lg:hidden"
-          />
-          <div
-            class="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:p-0 lg:h-full"
-          >
+          <div aria-hidden="true" class="absolute inset-x-0 top-0 h-1/2 bg-white lg:hidden" />
+          <div class="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:p-0 lg:h-full">
             <div
               class="
                 aspect-w-10 aspect-h-6
@@ -31,15 +24,7 @@
           </div>
         </div>
         <div class="mt-12 lg:m-0 lg:col-span-2 lg:pl-8">
-          <div
-            class="
-              mx-auto
-              max-w-md
-              px-4
-              sm:max-w-2xl sm:px-6
-              lg:px-0 lg:py-20 lg:max-w-none
-            "
-          >
+          <div class="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 lg:px-0 lg:py-20 lg:max-w-none">
             <blockquote>
               <div>
                 <svg
@@ -53,8 +38,8 @@
                   />
                 </svg>
                 <p class="mt-6 text-2xl font-medium text-white">
-                  I like Skedr.io more than anything because it is easy to use
-                  and fast, something that in Flickr costs more to do.
+                  I like Skedr.io more than anything because it is easy to use and fast, something
+                  that in Flickr costs more to do.
                 </p>
               </div>
               <footer class="mt-6">
@@ -68,4 +53,3 @@
     </div>
   </div>
 </template>
- 

@@ -30,36 +30,24 @@
             <rect x="0" y="0" width="4" height="4" fill="currentColor" />
           </pattern>
         </defs>
-        <rect
-          width="364"
-          height="384"
-          fill="url(#eab71dd9-9d7a-47bd-8044-256344ee00d0)"
-        />
+        <rect width="364" height="384" fill="url(#eab71dd9-9d7a-47bd-8044-256344ee00d0)" />
       </svg>
     </div>
     <div class="relative pt-6 pb-16 sm:pb-24">
       <Popover>
         <nav
-          class="
-            relative
-            max-w-7xl
-            mx-auto
-            flex
-            items-center
-            justify-between
-            px-4
-            sm:px-6
-          "
+          class="relative max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6"
           aria-label="Global"
         >
           <div class="flex items-center flex-1">
             <div class="flex items-center justify-between w-full md:w-auto">
-              <a href="#">
-                <span class="sr-only">Workflow</span>
+              <a href="#" class="flex">
+                <span class="sr-only">Skedr.io</span>
+                <img class="h-9 w-auto sm:h-10" src="/logo/brand_logo.svg" alt="Skedr.io logo" />
                 <img
-                  class="h-8 w-auto sm:h-10"
-                  src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg"
-                  alt=""
+                  class="ml-4 h-9 w-auto hidden sm:flex"
+                  src="/logo/brand_name.svg"
+                  alt="Skedr.io brand"
                 />
               </a>
               <div class="-mr-2 flex items-center md:hidden">
@@ -73,10 +61,7 @@
                     justify-center
                     text-gray-400
                     hover:bg-gray-700
-                    focus:outline-none
-                    focus:ring-2
-                    focus-ring-inset
-                    focus:ring-white
+                    focus:outline-none focus:ring-2 focus-ring-inset focus:ring-white
                   "
                 >
                   <span class="sr-only">Open main menu</span>
@@ -139,13 +124,7 @@
             "
           >
             <div
-              class="
-                rounded-lg
-                shadow-md
-                bg-white
-                ring-1 ring-black ring-opacity-5
-                overflow-hidden
-              "
+              class="rounded-lg shadow-md bg-white ring-1 ring-black ring-opacity-5 overflow-hidden"
             >
               <div class="px-5 pt-4 flex items-center justify-between">
                 <div>
@@ -166,10 +145,7 @@
                       justify-center
                       text-gray-400
                       hover:bg-gray-100
-                      focus:outline-none
-                      focus:ring-2
-                      focus:ring-inset
-                      focus:ring-indigo-500
+                      focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500
                     "
                   >
                     <span class="sr-only">Close menu</span>
@@ -260,10 +236,7 @@
                     >Video</span
                   >
                   <span class="ml-4 text-sm">Automate your share workflow</span>
-                  <ChevronRightIcon
-                    class="ml-2 w-5 h-5 text-gray-500"
-                    aria-hidden="true"
-                  />
+                  <ChevronRightIcon class="ml-2 w-5 h-5 text-gray-500" aria-hidden="true" />
                 </a>
                 <h1
                   class="
@@ -279,46 +252,34 @@
                 >
                   <span class="md:block">Spend less time</span>
                   {{ " " }}
-                  <span class="text-indigo-400 md:block"
-                    >sharing photos to Flickr groups</span
-                  >
+                  <span class="text-indigo-400 md:block">sharing photos to Flickr groups</span>
                 </h1>
-                <p
-                  class="
-                    mt-3
-                    text-base text-gray-300
-                    sm:mt-5 sm:text-xl
-                    lg:text-lg
-                    xl:text-xl
-                  "
-                >
+                <p class="mt-3 text-base text-gray-300 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
                   We have improved your group sharing workflow<br />
-                  Flickr is a great tool and using photo groups is a great way
-                  to enjoy other people photos. But let's face it, the tool
-                  experience can be way better.<br />
+                  Flickr is a great tool and using photo groups is a great way to enjoy other people
+                  photos. But let's face it, the tool experience can be way better.<br />
                   We, as users, have taken the time to improve that part.
                 </p>
                 <div class="mt-5 w-full sm:mx-auto sm:max-w-lg lg:ml-0 flex">
-                   <a
-              href="#"
-              class="
-              mx-auto
-                bg-yellow-500
-                hover:bg-yellow-400
-                border border-yellow-800
-                rounded-md
-                shadow
-                px-5
-                py-3
-                inline-flex
-                items-center
-                text-base
-                font-medium
-                text-white
-              "
-              >Try it for free
-            </a>
-                  
+                  <a
+                    href="#"
+                    class="
+                      mx-auto
+                      bg-yellow-500
+                      hover:bg-yellow-400
+                      border border-yellow-800
+                      rounded-md
+                      shadow
+                      px-5
+                      py-3
+                      inline-flex
+                      items-center
+                      text-base
+                      font-medium
+                      text-white
+                    "
+                    >Try it for free
+                  </a>
                 </div>
               </div>
             </div>
@@ -408,16 +369,15 @@
 </template>
 
 <script>
-  import { Popover, PopoverButton, PopoverPanel } from "@headlessui/vue";
-  import { MenuIcon, XIcon } from "@heroicons/vue/outline";
-  import { ChevronRightIcon } from "@heroicons/vue/solid";
+  import { Popover, PopoverButton, PopoverPanel } from "@headlessui/vue"
+  import { MenuIcon, XIcon } from "@heroicons/vue/outline"
+  import { ChevronRightIcon } from "@heroicons/vue/solid"
 
   const navigation = [
-    { name: "Product", href: "#" },
-    { name: "Features", href: "#" },
-    { name: "Marketplace", href: "#" },
-    { name: "Company", href: "#" },
-  ];
+    { name: "How it works", href: "#" },
+    { name: "Pricing", href: "#" },
+    { name: "FAQ", href: "#" }
+  ]
 
   export default {
     components: {
@@ -426,12 +386,12 @@
       PopoverPanel,
       ChevronRightIcon,
       MenuIcon,
-      XIcon,
+      XIcon
     },
     setup() {
       return {
-        navigation,
-      };
-    },
-  };
+        navigation
+      }
+    }
+  }
 </script>
