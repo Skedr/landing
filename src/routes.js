@@ -1,12 +1,18 @@
-import Home from "./Views/Home.vue"
-import Pricing from "./Views/Pricing.vue"
+import Home from "./views/Home.vue"
+import Pricing from "./views/Pricing.vue"
+import HowItWorks from "./views/HowItWorks.vue"
 
-import HomeMain from "./components/HomeMain.vue"
-import PricingMain from "./components/PricingMain.vue"
+import HeaderHome from "./components/HeaderHome.vue"
+import HeaderPricing from "./components/HeaderPricing.vue"
+import HeaderHowItWorks from "./components/HeaderHowitWorks.vue"
 
 export const routes = [
-  { path: "/", name: "home", components: { default: Home, main: HomeMain } },
-  { path: "/pricing", name: "pricing", components: { default: Pricing, main: PricingMain } }
-  // { path: "/how-it-works", name: "howitworks", components: { default: Home, main } },
+  { path: "/", name: "home", components: { default: Home, header: HeaderHome } },
+  { path: "/pricing", name: "pricing", components: { default: Pricing, header: HeaderPricing } },
+  {
+    path: "/how-it-works",
+    name: "HowItWorks",
+    components: { default: HowItWorks, header: HeaderHowItWorks }
+  }
   // { path: "/faq", name: "faq", components: { default: Home, main } }
 ]
