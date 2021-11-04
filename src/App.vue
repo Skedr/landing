@@ -1,9 +1,7 @@
 <template>
-  <main-header />
-  <main-stats />
-  <main-grid />
-  <main-testimonial />
-  <main-features />
-  <main-cta />
+  <main-header>
+    <router-view name="main" />
+  </main-header>
+  <router-view />
   <main-footer />
 </template>
