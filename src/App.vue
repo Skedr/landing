@@ -1,7 +1,7 @@
 <template>
-  <main-header>
+  <the-header>
     <router-view name="header" />
-  </main-header>
+  </the-header>
   <router-view />
-  <main-footer />
+  <the-footer />
 </template>

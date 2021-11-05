@@ -1,7 +1,7 @@
 <template>
-  <main-stats />
-  <main-grid />
-  <main-testimonial />
-  <main-features />
-  <main-cta />
+  <home-stats />
+  <home-grid />
+  <home-testimonial />
+  <home-features />
+  <home-cta />
 </template>
