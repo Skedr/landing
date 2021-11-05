@@ -2,9 +2,9 @@ import Home from "./views/Home.vue"
 import Pricing from "./views/Pricing.vue"
 import HowItWorks from "./views/HowItWorks.vue"
 
-import HeaderHome from "./components/HeaderHome.vue"
-import HeaderPricing from "./components/HeaderPricing.vue"
-import HeaderHowItWorks from "./components/HeaderHowitWorks.vue"
+import HeaderHome from "./components/headers/HeaderHome.vue"
+import HeaderPricing from "./components/headers/HeaderPricing.vue"
+import HeaderHowItWorks from "./components/headers/HeaderHowitWorks.vue"
 
 export const routes = [
   { path: "/", name: "home", components: { default: Home, header: HeaderHome } },
