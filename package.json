@@ -9,6 +9,7 @@
     "format": "prettier .  --write"
   },
   "dependencies": {
+    "@vueuse/head": "^0.6.0",
     "vue": "^3.2.16",
     "vue-router": "^4.0.12"
   },

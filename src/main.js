@@ -10,7 +10,10 @@ const router = createRouter({
   routes
 })
 
+import { createHead } from "@vueuse/head"
+
 const app = createApp(App)
 
+app.use(createHead())
 app.use(router)
 app.mount("#app")
