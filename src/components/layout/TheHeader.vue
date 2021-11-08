@@ -204,8 +204,8 @@
 
   const navigation = [
     { name: "How it works", to: { name: "HowItWorks" } },
-    { name: "Pricing", to: { name: "pricing" } }
-    //{ name: "FAQ", to: { name: "faq" } }
+    { name: "Pricing", to: { name: "pricing" } },
+    { name: "Faq", to: { name: "faq" } }
   ]
 
   export default {
