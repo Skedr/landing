@@ -9,12 +9,13 @@
     "format": "prettier .  --write"
   },
   "dependencies": {
-    "@vueuse/head": "^0.6.0",
     "vue": "^3.2.16",
+    "vue-gtag": "^2.0.1",
     "vue-router": "^4.0.12"
   },
   "devDependencies": {
     "@headlessui/vue": "^1.4.2",
+    "@vueuse/head": "^0.6.0",
     "@heroicons/vue": "^1.0.4",
     "@tailwindcss/aspect-ratio": "^0.3.0",
     "@tailwindcss/forms": "^0.3.4",
