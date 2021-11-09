@@ -24,7 +24,11 @@
           },
           {
             name: "image",
-            content: 'https://skedr.io/screenshot.png'
+            content: "https://skedr.io/screenshot.png"
+          },
+          {
+            name: "viewport",
+            content: "width=device-width, initial-scale=1.0"
           }
         ]
       })
