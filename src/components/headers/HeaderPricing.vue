@@ -6,10 +6,12 @@
           Pricing
         </h2>
         <p class="mt-2 text-3xl font-extrabold text-white sm:text-4xl lg:text-5xl">
-          How much do you value your time?
+          How much do you
+          <span class="text-indigo-400 md:block">value your time?</span>
         </p>
         <p class="mt-3 max-w-4xl mx-auto text-xl text-gray-300 sm:mt-5 sm:text-2xl">
-           With Skedr.io you will save hundreds of hours of sharing your photos to differents groups. Forget about having to reshare throttled phots from groups
+          With Skedr.io you will save hundreds of hours of sharing your photos to differents groups.
+          Forget about having to reshare throttled photos from groups
         </p>
       </div>
     </div>

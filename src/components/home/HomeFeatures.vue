@@ -73,7 +73,7 @@
       id: 2,
       name: "For enthusiasts",
       description:
-        "Gain views and likes by easily sharing your pictures in lots of groups. Don't waste your time and improve your photography skills.",
+        "Gain views and likes by easily sharing your photos in lots of groups. Don't waste your time and improve your photography skills.",
       icon: LightBulbIcon
     },
     {

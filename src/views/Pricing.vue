@@ -57,7 +57,7 @@
                 lg:flex-shrink-0 lg:flex lg:flex-col lg:justify-center lg:p-12
               "
             >
-              <p class="text-lg leading-6 font-medium text-gray-900">Your free time for</p>
+              <p class="text-lg leading-6 font-medium text-gray-900">Get your free time for</p>
               <div
                 class="mt-4 flex items-center justify-center text-5xl font-extrabold text-gray-900"
               >
@@ -84,8 +84,9 @@
                       font-medium
                       rounded-md
                       text-white
-                      bg-gray-800
-                      hover:bg-gray-900
+                      bg-amber-500
+                      hover:bg-amber-600
+                      border-amber-600
                     "
                   >
                     Join now
@@ -103,9 +104,21 @@
           </div>
         </div>
       </div>
+
+      <div class="relative py-4">
+        <div class="mx-auto max-w-md px-4 sm:px-6 sm:max-w-3xl lg:px-8 lg:max-w-7xl">
+          <p class="mt-5 max-w-prose mx-auto text-xl text-gray-700">
+            Skedr.io is a self-developed tool, created by a Flickr and photo fan. By subscribing,
+            you will be contributing to adding more functionalities and improvements.
+          </p>
+        </div>
+      </div>
+
       <div class="mt-4 relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 lg:mt-5">
         <div class="max-w-md mx-auto lg:max-w-5xl">
-          <div class="rounded-lg bg-gray-100 px-6 py-8 sm:p-10 lg:flex lg:items-center">
+          <div
+            class="rounded-lg bg-gray-100 px-6 py-8 sm:p-10 lg:flex lg:items-center shadow-inner"
+          >
             <div class="flex-1">
               <div>
                 <h3
@@ -118,8 +131,9 @@
                     font-semibold
                     tracking-wide
                     uppercase
-                    bg-white
-                    text-gray-800
+                    bg-indigo-500
+                    text-white
+                    shadow-md
                   "
                 >
                   for starters
@@ -144,9 +158,10 @@
                   text-base
                   font-medium
                   rounded-md
-                  text-gray-900
-                  bg-white
-                  hover:bg-gray-50
+                  text-white
+                  bg-gray-500
+                  hover:bg-gray-800
+                  shadow-md
                 "
               >
                 Try it for free
@@ -181,7 +196,7 @@
   const includedFeatures = [
     "<strong>Unlimited</strong> autoimport group tags",
     "<strong>Suggest Tags</strong> for autoimport group",
-    "<strong>Auto schedule</strong> throttled pictures",
+    "<strong>Auto schedule</strong> throttled photos",
     "<strong>Unlimited</strong> support"
   ]
 
@@ -206,7 +221,7 @@
     },
     {
       id: 4,
-      question: 'What does "scheduled throttled pictures"?',
+      question: 'What does "scheduled throttled photos"?',
       answer:
         "We automatically reschedule any photo that was rejected due to group restrictions. Each rescheduled photo is based on each group restriction."
     }
