@@ -72,9 +72,9 @@
                 href="#"
                 class="
                   mx-auto
-                  bg-yellow-500
-                  hover:bg-yellow-400
-                  border border-yellow-800
+                  bg-amber-500
+                  hover:bg-amber-600
+                  border border-amber-600
                   rounded-md
                   shadow
                   px-5
