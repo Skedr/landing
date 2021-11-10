@@ -62,10 +62,10 @@
               <span class="text-indigo-400 md:block">sharing photos to Flickr groups</span>
             </h1>
             <p class="mt-3 text-base text-gray-300 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
-              We have improved your group sharing workflow<br />
-              Flickr is a great tool and using photo groups is a great way to enjoy other people
+              Skedr.io has improved your group sharing workflow<br />
+              Flickr is a great tool and sharing photos into groups is a great way to enjoy other people
               photos. But let's face it, the tool experience can be way better.<br />
-              We, as users, have taken the time to improve that part.
+              We, as users, have taken the time to improve the experience.
             </p>
             <div class="mt-5 w-full sm:mx-auto sm:max-w-lg lg:ml-0 flex">
               <a

@@ -10,7 +10,8 @@
               <p class="mt-6 text-base text-gray-500">
                 Configure each of your groups with one or more tags <strong>only once</strong>.
                 Every new photo tagged that matches one or more group tag will be shared
-                automatically.
+                automatically.<br />
+                Throttled photos are automatically scheduled.
               </p>
               <div class="mt-8">
                 <div class="flex items-center">
@@ -179,8 +180,8 @@
 
   const includedFeatures = [
     "<strong>Unlimited</strong> autoimport group tags",
-    "<strong>Suggest Tags</strong> for group tagging",
-    "<strong>Schedule</strong> throttled pictures",
+    "<strong>Suggest Tags</strong> for autoimport group",
+    "<strong>Auto schedule</strong> throttled pictures",
     "<strong>Unlimited</strong> support"
   ]
 

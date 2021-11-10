@@ -9,7 +9,7 @@
           How much do you value your time?
         </p>
         <p class="mt-3 max-w-4xl mx-auto text-xl text-gray-300 sm:mt-5 sm:text-2xl">
-           The right tool for a cheap price. With Skedr.io you will save hundreds of hours of sharing your photos to differents groups
+           With Skedr.io you will save hundreds of hours of sharing your photos to differents groups. Forget about having to reshare throttled phots from groups
         </p>
       </div>
     </div>
