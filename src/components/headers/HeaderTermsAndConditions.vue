@@ -6,11 +6,11 @@
           Legal resources
         </h2>
         <p class="mt-2 text-3xl font-extrabold text-white sm:text-4xl lg:text-5xl">
-          Privacy
-          <span class="text-indigo-400">Policy</span>
+          Terms
+          <span class="text-indigo-400 ">and conditions</span>
         </p>
         <p class="mt-3 max-w-4xl mx-auto text-xl text-gray-300 sm:mt-5 sm:text-2xl">
-          Please read these Privacy policy carefully before using the Service.
+          Please read these Terms and Conditions carefully before using the Service.
         </p>
       </div>
     </div>

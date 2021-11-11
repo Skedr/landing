@@ -398,10 +398,10 @@
           this Privacy Policy are effective when they are posted on this page.
         </p>
         <h2>Contact Us</h2>
-        <p>If you have any questions about this Privacy Policy, please contact us:</p>
-        <ul>
-          <li>By email: <a href="mailto:info@skedr.io">info@skedr.io</a></li>
-        </ul>
+        <p>
+          If you have any questions about these Terms, please contact us by email:
+          <a href="mailto:info@skedr.io">info@skedr.io</a>
+        </p>
       </div>
     </div>
   </div>
