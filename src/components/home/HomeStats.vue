@@ -1,6 +1,6 @@
 <!-- This example requires Tailwind CSS v2.0+ -->
 <template>
-  <div class="bg-gradient-to-r from-purple-800 via-violet-900 to-purple-800">
+  <div class="bg-gradient-to-r from-indigo-800 via-indigo-500 to-indigo-800">
     <div class="max-w-7xl mx-auto py-12 px-4 sm:py-16 sm:px-6 lg:px-8 lg:py-20">
       <div class="max-w-4xl mx-auto text-center">
         <h2 class="text-3xl font-extrabold text-white sm:text-4xl">

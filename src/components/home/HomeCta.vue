@@ -4,9 +4,9 @@
       <div
         class="
           bg-gradient-to-r
-          from-purple-800
-          via-violet-900
-          to-purple-800
+          from-indigo-800
+          via-indigo-900
+          to-indigo-700
           rounded-lg
           shadow-xl
           overflow-hidden
