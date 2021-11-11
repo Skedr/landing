@@ -69,7 +69,7 @@
             </p>
             <div class="mt-5 w-full sm:mx-auto sm:max-w-lg lg:ml-0 flex">
               <a
-                href="#"
+                href="https://app.skedr.io/auth/create-account"
                 class="
                   mx-auto
                   bg-amber-500

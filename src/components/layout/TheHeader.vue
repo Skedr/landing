@@ -78,14 +78,17 @@
               >
                 {{ item.name }}
               </router-link>
-              <a class="font-medium text-white hover:text-gray-300 cursor-pointer" @click.prevent="openBeacon()">
+              <a
+                class="font-medium text-white hover:text-gray-300 cursor-pointer"
+                @click.prevent="openBeacon()"
+              >
                 Support
               </a>
             </div>
           </div>
           <div class="hidden md:flex">
             <a
-              href="#"
+              href="https://app.skedr.io/"
               class="
                 inline-flex
                 items-center
@@ -131,11 +134,13 @@
               class="rounded-lg shadow-md bg-white ring-1 ring-black ring-opacity-5 overflow-hidden"
             >
               <div class="px-5 pt-4 flex items-center justify-between">
-                <div>
+                <div class="flex">
+                  <span class="sr-only">Skedr.io</span>
+                  <img class="h-10 w-auto" src="/logo/brand_logo_white.svg" alt="Skedr.io logo" />
                   <img
-                    class="h-8 w-auto"
-                    src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
-                    alt=""
+                    class="ml-4 h-9 w-auto flex"
+                    src="/logo/brand_name_white.svg"
+                    alt="Skedr.io brand"
                   />
                 </div>
                 <div class="-mr-2">
@@ -158,10 +163,10 @@
                 </div>
               </div>
               <div class="px-2 pt-2 pb-3 space-y-1">
-                <a
+                <router-link
                   v-for="item in navigation"
                   :key="item.name"
-                  :href="item.href"
+                  :to="item.to"
                   class="
                     block
                     px-3
@@ -172,11 +177,27 @@
                     text-gray-700
                     hover:text-gray-900 hover:bg-gray-50
                   "
-                  >{{ item.name }}</a
                 >
+                  {{ item.name }}
+                </router-link>
+                <a
+                  class="
+                    block
+                    px-3
+                    py-2
+                    rounded-md
+                    text-base
+                    font-medium
+                    text-gray-700
+                    hover:text-gray-900 hover:bg-gray-50
+                  "
+                  @click.prevent="openBeacon()"
+                >
+                  Support
+                </a>
               </div>
               <a
-                href="#"
+                href="https://app.skedr.io"
                 class="
                   block
                   w-full

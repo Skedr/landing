@@ -23,7 +23,7 @@
               Save time with a new group sharing tool experience, made by users for users.
             </p>
             <a
-              href="#"
+              href="https://app.skedr.io/auth/create-account"
               class="
                 mt-8
                 bg-amber-500
@@ -39,7 +39,8 @@
                 font-medium
                 text-white
               "
-              >Try it for free
+            >
+              Try it for free
             </a>
           </div>
         </div>

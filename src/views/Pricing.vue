@@ -65,9 +65,9 @@
                 <span class="ml-3 text-xl font-medium text-gray-500"> /mo </span>
               </div>
               <p class="mt-4 text-sm">
-                <a href="#" class="font-medium text-gray-500 underline">
+                <router-link :to="{ name: 'terms' }" class="font-medium text-gray-500 underline">
                   Learn about our membership policy
-                </a>
+                </router-link>
               </p>
               <div class="mt-6">
                 <div class="rounded-md shadow">
