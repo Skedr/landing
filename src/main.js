@@ -3,7 +3,7 @@ import App from "./App.vue"
 import "./index.css"
 import { routes } from "./routes"
 import VueGtag from "vue-gtag"
-import VueHotjar from "vue-hotjar-next"
+//import VueHotjar from "vue-hotjar-next"
 
 export const createApp = ViteSSG(
   App,
@@ -25,9 +25,9 @@ export const createApp = ViteSSG(
       router
     )
 
-    app.use(VueHotjar, {
-      id: import.meta.env.VITE_HOTJAR_ID,
-      isProduction: import.meta.env.PROD
-    })
+    // app.use(VueHotjar, {
+    //   id: import.meta.env.VITE_HOTJAR_ID,
+    //   isProduction: import.meta.env.PROD
+    // })
   }
 )
