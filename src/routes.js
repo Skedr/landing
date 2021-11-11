@@ -1,16 +1,17 @@
-import Home from "./views/Home.vue"
-import Pricing from "./views/Pricing.vue"
-import HowItWorks from "./views/HowItWorks.vue"
-import Faq from "./views/Faq.vue"
-import Privacy from "./views/PrivacyPolicy.vue"
-import Terms from "./views/TermsAndConditions.vue"
+//import Home from "./views/Home.vue"
+const Home = () => import("./views/Home.vue")
+const Pricing = () => import("./views/Pricing.vue")
+const HowItWorks = () => import("./views/HowItWorks.vue")
+const Faq = () => import("./views/Faq.vue")
+const Privacy = () => import("./views/PrivacyPolicy.vue")
+const Terms = () => import("./views/TermsAndConditions.vue")
 
-import HeaderHome from "./components/headers/HeaderHome.vue"
-import HeaderPricing from "./components/headers/HeaderPricing.vue"
-import HeaderHowItWorks from "./components/headers/HeaderHowitWorks.vue"
-import HeaderFaq from "./components/headers/HeaderFaq.vue"
-import HeaderPrivacy from "./components/headers/HeaderPrivacyPolicy.vue"
-import HeaderTerms from "./components/headers/HeaderTermsAndConditions.vue"
+const HeaderHome = () => import("./components/headers/HeaderHome.vue")
+const HeaderPricing = () => import("./components/headers/HeaderPricing.vue")
+const HeaderHowItWorks = () => import("./components/headers/HeaderHowitWorks.vue")
+const HeaderFaq = () => import("./components/headers/HeaderFaq.vue")
+const HeaderPrivacy = () => import("./components/headers/HeaderPrivacyPolicy.vue")
+const HeaderTerms = () => import("./components/headers/HeaderTermsAndConditions.vue")
 
 export const routes = [
   {
