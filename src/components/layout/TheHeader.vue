@@ -78,6 +78,9 @@
               >
                 {{ item.name }}
               </router-link>
+              <a class="font-medium text-white hover:text-gray-300 cursor-pointer" @click.prevent="openBeacon()">
+                Support
+              </a>
             </div>
           </div>
           <div class="hidden md:flex">
@@ -208,6 +211,10 @@
     { name: "Faq", to: { name: "faq" } }
   ]
 
+  const openBeacon = () => {
+    window.Beacon("toggle")
+  }
+
   export default {
     components: {
       Popover,
@@ -218,7 +225,8 @@
     },
     setup() {
       return {
-        navigation
+        navigation,
+        openBeacon
       }
     }
   }
