@@ -32,7 +32,7 @@ export const routes = [
   {
     path: "/features",
     name: "features",
-    components: { default: Features, header: HeaderFeatures},
+    components: { default: Features, header: HeaderFeatures },
     meta: {
       title: "Features of Skedr.io",
       description: "Learn how Skedr.io helps you share your images more easyly"
@@ -61,5 +61,13 @@ export const routes = [
       title: "Terms and Conditions - Skedr.io",
       description: "Terms and Conditions for Skedr.io"
     }
+  },
+  {
+    path: "/articles/group-tagging",
+    redirect: "/features"
+  },
+  {
+    path: "/articles/share-single-photo",
+    redirect: "/features"
   }
 ]
