@@ -227,6 +227,7 @@
   import { MenuIcon, XIcon } from "@heroicons/vue/outline"
 
   const navigation = [
+    { name: "Features", to: { name: "features" } },
     { name: "Pricing", to: { name: "pricing" } },
     { name: "Faq", to: { name: "faq" } }
   ]

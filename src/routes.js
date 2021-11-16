@@ -1,14 +1,14 @@
 //import Home from "./views/Home.vue"
 const Home = () => import("./views/Home.vue")
 const Pricing = () => import("./views/Pricing.vue")
-const HowItWorks = () => import("./views/HowItWorks.vue")
+const Features = () => import("./views/Features.vue")
 const Faq = () => import("./views/Faq.vue")
 const Privacy = () => import("./views/PrivacyPolicy.vue")
 const Terms = () => import("./views/TermsAndConditions.vue")
 
 const HeaderHome = () => import("./components/headers/HeaderHome.vue")
 const HeaderPricing = () => import("./components/headers/HeaderPricing.vue")
-const HeaderHowItWorks = () => import("./components/headers/HeaderHowitWorks.vue")
+const HeaderFeatures = () => import("././components/headers/HeaderFeatures.vue")
 const HeaderFaq = () => import("./components/headers/HeaderFaq.vue")
 const HeaderPrivacy = () => import("./components/headers/HeaderPrivacyPolicy.vue")
 const HeaderTerms = () => import("./components/headers/HeaderTermsAndConditions.vue")
@@ -30,12 +30,12 @@ export const routes = [
     meta: { title: "Pricing", description: "" }
   },
   {
-    path: "/how-it-works",
-    name: "HowItWorks",
-    components: { default: HowItWorks, header: HeaderHowItWorks },
+    path: "/features",
+    name: "features",
+    components: { default: Features, header: HeaderFeatures},
     meta: {
-      title: "Group tagging",
-      description: "Sharing images into your prefered groups from Flickr is really easy."
+      title: "Features of Skedr.io",
+      description: "Learn how Skedr.io helps you share your images more easyly"
     }
   },
   {
