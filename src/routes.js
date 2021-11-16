@@ -27,7 +27,7 @@ export const routes = [
     path: "/pricing",
     name: "pricing",
     components: { default: Pricing, header: HeaderPricing },
-    meta: { title: "Pricing", description: "" }
+    meta: { title: "Pricing for Skedr.io", description: "Skedr.io you will save hundreds of hours of sharing your photos to differents groups" }
   },
   {
     path: "/features",
