@@ -162,7 +162,7 @@
                     lg:h-full lg:w-auto lg:max-w-none
                   "
                   src="/screenshot.png"
-                  alt=""
+                  alt="Groups view for skedr.io. List of joined groups and tag cloud of configured tags."
                 />
               </div>
             </div>
