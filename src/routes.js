@@ -35,7 +35,7 @@ export const routes = [
     components: { default: Features, header: HeaderFeatures },
     meta: {
       title: "Features of Skedr.io",
-      description: "Learn how Skedr.io helps you share your images more easyly"
+      description: "Learn how Skedr.io helps you share your photos more easyly"
     }
   },
   {

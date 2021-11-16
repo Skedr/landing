@@ -17,12 +17,12 @@
         </div>
         <div class="flex flex-col mt-10 sm:mt-0">
           <dt class="order-2 mt-2 text-lg leading-6 font-medium text-indigo-200">
-            scheduled images
+            scheduled photos
           </dt>
           <dd class="order-1 text-5xl font-extrabold text-white">750.671</dd>
         </div>
         <div class="flex flex-col mt-10 sm:mt-0">
-          <dt class="order-2 mt-2 text-lg leading-6 font-medium text-indigo-200">shared images</dt>
+          <dt class="order-2 mt-2 text-lg leading-6 font-medium text-indigo-200">shared photos</dt>
           <dd class="order-1 text-5xl font-extrabold text-white">4.629.348</dd>
         </div>
       </dl>

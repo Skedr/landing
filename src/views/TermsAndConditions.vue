@@ -69,7 +69,7 @@
     </div>
     <div class="relative px-4 sm:px-6 lg:px-8">
       <div class="text-lg max-w-prose mx-auto">
-        <h1>
+        <h2>
           <span
             class="
               block
@@ -94,7 +94,7 @@
             "
             >Summary</span
           >
-        </h1>
+        </h2>
       </div>
       <div class="mt-6 prose prose-indigo prose-lg text-gray-500 mx-auto">
         <p>
@@ -115,7 +115,7 @@
 
     <div>
       <div class="text-lg max-w-prose mx-auto">
-        <h1>
+        <h2>
           <span
             class="
               block
@@ -140,7 +140,7 @@
             "
             >Subscriptions</span
           >
-        </h1>
+        </h2>
       </div>
       <div class="mt-6 prose prose-indigo prose-lg text-gray-500 mx-auto">
         <p>
@@ -171,7 +171,7 @@
           invoice indicating that you must proceed manually, within a certain deadline date, with
           the full payment corresponding to the billing period as indicated on the invoice.
         </p>
-        <h2>Fee Changes</h2>
+        <h3>Fee Changes</h3>
         <p>
           Skedr.io, in its sole discretion and at any time, may modify the Subscription fees for the
           Subscriptions. Any Subscription fee change will become effective at the end of the
@@ -188,12 +188,12 @@
           Your continued use of the Service after the Subscription fee change comes into effect
           constitutes your agreement to pay the modified Subscription fee amount.
         </p>
-        <h2>Refunds</h2>
+        <h3>Refunds</h3>
         <p>
           Certain refund requests for Subscriptions may be considered by Skedr.io on a case-by-case
           basis and granted in sole discretion of Skedr.io.
         </p>
-        <h2>Accounts</h2>
+        <h3>Accounts</h3>
         <p>
           When you create an account with us, you must provide us information that is accurate,
           complete, and current at all times. Failure to do so constitutes a breach of the Terms,
@@ -215,7 +215,7 @@
 
     <div>
       <div class="text-lg max-w-prose mx-auto">
-        <h1>
+        <h2>
           <span
             class="
               block
@@ -240,7 +240,7 @@
             "
             >Intellectual Property</span
           >
-        </h1>
+        </h2>
       </div>
       <div class="mt-6 prose prose-indigo prose-lg text-gray-500 mx-auto">
         <p>
@@ -250,7 +250,7 @@
           trade dress may not be used in connection with any product or service without the prior
           written consent of Skedr.io.
         </p>
-        <h2>Links To Other Web Sites</h2>
+        <h3>Links To Other Web Sites</h3>
         <p>
           Our Service may contain links to third-party web sites or services that are not owned or
           controlled by Skedr.io.
@@ -267,7 +267,7 @@
           We strongly advise you to read the terms and conditions and privacy policies of any
           third-party web sites or services that you visit.
         </p>
-        <h2>Termination</h2>
+        <h3>Termination</h3>
         <p>
           We may terminate or suspend your account immediately, without prior notice or liability,
           for any reason whatsoever, including without limitation if you breach the Terms.
@@ -276,7 +276,7 @@
           Upon termination, your right to use the Service will immediately cease. If you wish to
           terminate your account, you may simply discontinue using the Service.
         </p>
-        <h2>Limitation Of Liability</h2>
+        <h3>Limitation Of Liability</h3>
         <p>
           In no event shall Skedr.io, nor its directors, employees, partners, agents, suppliers, or
           affiliates, be liable for any indirect, incidental, special, consequential or punitive
@@ -289,7 +289,7 @@
           damage, and even if a remedy set forth herein is found to have failed of its essential
           purpose.
         </p>
-        <h2>Disclaimer</h2>
+        <h3>Disclaimer</h3>
         <p>
           Your use of the Service is at your sole risk. The Service is provided on an "AS IS" and
           "AS AVAILABLE" basis. The Service is provided without warranties of any kind, whether
@@ -303,7 +303,7 @@
           other harmful components; or d) the results of using the Service will meet your
           requirements.
         </p>
-        <h2>Governing Law</h2>
+        <h3>Governing Law</h3>
         <p>
           These Terms shall be governed and construed in accordance with the laws of Spain, without
           regard to its conflict of law provisions.
@@ -316,7 +316,7 @@
           supersede and replace any prior agreements we might have between us regarding the Service.
         </p>
 
-        <h2>Changes</h2>
+        <h3>Changes</h3>
         <p>
           We reserve the right, at our sole discretion, to modify or replace these Terms at any
           time. If a revision is material we will try to provide at least 30 days notice prior to
@@ -329,7 +329,7 @@
           using the Service.
         </p>
 
-        <h2>Contact Us</h2>
+        <h3>Contact Us</h3>
         <p>
           If you have any questions about these Terms, please contact us by email:
           <a href="mailto:info@skedr.io">info@skedr.io</a>

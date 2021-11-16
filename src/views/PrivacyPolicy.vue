@@ -69,7 +69,7 @@
     </div>
     <div class="relative px-4 sm:px-6 lg:px-8">
       <div class="text-lg max-w-prose mx-auto">
-        <h1>
+        <h2>
           <span
             class="
               block
@@ -94,7 +94,7 @@
             "
             >Summary</span
           >
-        </h1>
+        </h2>
       </div>
       <div class="mt-6 prose prose-indigo prose-lg text-gray-500 mx-auto">
         <p>
@@ -120,7 +120,7 @@
     </div>
     <div>
       <div class="text-lg max-w-prose mx-auto">
-        <h1>
+        <h2>
           <span
             class="
               block
@@ -145,7 +145,7 @@
             "
             >Information collection and use
           </span>
-        </h1>
+        </h2>
       </div>
       <div class="mt-6 prose prose-indigo prose-lg text-gray-500 mx-auto">
         <p>
@@ -158,7 +158,7 @@
           <li>First name and last name</li>
           <li>Cookies and Usage Data</li>
         </ul>
-        <h2>Usage data</h2>
+        <h3>Usage data</h3>
         <p>
           We may also collect information that your browser sends whenever you visit our Service or
           when you access the Service by or through a mobile device ("Usage Data").
@@ -175,7 +175,7 @@
           IP address of your mobile device, your mobile operating system, the type of mobile
           Internet browser you use, unique device identifiers and other diagnostic data.
         </p>
-        <h2>Tracking & cookies data</h2>
+        <h3>Tracking & cookies data</h3>
         <p>
           We use cookies and similar tracking technologies to track the activity on our Service and
           hold certain information.
@@ -200,7 +200,7 @@
           </li>
           <li><strong>Security Cookies</strong>: We use Security Cookies for security purposes.</li>
         </ul>
-        <h2>Use of data</h2>
+        <h3>Use of data</h3>
         <p>Skedr.io uses the collected data for various purposes:</p>
         <ul role="list">
           <li>To provide and maintain the Service</li>
@@ -211,7 +211,7 @@
           <li>To monitor the usage of the Service</li>
           <li>To detect, prevent and address technical issues</li>
         </ul>
-        <h2>Transfer of data</h2>
+        <h3>Transfer of data</h3>
         <p>
           Your information, including Personal Data, may be transferred to — and maintained on —
           computers located outside of your state, province, country or other governmental
@@ -235,7 +235,7 @@
     </div>
     <div>
       <div class="text-lg max-w-prose mx-auto">
-        <h1>
+        <h2>
           <span
             class="
               block
@@ -260,7 +260,7 @@
             "
             >Disclosure Of Data</span
           >
-        </h1>
+        </h2>
       </div>
       <div class="mt-6 prose prose-indigo prose-lg text-gray-500 mx-auto">
         <p>
@@ -274,14 +274,14 @@
           <li>To protect the personal safety of users of the Service or the public</li>
           <li>To protect against legal liability</li>
         </ul>
-        <h2>Security Of Data</h2>
+        <h3>Security Of Data</h3>
         <p>
           The security of your data is important to us, but remember that no method of transmission
           over the Internet, or method of electronic storage is 100% secure. While we strive to use
           commercially acceptable means to protect your Personal Data, we cannot guarantee its
           absolute security.
         </p>
-        <h2>Service providers</h2>
+        <h3>Service providers</h3>
         <p>
           We may employ third party companies and individuals to facilitate our Service ("Service
           Providers"), to provide the Service on our behalf, to perform Service-related services or
@@ -291,7 +291,7 @@
           These third parties have access to your Personal Data only to perform these tasks on our
           behalf and are obligated not to disclose or use it for any other purpose.
         </p>
-        <h2>Analytics</h2>
+        <h3>Analytics</h3>
         <p>
           We may use third-party Service Providers to monitor and analyze the use of our Service.
         </p>
@@ -313,7 +313,7 @@
             </p>
           </li>
         </ul>
-        <h2>Links To Other Sites</h2>
+        <h3>Links To Other Sites</h3>
         <p>
           Our Service may contain links to other sites that are not operated by us. If you click on
           a third party link, you will be directed to that third party's site. We strongly advise
@@ -327,7 +327,7 @@
     </div>
     <div>
       <div class="text-lg max-w-prose mx-auto">
-        <h1>
+        <h2>
           <span
             class="
               mt-2
@@ -341,7 +341,7 @@
             "
             >Children's Privacy</span
           >
-        </h1>
+        </h2>
       </div>
       <div class="mt-6 prose prose-indigo prose-lg text-gray-500 mx-auto">
         <p>Our Service does not address anyone under the age of 18 ("Children").</p>
@@ -356,7 +356,7 @@
     </div>
     <div>
       <div class="text-lg max-w-prose mx-auto">
-        <h1>
+        <h2>
           <span
             class="
               block
@@ -381,7 +381,7 @@
             "
             >Changes To This Privacy Policy</span
           >
-        </h1>
+        </h2>
       </div>
       <div class="mt-6 prose prose-indigo prose-lg text-gray-500 mx-auto">
         <p>
@@ -397,7 +397,7 @@
           You are advised to review this Privacy Policy periodically for any changes. Changes to
           this Privacy Policy are effective when they are posted on this page.
         </p>
-        <h2>Contact Us</h2>
+        <h3>Contact Us</h3>
         <p>
           If you have any questions about these Terms, please contact us by email:
           <a href="mailto:info@skedr.io">info@skedr.io</a>
