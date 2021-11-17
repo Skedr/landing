@@ -11,7 +11,7 @@
             Learn how Skedr.io <span class="text-indigo-400 md:block">helps you</span>
           </h1>
           <p class="mt-3 max-w-4xl mx-auto text-xl text-gray-300 sm:mt-5 sm:text-2xl">
-            Share your photos more easyly with our improved workflow
+            Share your photos more easily with our improved workflow
           </p>
         </div>
       </div>
