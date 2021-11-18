@@ -77,10 +77,10 @@
   resolved "https://registry.yarnpkg.com/@gtm-support/core/-/core-1.1.0.tgz#bacc66e1b64a3c6b6302bb7feb81ba506c5330ba"
   integrity sha512-GyiZEfKejkAQq2lDS0u2mv6NDVdNWqXi+uQX0zcBOsIpWHfQxWpuCeTTCSv3DZEKv2LMkC0cwv6ukVRJvPmpaA==
 
-"@gtm-support/vue-gtm@^1.2.2":
-  version "1.2.2"
-  resolved "https://registry.yarnpkg.com/@gtm-support/vue-gtm/-/vue-gtm-1.2.2.tgz#c771d3a856a48479a3e6217d83703b75be70fc29"
-  integrity sha512-ShqeB97ThHGSIvJiu022jhWpsr0Zlk+OlD508k0V41Br1+7WQugL5uEjG4jeY8L9VuZYKjwW7fIWSVOa2hWHtg==
+"@gtm-support/vue-gtm@1.2.3":
+  version "1.2.3"
+  resolved "https://registry.yarnpkg.com/@gtm-support/vue-gtm/-/vue-gtm-1.2.3.tgz#cdde4ebd31807a12a20da9f88d53e13ee97993f7"
+  integrity sha512-ZpOAkaVXG8RSXjCTfW2u70hYAj3xgOg7Fzi+M0OHyYzJf0zYMWfe/0L+Ck0zuA7cZ//aV1rgwZMIaj2DFiK9Jw==
   dependencies:
     "@gtm-support/core" "1.1.0"
   optionalDependencies:
