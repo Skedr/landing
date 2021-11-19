@@ -37,8 +37,10 @@
   export default defineComponent({
     setup() {
       const route = useRoute()
-      loadHelpScout()
-      window.Beacon("init", "9d640825-f226-46b1-9a92-dbed14392554")
+      if (!import.meta.env.SSR) {
+        loadHelpScout()
+        window.Beacon("init", "9d640825-f226-46b1-9a92-dbed14392554")
+      }
       useHead({
         title: computed(() => route.meta.title),
         meta: [

@@ -13,19 +13,43 @@
       <dl class="mt-10 text-center sm:max-w-3xl sm:mx-auto sm:grid sm:grid-cols-3 sm:gap-8">
         <div class="flex flex-col">
           <dt class="order-2 mt-2 text-lg leading-6 font-medium text-indigo-200">tagged groups</dt>
-          <dd class="order-1 text-5xl font-extrabold text-white">40.989</dd>
+          <dd class="order-1 text-5xl font-extrabold text-white">{{ configuredGroups }}</dd>
         </div>
         <div class="flex flex-col mt-10 sm:mt-0">
           <dt class="order-2 mt-2 text-lg leading-6 font-medium text-indigo-200">
             scheduled photos
           </dt>
-          <dd class="order-1 text-5xl font-extrabold text-white">750.671</dd>
+          <dd class="order-1 text-5xl font-extrabold text-white">{{ scheduledPhotos }}</dd>
         </div>
         <div class="flex flex-col mt-10 sm:mt-0">
           <dt class="order-2 mt-2 text-lg leading-6 font-medium text-indigo-200">shared photos</dt>
-          <dd class="order-1 text-5xl font-extrabold text-white">4.629.348</dd>
+          <dd class="order-1 text-5xl font-extrabold text-white">{{ totalShares }}</dd>
         </div>
       </dl>
     </div>
   </div>
 </template>
+
+<script>
+  import { onMounted, ref } from "vue"
+  export default {
+    setup() {
+      const parseInt = (value) => {
+        return value.toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1.")
+      }
+      const configuredGroups = ref(0)
+      const scheduledPhotos = ref(0)
+      const totalShares = ref(0)
+
+      onMounted(async () => {
+        const fetchedData = await fetch(`${import.meta.env.VITE_URL}/totals`).then((res) =>
+          res.json()
+        )
+        configuredGroups.value = parseInt(fetchedData.configuredGroups)
+        scheduledPhotos.value = parseInt(fetchedData.scheduledPhotos)
+        totalShares.value = parseInt(fetchedData.totalShares)
+      })
+      return { configuredGroups, scheduledPhotos, totalShares }
+    }
+  }
+</script>
