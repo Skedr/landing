@@ -4,10 +4,26 @@ import Components from "unplugin-vue-components/vite"
 import eslintPlugin from "vite-plugin-eslint"
 import viteImagemin from "vite-plugin-imagemin"
 
+export const ssrTransformCustomDir = () => {
+  return {
+    props: [],
+    needRuntime: true
+  }
+}
+
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
-    vue(),
+    vue({
+      template: {
+        ssr: true,
+        compilerOptions: {
+          directiveTransforms: {
+            lazy: ssrTransformCustomDir
+          }
+        }
+      }
+    }),
     Components({}),
     eslintPlugin(),
     viteImagemin({
