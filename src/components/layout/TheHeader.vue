@@ -43,10 +43,14 @@
             <div class="flex items-center justify-between w-full md:w-auto">
               <router-link :to="{ name: 'home' }" class="flex">
                 <span class="sr-only">Skedr.io</span>
-                <img class="h-9 w-auto sm:h-10" src="/logo/brand_logo.svg" alt="Skedr.io logo" />
                 <img
+                  v-lazy="'/logo/brand_logo.svg'"
+                  class="h-9 w-auto sm:h-10"
+                  alt="Skedr.io logo"
+                />
+                <img
+                  v-lazy="'/logo/brand_name.svg'"
                   class="ml-4 h-9 w-auto hidden sm:flex"
-                  src="/logo/brand_name.svg"
                   alt="Skedr.io brand"
                 />
               </router-link>
@@ -136,11 +140,15 @@
               <div class="px-5 pt-4 flex items-center justify-between">
                 <div class="flex">
                   <span class="sr-only">Skedr.io</span>
-                  <img class="h-10 w-auto" src="/logo/brand_logo_white.svg" alt="Skedr.io logo" />
                   <img
+                    v-lazy="'/logo/brand_logo_white.svg'"
+                    class="h-10 w-auto"
+                    alt="Skedr.io logo"
+                  />
+                  <img
+                    v-lazy="'/logo/brand_name_white.svg'"
                     class="ml-4 h-9 w-auto flex"
-                    src="/logo/brand_name_white.svg"
-                    alt="Skedr.io brand"
+                    alt="'Skedr.io brand'"
                   />
                 </div>
                 <div class="-mr-2">

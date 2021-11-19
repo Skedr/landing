@@ -63,8 +63,8 @@
             </h1>
             <p class="mt-3 text-base text-gray-300 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
               Skedr.io has improved your group sharing workflow<br />
-              Flickr is a great tool and sharing photos into groups is a great way to enjoy other people
-              photos. But let's face it, the tool experience can be way better.<br />
+              Flickr is a great tool and sharing photos into groups is a great way to enjoy other
+              people photos. But let's face it, the tool experience can be way better.<br />
               We, as users, have taken the time to improve the experience.
             </p>
             <div class="mt-5 w-full sm:mx-auto sm:max-w-lg lg:ml-0 flex">
@@ -154,6 +154,7 @@
                 "
               >
                 <img
+                  v-lazy="'/screenshot.png'"
                   class="
                     w-full
                     rounded-md
@@ -161,7 +162,6 @@
                     ring-1 ring-black ring-opacity-5
                     lg:h-full lg:w-auto lg:max-w-none
                   "
-                  src="/screenshot.png"
                   alt="Groups view for skedr.io. List of joined groups and tag cloud of configured tags."
                 />
               </div>

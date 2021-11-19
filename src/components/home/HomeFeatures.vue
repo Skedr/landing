@@ -42,6 +42,7 @@
       <div class="mt-12 sm:mt-16 lg:mt-0 lg:col-start-1">
         <div class="pr-4 -ml-48 sm:pr-6 md:-ml-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
           <img
+            v-lazy="'/screenshot_manage_tags.png'"
             class="
               w-full
               rounded-xl
@@ -49,7 +50,6 @@
               ring-1 ring-black ring-opacity-5
               lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-none
             "
-            src="/screenshot_manage_tags.png"
             alt="Customer profile user interface"
           />
         </div>

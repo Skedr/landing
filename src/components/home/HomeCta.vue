@@ -46,6 +46,7 @@
         </div>
         <div class="-mt-6 aspect-w-5 aspect-h-3 md:aspect-w-2 md:aspect-h-1">
           <img
+            v-lazy="'/screenshot_scheduled.png'"
             class="
               transform
               translate-x-6 translate-y-6
@@ -55,7 +56,6 @@
               sm:translate-x-16
               lg:translate-y-20
             "
-            src="/screenshot_scheduled.png"
             alt="Skedr scheduled view"
           />
         </div>

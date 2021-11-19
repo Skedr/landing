@@ -39,8 +39,8 @@
             <div class="flex items-start">
               <div class="flex-shrink-0 inline-flex rounded-full border-2 border-white">
                 <img
+                  v-lazy="'https://farm4.staticflickr.com/3766/buddyicons/66358983@N07.jpg'"
                   class="h-12 w-12 rounded-full"
-                  src="https://farm4.staticflickr.com/3766/buddyicons/66358983@N07.jpg"
                   alt="Brian Evans"
                 />
               </div>
@@ -91,8 +91,8 @@
             <div class="flex items-start">
               <div class="flex-shrink-0 inline-flex rounded-full border-2 border-white">
                 <img
+                  v-lazy="'https://farm6.staticflickr.com/5602/buddyicons/91905103@N02.jpg'"
                   class="h-12 w-12 rounded-full"
-                  src="https://farm6.staticflickr.com/5602/buddyicons/91905103@N02.jpg"
                   alt="LuceMia"
                 />
               </div>

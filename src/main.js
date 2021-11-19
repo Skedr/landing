@@ -4,6 +4,7 @@ import "./index.css"
 import { routes } from "./routes"
 import VueGtag from "vue-gtag"
 import { createGtm } from "@gtm-support/vue-gtm"
+import VueLazyLoad from 'vue3-lazyload'
 //import VueHotjar from "vue-hotjar-next"
 
 export const createApp = ViteSSG(
@@ -38,6 +39,8 @@ export const createApp = ViteSSG(
         trackOnNextTick: false
       })
     )
+
+    app.use(VueLazyLoad)
 
     // app.use(VueHotjar, {
     //   id: import.meta.env.VITE_HOTJAR_ID,
