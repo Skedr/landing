@@ -46,16 +46,16 @@
                 <img
                   v-lazy="'/logo/brand_logo.svg'"
                   class="h-9 w-auto sm:h-10"
-                  with="48"
-                  heigh="40"
+                  width="48"
+                  height="40"
                   alt="Skedr.io logo"
                 />
                 <img
                   v-lazy="'/logo/brand_name.svg'"
                   class="ml-4 h-9 w-auto hidden sm:flex"
                   alt="Skedr.io brand"
-                  with="120"
-                  heigh="36"
+                  width="120"
+                  height="36"
                 />
               </router-link>
               <div class="-mr-2 flex items-center md:hidden">
@@ -148,15 +148,15 @@
                     v-lazy="'/logo/brand_logo_white.svg'"
                     class="h-10 w-auto"
                     alt="Skedr.io logo"
-                    with="48"
-                    heigh="40"
+                    width="48"
+                    height="40"
                   />
                   <img
                     v-lazy="'/logo/brand_name_white.svg'"
                     class="ml-4 h-9 w-auto flex"
                     alt="'Skedr.io brand'"
-                    with="120"
-                    heigh="36"
+                    width="120"
+                    height="36"
                   />
                 </div>
                 <div class="-mr-2">
