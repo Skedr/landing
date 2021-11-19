@@ -56,6 +56,8 @@
               sm:translate-x-16
               lg:translate-y-20
             "
+            width="554"
+            height="418"
             alt="Skedr scheduled view"
           />
         </div>

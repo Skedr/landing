@@ -50,6 +50,8 @@
               ring-1 ring-black ring-opacity-5
               lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-none
             "
+            width="1135"
+            heigh="624"
             alt="Customer profile user interface"
           />
         </div>

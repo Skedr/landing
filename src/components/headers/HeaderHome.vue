@@ -162,6 +162,8 @@
                     ring-1 ring-black ring-opacity-5
                     lg:h-full lg:w-auto lg:max-w-none
                   "
+                  with="735"
+                  heigh="510"
                   alt="Groups view for skedr.io. List of joined groups and tag cloud of configured tags."
                 />
               </div>
