@@ -53,18 +53,12 @@
         {
           question: "Who is behind Skedr.io?",
           answer:
-            "Enric Bisbe Gil is the owner and creator of Skedr.io. His Flickr profile can be found at https://www.flickr.com/photos/enric-bisbe"
+            "Enric Bisbe Gil is the owner and creator of Skedr.io. His Flickr profile can be found at <a href='https://www.flickr.com/photos/enric-bisbe'>https://www.flickr.com/photos/enric-bisbe</a>"
         },
         {
           question: "What is the purpose of Skedr.io?",
           answer:
             "Skedr.io aims to help you by saving time when sharing your photos in Flickr. Adding the same photo to groups with different Posting Limits may make your life harder, so we are automating this process for you."
-        },
-        {
-          question:
-            "I would like to see how does the app work in the first place without registering. Could I do that?",
-          answer:
-            "Sure.<br><br> Go to <a href='https://app.skedr.io/auth/login/'>https://app.skedr.io/auth/login</a> and click on 'Demo Account' and then click on the Continue button to sign in with our demo account. We have added 20 photos from Unsplash as a show case and we have created 4 groups with different restrictions."
         },
         {
           question: "Will Skedr.io post any photo without my specific instructions?",
@@ -105,7 +99,12 @@
           question: "What is Group Tagging?",
           answer:
             "To bind any tag of your choice to one or more groups. That is, to define the content of the photos included in the group by keywords (tags).<br><br>Every photo uploaded with one tag will be automatically added to every group that has been tagged with this same keyword.<br><br>For example: If you choose the tag #landscape to be bound to 3 different groups which are related to landscape photography, whenever a photo with that tag is uploaded to your photostream it will be automatically added to those 3 groups."
-        },
+        }
+      ]
+    },
+    {
+      title: "Promotion",
+      items: [
         {
           question: "What is Autoimported comment?",
           answer:
