@@ -1,4 +1,3 @@
-//import Home from "./views/Home.vue"
 const Home = () => import("./views/Home.vue")
 const Pricing = () => import("./views/Pricing.vue")
 const Features = () => import("./views/Features.vue")
