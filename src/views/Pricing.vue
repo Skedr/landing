@@ -164,7 +164,7 @@
                   </div>
                 </div>
                 <a
-                  href="#"
+                  href="https://app.skedr.io/auth/create-account"
                   :class="[
                     plan.featured
                       ? 'bg-indigo-600 text-white hover:bg-indigo-700'
@@ -581,7 +581,7 @@
     {
       title: "Tandem",
       featured: true,
-      description: "50% discount and help spreading Skedr [*]",
+      description: "50% discount and help spreading Skedr",
       priceMonthly: 3.99,
       priceYearly: 39.99,
       mainFeatures: [
