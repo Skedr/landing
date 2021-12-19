@@ -8,8 +8,8 @@
           Automate your share workflow
         </p>
         <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
-          Lorem ipsum dolor sit amet consect adipisicing elit. Possimus magnam voluptatum cupiditate
-          veritatis in accusamus quisquam.
+          From sharing your photos automatically through your tags to sharing them again due to
+          group restriction limits
         </p>
       </div>
 
@@ -57,15 +57,15 @@
       icon: HashtagIcon
     },
     {
-      name: "Autoschedule built-in",
+      name: "Auto schedule built-in",
       description:
         "Every rejected photo due to group restriction limits is autoscheduled for reshare. You won't miss it.",
       icon: RefreshIcon
     },
     {
-      name: "Scheduled photos",
+      name: "Auto scheduled photos section",
       description:
-        "Schedule view brings your schedule to life and makes it easy to see what's ahead in time.",
+        "Auto schedule page shows your auto scheduled photos in a timeline that makes it easy to see what will be shared again",
       icon: ClockIcon
     },
     {
