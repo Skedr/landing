@@ -59,13 +59,13 @@
     {
       name: "Auto schedule built-in",
       description:
-        "Every rejected photo due to group restriction limits is autoscheduled for reshare. You won't miss it.",
+        "Every rejected photo due to group restriction limits is auto scheduled for reshare. You won't miss it.",
       icon: RefreshIcon
     },
     {
       name: "Auto scheduled photos section",
       description:
-        "Auto schedule page shows your auto scheduled photos in a timeline that makes it easy to see what will be shared again",
+        "Auto schedule page shows your auto scheduled photos in a timeline that makes it easy to see what will be shared again.",
       icon: ClockIcon
     },
     {

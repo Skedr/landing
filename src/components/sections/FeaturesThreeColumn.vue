@@ -10,7 +10,7 @@
       <p class="mt-4 max-w-3xl text-lg text-indigo-200">
         Skedr.io will help you succed in getting your free time back. Configure each group with a
         tag and do not worry on anything else. Upload your tagged photos to see them be shared or
-        scheduled when a group's limit is hit.
+        auto scheduled when a group's limit is hit.
       </p>
       <div
         class="
@@ -72,7 +72,7 @@
     {
       name: "Scheduled",
       description:
-        "For each day and each group see which photos are scheduled to be shared.",
+        "For each day and each group see which photos are auto scheduled to be shared later ( when the group limits allow it ).",
       icon: CalendarIcon
     }
   ]

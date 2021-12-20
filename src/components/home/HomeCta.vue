@@ -58,7 +58,7 @@
             "
             width="554"
             height="418"
-            alt="Skedr scheduled view"
+            alt="Skedr auto scheduled view"
           />
         </div>
       </div>

@@ -690,7 +690,7 @@
     },
     {
       id: 4,
-      question: 'What does "scheduled throttled photos"?',
+      question: 'What does "auto scheduled throttled photos"?',
       answer:
         "We automatically reschedule any photo that was rejected due to group restrictions. Each rescheduled photo is based on each group restriction."
     },

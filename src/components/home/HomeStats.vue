@@ -17,7 +17,7 @@
         </div>
         <div class="flex flex-col mt-10 sm:mt-0">
           <dt class="order-2 mt-2 text-lg leading-6 font-medium text-indigo-200">
-            scheduled photos
+            auto scheduled photos
           </dt>
           <dd class="order-1 text-5xl font-extrabold text-white">{{ scheduledPhotos }}</dd>
         </div>
