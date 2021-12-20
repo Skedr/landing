@@ -8,8 +8,8 @@
           Automate your share workflow
         </p>
         <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
-          From sharing your photos automatically through your tags to sharing them again due to
-          group restriction limits
+          From sharing your photos automatically through your tags <br />
+          to sharing them again due to group restriction limits
         </p>
       </div>
 
