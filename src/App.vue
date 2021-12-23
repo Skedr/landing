@@ -32,6 +32,26 @@
           {
             name: "viewport",
             content: "width=device-width, initial-scale=1.0"
+          },
+          {
+            property: "og:type",
+            content: "website"
+          },
+          {
+            property: "og:url",
+            content: computed(() => "https://skedr.io" + route.path)
+          },
+          {
+            property: "og:title",
+            content: computed(() => route.meta.title)
+          },
+          {
+            property: "og:description",
+            content: computed(() => route.meta.description)
+          },
+          {
+            property: "og:image",
+            content: "https://skedr.io/screenshot.png"
           }
         ]
       })
