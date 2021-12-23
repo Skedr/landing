@@ -52,6 +52,10 @@
           {
             property: "og:image",
             content: "https://skedr.io/screenshot.png"
+          },
+          {
+            property: "twitter:card",
+            content: "summary_large_image"
           }
         ]
       })
