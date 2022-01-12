@@ -25,6 +25,7 @@
             <a
               href="https://app.skedr.io/auth/create-account"
               class="
+                try-it-for-free
                 mt-8
                 bg-amber-500
                 hover:bg-amber-600

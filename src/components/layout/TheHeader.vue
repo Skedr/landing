@@ -98,6 +98,7 @@
             <a
               href="https://app.skedr.io/"
               class="
+                log-in
                 inline-flex
                 items-center
                 px-4
@@ -215,6 +216,7 @@
               <a
                 href="https://app.skedr.io"
                 class="
+                  log-in
                   block
                   w-full
                   px-5
