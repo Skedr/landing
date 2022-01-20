@@ -94,7 +94,7 @@
               </a>
             </div>
           </div>
-          <div class="hidden md:flex">
+          <div class="hidden md:flex md:space-x-2">
             <a
               href="https://app.skedr.io/"
               class="
@@ -113,6 +113,26 @@
               "
             >
               Log in
+            </a>
+            <a
+              href="https://app.skedr.io/auth/create-account"
+              class="
+                sign-up
+                inline-flex
+                items-center
+                px-4
+                py-2
+                border border-transparent
+                text-sm
+                font-medium
+                rounded-md
+                text-white
+                bg-amber-500
+                hover:bg-amber-600
+                border-amber-600
+              "
+            >
+              Sign up
             </a>
           </div>
         </nav>
@@ -229,6 +249,24 @@
                 "
               >
                 Log in
+              </a>
+              <a
+                href="https://app.skedr.io/auth/create-account"
+                class="
+                  sign-up
+                  block
+                  w-full
+                  px-5
+                  py-3
+                  text-center
+                  font-medium
+                  text-white
+                  bg-amber-500
+                  hover:bg-amber-600
+                  border-amber-600
+                "
+              >
+                Sign up
               </a>
             </div>
           </PopoverPanel>
