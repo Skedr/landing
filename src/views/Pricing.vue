@@ -158,12 +158,10 @@
                     <p :class="[plan.featured ? 'text-gray-700' : 'text-white', 'text-sm']">
                       for ever
                     </p>
-                    <p :class="[plan.featured ? 'text-gray-500' : 'text-indigo-200', 'text-sm']">
-                      Billed yearly ( still free )
-                    </p>
                   </div>
                 </div>
                 <a
+                  v-if="plan.priceMonthly > 0"
                   href="https://app.skedr.io/auth/create-account"
                   :class="[
                     plan.featured
@@ -172,6 +170,17 @@
                     'pricing-buy mt-6 w-full inline-block py-2 px-8 border border-transparent rounded-md shadow-sm text-center text-sm font-medium sm:mt-0 sm:w-auto lg:mt-6 lg:w-full'
                   ]"
                   >Buy {{ plan.title }}</a
+                >
+                <a
+                  v-else
+                  href="https://app.skedr.io/auth/create-account"
+                  :class="[
+                    plan.featured
+                      ? 'bg-indigo-600 text-white hover:bg-indigo-700'
+                      : 'bg-white text-indigo-600 hover:bg-indigo-50',
+                    'pricing-buy mt-6 w-full inline-block py-2 px-8 border border-transparent rounded-md shadow-sm text-center text-sm font-medium sm:mt-0 sm:w-auto lg:mt-6 lg:w-full'
+                  ]"
+                  >Try it for free</a
                 >
               </div>
             </div>
