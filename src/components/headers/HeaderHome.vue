@@ -1,5 +1,5 @@
 <template>
-  <main class="mt-16 sm:mt-24">
+  <main class="mt-4 sm:mt-24">
     <div class="mx-auto max-w-7xl">
       <div class="lg:grid lg:grid-cols-12 lg:gap-8">
         <div
