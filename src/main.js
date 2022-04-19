@@ -5,10 +5,6 @@ import { routes } from "./routes"
 import VueGtag from "vue-gtag"
 import { createGtm } from "@gtm-support/vue-gtm"
 import VueLazyLoad from "vue3-lazyload"
-import LogRocket from "logrocket"
-if (import.meta.env.VITE_LOGROCKET) {
-  LogRocket.init(import.meta.env.VITE_LOGROCKET)
-}
 
 export const createApp = ViteSSG(
   App,

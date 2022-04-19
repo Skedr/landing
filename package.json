@@ -9,7 +9,6 @@
     "format": "prettier .  --write"
   },
   "dependencies": {
-    "logrocket": "^2.2.0",
     "vue": "^3.2.16",
     "vue-gtag": "^2.0.1",
     "vue-router": "^4.0.12",
