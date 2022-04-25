@@ -105,7 +105,7 @@
               plan.featured
                 ? 'bg-white ring-2 ring-indigo-700 shadow-md'
                 : 'bg-indigo-700 lg:bg-transparent',
-              'pt-6 px-6 pb-3 rounded-lg lg:px-8 lg:pt-12'
+              'relative pt-6 px-6 pb-3 rounded-lg lg:px-8 lg:pt-12'
             ]"
           >
             <div>
@@ -117,6 +117,26 @@
               >
                 {{ plan.title }}
               </h3>
+              <p
+                v-if="plan.mostPopular"
+                class="
+                  absolute
+                  top-0
+                  py-1.5
+                  px-4
+                  bg-indigo-600
+                  rounded-full
+                  text-xs
+                  font-semibold
+                  uppercase
+                  tracking-wide
+                  text-white
+                  transform
+                  -translate-y-3
+                "
+              >
+                Discount with code Worker-day
+              </p>
               <div
                 class="
                   flex flex-col
@@ -573,6 +593,8 @@
   import { CheckIcon, XIcon } from "@heroicons/vue/solid"
   import { ref } from "vue"
 
+  const upToGroups = 25
+
   const plans = [
     {
       title: "Starter",
@@ -581,7 +603,7 @@
       priceMonthly: "Free",
       priceYearly: "Free",
       mainFeatures: [
-        { id: 1, value: "Up to 10 groups" },
+        { id: 1, value: `Up to ${upToGroups} groups` },
         { id: 2, value: "Auto schedule throttle photos" },
         { id: 3, value: "Suggest Tags" },
         { id: 4, value: "Ad comment [*]" }
@@ -591,6 +613,7 @@
       title: "Tandem",
       featured: true,
       description: "50% discount and help spreading Skedr",
+      mostPopular: true,
       priceMonthly: 3.99,
       priceYearly: 39.99,
       mainFeatures: [
@@ -621,7 +644,7 @@
     {
       title: "Autoimport groups",
       tiers: [
-        { title: "starter", value: "Up to 10 groups" },
+        { title: "starter", value: `Up to ${upToGroups} groups` },
         { title: "popular", featured: false, value: "Unlimited" },
         { title: "intermediate", value: "Unlimited" }
       ]
