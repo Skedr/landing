@@ -16,8 +16,8 @@
 
         <p class="mt-3 max-w-4xl mx-auto text-xl text-gray-300 sm:mt-5 sm:text-2xl">
           With Skedr you can do your yoga while we are sharing your photos.<br />
-          Use the code <strong>WORKER-DAY</strong> for a 25% off discount on the yearly
-          subscriptions.
+          Use the code <span class="font-bold uppercase text-amber-500">worker-day</span> for a
+          <span class="text-amber-500">25% off discount</span> on the yearly subscriptions.
           <br />
           <span class="text-sm"
             >[ Discount for 1 year on both Tandem and Premium year subscriptions. New subscriptions

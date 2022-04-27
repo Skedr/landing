@@ -124,7 +124,6 @@
                   top-0
                   py-1.5
                   px-4
-                  bg-indigo-600
                   rounded-full
                   text-xs
                   font-semibold
@@ -133,6 +132,7 @@
                   text-white
                   transform
                   -translate-y-3
+                  bg-amber-500
                 "
               >
                 Discount with code Worker-day
