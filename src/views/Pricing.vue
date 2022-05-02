@@ -135,7 +135,7 @@
                   bg-amber-500
                 "
               >
-                Discount with code Worker-day
+                2 mo for free with Yearly
               </p>
               <div
                 class="
