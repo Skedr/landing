@@ -189,8 +189,9 @@
                       : 'bg-white text-indigo-600 hover:bg-indigo-50',
                     'pricing-buy mt-6 w-full inline-block py-2 px-8 border border-transparent rounded-md shadow-sm text-center text-sm font-medium sm:mt-0 sm:w-auto lg:mt-6 lg:w-full'
                   ]"
-                  >Buy {{ plan.title }}</a
                 >
+                  Buy {{ plan.title }}
+                </a>
                 <a
                   v-else
                   href="https://app.skedr.io/auth/create-account"
@@ -200,8 +201,9 @@
                       : 'bg-white text-indigo-600 hover:bg-indigo-50',
                     'pricing-buy mt-6 w-full inline-block py-2 px-8 border border-transparent rounded-md shadow-sm text-center text-sm font-medium sm:mt-0 sm:w-auto lg:mt-6 lg:w-full'
                   ]"
-                  >Try it for free</a
                 >
+                  Try it for free
+                </a>
               </div>
             </div>
             <h4 class="sr-only">Features</h4>
@@ -231,8 +233,9 @@
                     plan.featured ? 'text-gray-600' : 'text-white',
                     'ml-3 text-sm font-medium'
                   ]"
-                  >{{ mainFeature.value }}</span
                 >
+                  {{ mainFeature.value }}
+                </span>
               </li>
             </ul>
           </div>
@@ -298,8 +301,9 @@
                           : 'text-gray-900',
                         'text-sm font-medium'
                       ]"
-                      >{{ feature.tiers[mobilePlanIndex].value }}</span
                     >
+                      {{ feature.tiers[mobilePlanIndex].value }}
+                    </span>
                     <template v-else>
                       <CheckIcon
                         v-if="feature.tiers[mobilePlanIndex].value === true"
@@ -307,9 +311,9 @@
                         aria-hidden="true"
                       />
                       <XIcon v-else class="mx-auto h-5 w-5 text-gray-400" aria-hidden="true" />
-                      <span class="sr-only">{{
-                        feature.tiers[mobilePlanIndex].value === true ? "Yes" : "No"
-                      }}</span>
+                      <span class="sr-only">
+                        {{ feature.tiers[mobilePlanIndex].value === true ? "Yes" : "No" }}
+                      </span>
                     </template>
                   </dd>
                 </div>
@@ -362,9 +366,9 @@
                       aria-hidden="true"
                     />
                     <XIcon v-else class="mx-auto h-5 w-5 text-gray-400" aria-hidden="true" />
-                    <span class="sr-only">{{
-                      perk.tiers[mobilePlanIndex].value === true ? "Yes" : "No"
-                    }}</span>
+                    <span class="sr-only">
+                      {{ perk.tiers[mobilePlanIndex].value === true ? "Yes" : "No" }}
+                    </span>
                   </dd>
                 </div>
               </dl>
@@ -431,9 +435,7 @@
           </div>
 
           <table class="relative w-full">
-            <caption class="sr-only">
-              Business feature comparison
-            </caption>
+            <caption class="sr-only">Business feature comparison</caption>
             <thead>
               <tr class="text-left">
                 <th scope="col">
@@ -464,8 +466,9 @@
                         tier.featured ? 'text-indigo-600' : 'text-gray-900',
                         'text-sm font-medium'
                       ]"
-                      >{{ tier.value }}</span
                     >
+                      {{ tier.value }}
+                    </span>
                     <template v-else>
                       <CheckIcon
                         v-if="tier.value === true"
@@ -514,9 +517,7 @@
           </div>
 
           <table class="relative w-full">
-            <caption class="sr-only">
-              Perk comparison
-            </caption>
+            <caption class="sr-only">Perk comparison</caption>
             <thead>
               <tr class="text-left">
                 <th scope="col">
