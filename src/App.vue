@@ -11,12 +11,14 @@
   import { useHead } from "@vueuse/head"
   import { useRoute } from "vue-router"
   import loadHelpScout from "./lib/helpScout"
+  import loadHotjar from "./lib/hotjar"
 
   export default defineComponent({
     setup() {
       const route = useRoute()
 
       loadHelpScout()
+      loadHotjar()
 
       useHead({
         title: computed(() => route.meta.title),
