@@ -10,7 +10,7 @@
   import { defineComponent, computed } from "vue"
   import { useHead } from "@vueuse/head"
   import { useRoute } from "vue-router"
-  import loadHelpScout from "./lib/hotjar"
+  import loadHelpScout from "./lib/helpScout"
 
   export default defineComponent({
     setup() {
