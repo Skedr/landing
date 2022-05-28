@@ -10,8 +10,8 @@
           <span class="text-indigo-400">value your time?</span>
         </h1>
         <p class="mt-3 max-w-4xl mx-auto text-xl text-gray-300 sm:mt-5 sm:text-2xl">
-          With Skedr.io you will save hundreds of hours of sharing your photos to differents groups.
-          Forget about having to reshare throttled photos from groups
+          Skedr.io will save you time by sharing photographs with groups and automatically
+          rescheduling them for reshare.
         </p>
       </div>
     </div>

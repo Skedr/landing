@@ -176,7 +176,7 @@
                   </p>
                   <div class="ml-4">
                     <p :class="[plan.featured ? 'text-gray-700' : 'text-white', 'text-sm']">
-                      for ever
+                      (forever)
                     </p>
                   </div>
                 </div>
@@ -604,9 +604,9 @@
       priceMonthly: "Free",
       priceYearly: "Free",
       mainFeatures: [
-        { id: 1, value: `Up to ${upToGroups} groups` },
-        { id: 2, value: "Auto schedule throttle photos" },
-        { id: 3, value: "Suggest Tags" },
+        { id: 1, value: `You can join up to ${upToGroups} groups` },
+        { id: 2, value: "Auto scheduling dismissed photos" },
+        { id: 3, value: "Get tag suggestions" },
         { id: 4, value: "Ad comment [*]" }
       ]
     },
@@ -618,40 +618,40 @@
       priceMonthly: 3.99,
       priceYearly: 39.99,
       mainFeatures: [
-        { id: 1, value: "Unlimited" },
-        { id: 2, value: "Auto schedule throttle photos" },
-        { id: 3, value: "Suggest Tags" },
-        { id: 4, value: "24/7 customer support" },
-        { id: 5, value: "Strategy and configuration" },
+        { id: 1, value: "Join unlimited groups" },
+        { id: 2, value: "Auto scheduling dismissed photos" },
+        { id: 3, value: "Get tag suggestions" },
+        { id: 4, value: "24/7 Helpline" },
+        { id: 5, value: "Planning and instructions" },
         { id: 6, value: "Ad comment [*]" }
       ]
     },
     {
       title: "Premium",
       featured: false,
-      description: "No Skedr promotional comment version.",
+      description: "No ad comments or promotional comments by Skedr.io",
       priceMonthly: 7.99,
       priceYearly: 79.99,
       mainFeatures: [
-        { id: 1, value: "Unlimited" },
-        { id: 2, value: "Auto schedule throttle photos" },
-        { id: 3, value: "Suggest Tags" },
-        { id: 4, value: "24/7 customer support" },
-        { id: 5, value: "Strategy and configuration" }
+        { id: 1, value: "Join unlimited groups" },
+        { id: 2, value: "Auto scheduling dismissed photos" },
+        { id: 3, value: "Get tag suggestions" },
+        { id: 4, value: "24/7 Helpline" },
+        { id: 5, value: "Planning and instructions" }
       ]
     }
   ]
   const features = [
     {
-      title: "Autoimport groups",
+      title: "Auto sharing photos",
       tiers: [
         { title: "starter", value: `Up to ${upToGroups} groups` },
-        { title: "popular", featured: false, value: "Unlimited" },
-        { title: "intermediate", value: "Unlimited" }
+        { title: "popular", featured: false, value: "Join unlimited groups" },
+        { title: "intermediate", value: "Join unlimited groups" }
       ]
     },
     {
-      title: "Auto schedule throttle photos",
+      title: "Auto scheduling reshare",
       tiers: [
         { title: "starter", value: true },
         { title: "popular", featured: true, value: true },
@@ -669,7 +669,7 @@
   ]
   const perks = [
     {
-      title: "24/7 customer support",
+      title: "24/7 Helpline",
       tiers: [
         { title: "starter", value: false },
         { title: "popular", featured: true, value: true },
@@ -677,7 +677,7 @@
       ]
     },
     {
-      title: "Basic tool functionality",
+      title: "Basic tools",
       tiers: [
         { title: "starter", value: true },
         { title: "popular", featured: true, value: true },
@@ -685,7 +685,7 @@
       ]
     },
     {
-      title: "Strategy and configuration",
+      title: "Planning and instructions",
       tiers: [
         { title: "starter", value: false },
         { title: "popular", featured: true, value: true },
@@ -693,7 +693,7 @@
       ]
     },
     {
-      title: "Ad comment [*]",
+      title: "Ad Comment by Skedr.io [*]",
       tiers: [
         { title: "starter", value: true },
         { title: "popular", featured: true, value: true },
@@ -705,39 +705,39 @@
   const faqs = [
     {
       id: 1,
-      question: "What payment methods we can use?",
+      question: "Payment Methods used",
       answer:
         "Currently you can pay with your credit card or with <a href='https://paypal.com' rel='nofolow' target='_blank' class='underline' >PayPal</a>. We use <a href='https://paddle.com' target='_blank' rel='nofolow' class='underline' >Paddle</a> to manage our subscription payments. "
     },
     {
       id: 2,
-      question: 'What\'s an "autoimport group"?',
+      question: "Automatic grouping",
       answer:
-        "An autoimport group is one of your joined groups with a binding tag. In Skedr.io we bind your groups and photos through tags. Each photo has 1 or multiple tags that describe it. Adding the same tags to your groups let us share your photos to multiple groups."
+        "Skedr.io bind your photographs and groups through tags. The photos are shared and uploaded to groups based on the labels. Images can have one or more tags each."
     },
     {
       id: 3,
-      question: 'What does "suggest tags"?',
+      question: "Tag suggestions",
       answer:
-        "Suggest tags gets a list of ordered tags by percentage used in your photos shared to that group. If you don't have any shared photo we can't suggest tags."
+        "See tags from photos uploaded to each group. It may help you find a relevant tag for you aswell."
     },
     {
       id: 4,
-      question: 'What does "auto scheduled throttled photos"?',
+      question: "Auto-scheduling",
       answer:
-        "We automatically reschedule any photo that was rejected due to group restrictions. Each rescheduled photo is based on each group restriction."
+        "Auto scheduling is when the photos are scheduled for resharing after any group dismisses them due to group restrictions."
     },
     {
       id: 5,
-      question: 'How can I get help with "Strategy and configuration"?',
+      question: "Get help with strategy and Configuration",
       answer:
-        "Opening the support window will let chat with us. Just ask what you need help on and we can help you configure and make a strategy with your photos."
+        "Open the starting window, and you will be able to chat with the website team. You may ask for help, and the team will help you configure your photographs."
     },
     {
       id: 6,
-      question: 'What does "Ad comment" mean?',
+      question: "Ad comment",
       answer:
-        "As a way to promote Skedr easily we left a comment in every photo you share. You get a 50% discount and we reach to more people. "
+        "Ad comment is a promotion comment added by Skedr on the photos that you upload. If you take the premium offer, you never face such ad comments. Otherwise, there will be a 50 per cent discount, and Skedr.io will also spread through the promotional commenting."
     }
   ]
 
