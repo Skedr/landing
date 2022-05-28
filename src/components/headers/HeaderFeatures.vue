@@ -8,10 +8,11 @@
             Features
           </p>
           <h1 class="mt-2 text-3xl font-extrabold text-white sm:text-4xl lg:text-5xl">
-            Learn how Skedr.io <span class="text-indigo-400 md:block">helps you</span>
+            Learn how Skedr.io
+            <span class="text-indigo-400 md:block">helps you</span>
           </h1>
           <p class="mt-3 max-w-4xl mx-auto text-xl text-gray-300 sm:mt-5 sm:text-2xl">
-            Share your photos more easily with our improved workflow
+            Rediscover your time with a better experience
           </p>
         </div>
       </div>

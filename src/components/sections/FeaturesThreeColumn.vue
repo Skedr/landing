@@ -4,13 +4,11 @@
     <div
       class="max-w-4xl mx-auto px-4 py-16 sm:px-6 sm:pt-20 sm:pb-24 lg:max-w-7xl lg:pt-24 lg:px-8"
     >
-      <h2 class="text-3xl font-extrabold text-white tracking-tight">
-        All you need to share your photos at scale
-      </h2>
+      <h2 class="text-3xl font-extrabold text-white tracking-tight">What you need</h2>
       <p class="mt-4 max-w-3xl text-lg text-indigo-200">
-        Skedr.io will help you succed in getting your free time back. Configure each group with a
-        tag and do not worry on anything else. Upload your tagged photos to see them be shared or
-        auto scheduled when a group's limit is hit.
+        Skedr.io will save your time and make it easy for you to share your photos with tags. Upload
+        tagged pictures and see how Skedr uploads them to the tagged groups automatically. See how
+        your images are auto-shared when a limit is reached.
       </p>
       <div
         class="
@@ -43,9 +41,7 @@
           </div>
           <div class="mt-6">
             <h3 class="text-lg font-medium text-white"></h3>
-            <p class="mt-2 text-base text-indigo-200">
-              {{ feature.description }}
-            </p>
+            <p class="mt-2 text-base text-indigo-200" v-html="feature.description"></p>
           </div>
         </div>
       </div>
@@ -60,19 +56,19 @@
     {
       name: "Groups",
       description:
-        "Manage your groups. Find the best tags for each one. Search your joined groups or find new ones to share your photos. All in one place.",
+        "Deal with your groups. Join plenty of groups. Groups are about more than just posting; it is about contributing to the site. Before tagging, track down the best tags for every group. Search your joined groups or track down new ones to share your photographs. All in one place!",
       icon: CollectionIcon
     },
     {
       name: "Photostream",
       description:
-        "The fastest way of seeing each photo statistics. Views, shared groups and likes in one place. Manage each photo's tags too. ",
+        "The quickest approach to seeing every photograph measurement. Views, likes, shared groups, and preferences in a single spot. Deal with every photograph's tags as well.<br /> Comment regularly and interact as much as you can as this will make you well known and bring traffic to your photographs.",
       icon: UsersIcon
     },
     {
       name: "Scheduled",
       description:
-        "For each day and each group see which photos are auto scheduled to be shared later ( when the group limits allow it ).",
+        "For every day and group, see which photographs are auto-scheduled to be shared later (when as far as group limits permit it).",
       icon: CalendarIcon
     }
   ]
