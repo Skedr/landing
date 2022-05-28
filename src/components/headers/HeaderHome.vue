@@ -40,8 +40,9 @@
                   bg-indigo-500
                   rounded-full
                 "
-                >Video</span
               >
+                Video
+              </span>
               <span class="ml-4 text-sm">Automate your share workflow</span>
               <ChevronRightIcon class="ml-2 w-5 h-5 text-gray-500" aria-hidden="true" />
             </a>
@@ -57,15 +58,15 @@
                 xl:text-6xl
               "
             >
-              <span class="md:block">Spend less time</span>
+              <span class="md:block">Sharing photos</span>
               {{ " " }}
-              <span class="text-indigo-400 md:block">sharing photos to Flickr groups</span>
+              <span class="text-indigo-400 md:block">to Flickr groups made easier</span>
             </h1>
             <p class="mt-3 text-base text-gray-300 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
-              Skedr.io has improved your group sharing workflow<br />
-              Flickr is a great tool and sharing photos into groups is a great way to enjoy other
-              people photos. But let's face it, the tool experience can be way better.<br />
-              We, as users, have taken the time to improve the experience.
+              Skedr.io, a tool automating the process of group photo sharing on Flickr.
+              <br />
+              We have taken the time to work on the experience. Invest less energy and time by
+              sharing photos to Flickr groups automatically.
             </p>
             <div class="mt-5 w-full sm:mx-auto sm:max-w-lg lg:ml-0 flex">
               <a
@@ -86,7 +87,8 @@
                   font-medium
                   text-white
                 "
-                >Try it for free
+              >
+                Try it for free
               </a>
             </div>
           </div>

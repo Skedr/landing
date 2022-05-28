@@ -3,13 +3,14 @@
   <div class="py-12 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="lg:text-center">
-        <h2 class="text-base text-indigo-600 font-semibold tracking-wide uppercase">Features</h2>
-        <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-          Automate your share workflow
-        </p>
+        <p class="text-base text-indigo-600 font-semibold tracking-wide uppercase">Features</p>
+        <h2 class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+          Automatic photo sharing
+        </h2>
         <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
-          From sharing your photos automatically through your tags <br />
-          to sharing them again due to group restriction limits
+          Share your photographs to Flick groups by tags
+          <br />
+          and reshare them in case of group restriction limits.
         </p>
       </div>
 
@@ -32,9 +33,9 @@
               >
                 <component :is="feature.icon" class="h-6 w-6" aria-hidden="true" />
               </div>
-              <p class="ml-16 text-lg leading-6 font-medium text-gray-900">
+              <h2 class="ml-16 text-lg leading-6 font-medium text-gray-900">
                 {{ feature.name }}
-              </p>
+              </h2>
             </dt>
             <dd class="mt-2 ml-16 text-base text-gray-500">
               {{ feature.description }}
@@ -51,15 +52,15 @@
 
   const features = [
     {
-      name: "Tag your groups and photos",
+      name: "Tag your photographs and groups",
       description:
-        "When you upload a new photo, it will be automatically added to your groups by means of the desired tag/s. One shot configuration.",
+        "Label your photographs and get them automatically added to groups through the ideal tags.",
       icon: HashtagIcon
     },
     {
-      name: "Auto schedule built-in",
+      name: "Auto-scheduled for resharing",
       description:
-        "Every rejected photo due to group restriction limits is auto scheduled for reshare. You won't miss it.",
+        "Each dismissed photograph is scheduled for resharing automatically; this way, you will never miss it. Saves time!",
       icon: RefreshIcon
     },
     {
@@ -69,9 +70,9 @@
       icon: ClockIcon
     },
     {
-      name: "Engage with more users",
+      name: "Gain likes and views",
       description:
-        "Sharing photos to more groups will make your photos more visible at Flickr. Gaining views and likes.",
+        "Engage with users by sharing photos with additional groups. This will make your photographs more apparent on Flickr. You are acquiring likes and gaining views for your pictures.",
       icon: AnnotationIcon
     }
   ]

@@ -6,37 +6,49 @@
         lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-24
       "
     >
-      <div
-        class="px-4 max-w-xl mx-auto sm:px-6 lg:py-32 lg:max-w-none lg:mx-0 lg:px-0 lg:col-start-2"
-      >
-        <div>
-          <dl class="space-y-10">
-            <div v-for="item in transferFeatures" :key="item.id" class="relative">
-              <dt>
-                <div
-                  class="
-                    absolute
-                    flex
-                    items-center
-                    justify-center
-                    h-12
-                    w-12
-                    rounded-md
-                    bg-indigo-500
-                    text-white
-                  "
-                >
-                  <component :is="item.icon" class="h-6 w-6" aria-hidden="true" />
-                </div>
-                <p class="ml-16 text-lg leading-6 font-medium text-gray-900">
-                  {{ item.name }}
-                </p>
-              </dt>
-              <dd class="mt-2 ml-16 text-base text-gray-500">
-                {{ item.description }}
-              </dd>
-            </div>
-          </dl>
+      <div class="px-4 max-w-xl mx-auto sm:px-6 lg:max-w-none lg:mx-0 lg:px-0 lg:col-start-2">
+        <div class="text-base max-w-prose mx-auto lg:max-w-none">
+          <p class="text-base text-indigo-600 font-semibold tracking-wide uppercase">basic usage</p>
+          <h2
+            class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl"
+          >
+            How to use Skedr.io?
+          </h2>
+        </div>
+        <div class="relative z-10 text-base max-w-prose mx-auto">
+          <p class="text-lg text-gray-500">
+            Drinking a coffee or tea every day certainly costs you more than the yearly payment
+            required by Skedr.io, which offers you the lowest possible price. Yes, you read that
+            right.
+          </p>
+        </div>
+
+        <div class="relative z-10">
+          <div class="prose prose-indigo text-gray-500 mx-auto lg:max-w-none">
+            <p>
+              Moreover, there is a free rendition that permits you to share with a limited number of
+              25 groups. Save your time and look at the following guide to start using Skedr.io
+              without any difficulty.
+            </p>
+            <ul role="list">
+              <li>
+                As soon as you approve Skedr.io to post to your Flickr on your behalf, your record
+                will show you all the Flickr groups automatically.
+              </li>
+              <li>
+                You have to be careful by labeling or tagging your photos. Make sure to tag them
+                according to the rules of each group. A tag must be a keyword or something
+                meaningful to the group.
+              </li>
+              <li>
+                After tagging the photograph with the desired category or group, use the sync button
+                under each picture on the stream.
+                <br />
+                Skedr.io will go through all of the tags in that photo and share it with all groups
+                that match those tags
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
       <div class="mt-12 sm:mt-16 lg:mt-0 lg:col-start-1">
@@ -59,39 +71,3 @@
     </div>
   </div>
 </template>
-
-<script>
-  import { GlobeIcon, LightBulbIcon, PhotographIcon } from "@heroicons/vue/outline"
-
-  const transferFeatures = [
-    {
-      id: 1,
-      name: "For professionals",
-      description:
-        "Share your work easily with any group at any time. Focus on finding new clients. We will share your photos.",
-      icon: GlobeIcon
-    },
-    {
-      id: 2,
-      name: "For enthusiasts",
-      description:
-        "Gain views and likes by easily sharing your photos in lots of groups. Don't waste your time and improve your photography skills.",
-      icon: LightBulbIcon
-    },
-    {
-      id: 3,
-      name: "For beginners",
-      description:
-        "Improve your shots and photography through other photographer’s eyes. Share and discover. And always have fun.",
-      icon: PhotographIcon
-    }
-  ]
-
-  export default {
-    setup() {
-      return {
-        transferFeatures
-      }
-    }
-  }
-</script>

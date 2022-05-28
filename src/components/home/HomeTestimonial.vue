@@ -39,16 +39,16 @@
             <div class="flex items-start">
               <div class="flex-shrink-0 inline-flex rounded-full border-2 border-white">
                 <img
-                  v-lazy="'https://farm4.staticflickr.com/3766/buddyicons/66358983@N07.jpg'"
+                  v-lazy="'https://farm5.staticflickr.com/4571/buddyicons/159869034@N02_r.jpg'"
                   class="h-12 w-12 rounded-full"
                   width="48"
                   height="48"
-                  alt="Brian Evans"
+                  alt="Carsten Skodell"
                 />
               </div>
               <div class="ml-4">
-                <div class="text-base font-medium text-white">Brian Evans</div>
-                <div class="text-base font-medium text-indigo-200">5066 Photos</div>
+                <div class="text-base font-medium text-white">Carsten Skodell</div>
+                <div class="text-base font-medium text-indigo-200">497 Photos</div>
               </div>
             </div>
           </footer>
@@ -93,7 +93,7 @@
             <div class="flex items-start">
               <div class="flex-shrink-0 inline-flex rounded-full border-2 border-white">
                 <img
-                  v-lazy="'https://farm6.staticflickr.com/5602/buddyicons/91905103@N02.jpg'"
+                  v-lazy="'https://farm6.staticflickr.com/5602/buddyicons/91905103@N02_r.jpg'"
                   class="h-12 w-12 rounded-full"
                   width="48"
                   height="48"
