@@ -51,19 +51,19 @@
       title: "General",
       items: [
         {
-          question: "Who is behind Skedr.io?",
+          question: "How is the founder of Skedr.io?",
           answer:
-            "Enric Bisbe Gil is the owner and creator of Skedr.io. His Flickr profile can be found at <a href='https://www.flickr.com/photos/enric-bisbe'>https://www.flickr.com/photos/enric-bisbe</a>"
+            "The founder of Skedr.io is Enric Bisbe Gil, a full stack web developer also involved in many other projects."
         },
         {
-          question: "What is the purpose of Skedr.io?",
+          question: "What is the aim of Skedr.io?",
           answer:
-            "Skedr.io aims to help you by saving time when sharing your photos in Flickr. Adding the same photo to groups with different Posting Limits may make your life harder, so we are automating this process for you."
+            "The aim is to save your time by automatically posting photographs to groups based on the tags you attach on Flickr. So it is a flick photo-sharing app. It is difficult for the users to share a single photograph in different groups with different restriction limits; therefore, Skedr is here to make your life easier by automating the entire posting and resharing procedure."
         },
         {
-          question: "Will Skedr.io post any photo without my specific instructions?",
+          question: "Will Skedr post pictures without any instructions?",
           answer:
-            "No. <br><br>Skedr.io will never post any photos without having specifically configured the tool to do so. Specific instructions and configuration is needed for each and every action on a photo, including activating the Group Tagging feature."
+            "No. <br><br>Skedr will never post or share your photograph until or unless you provide specific instructions. These particular instructions include the group tagging feature as well."
         },
         {
           question: "Will Skedr.io keep my photos and have rights on them?",
@@ -78,12 +78,12 @@
         {
           question: "Will Skedr.io join new groups on my behalf?",
           answer:
-            "No. <br><br>It is on the Skedr.io plans in the future to include a functionality which will recommend interesting groups for you to share your photos with. However, groups will be suggested and the user will decide whether to join them or not."
+            "No. <br><br>Skedr will never join groups automatically on your behalf; instead, you will need to choose the desired groups. Skedr will only suggest groups related to your photographs and tags."
         },
         {
-          question: "How does Skedr.io handle PRIVATE photos from Flickr?",
+          question: "How will Skedr handle Private Photos from Flickr?",
           answer:
-            "All photos are shared with the users registered in each group. Private photos will show a LOCK icon.<br><br>When you share a private photo in Flickr from your Photostream to any group, that photo is visible to any member of the group. This is a behaviour within Flickr and there is nothing we can do to change it. If this is at any case causing you a major problem when sharing your photos, please contact us at our email and we will do our best to find a solution."
+            "All photographs are imparted to the clients enrolled in each gathering. Private pictures will show a LOCK symbol. <br/>Whenever you share a photo with a group, the photo is visible to all members."
         }
       ]
     },
@@ -93,7 +93,7 @@
         {
           question: "What is Automated scheduling?",
           answer:
-            "This functionality will allow you to share a photo to a group in a future date. This date is limited by the posting limits according to the group configuration.<br><br>Whenever a photo is not successfully added to a group, Flickr’s API will inform us with an error code (code number 5). For more information about error codes please visit <a href='https://www.flickr.com/services/api/flickr.groups.pools.add.html'>https://www.flickr.com/services/api/flickr.groups.pools.add.html</a>."
+            "This is a function that will allow you to schedule a reshare for the photograph automatically. <br/>If the picture you have posted is dismissed due to group limitations and restrictions, Skedr.io will automatically schedule the photo for resharing. This way, you will never miss it and save your time!"
         },
         {
           question: "What is Group Tagging?",
@@ -108,7 +108,7 @@
         {
           question: "What is Autoimported comment?",
           answer:
-            "Every time you share a photo through the Skedr.io app, a message will be displayed saying: 'Shared with Skedr.io to X groups.'. We do this as a way of promoting our app.<br><br> We will not allow ads on our pages or resell any data as a way of promotion or for getting incomes."
+            "Every time you share a photo through the Skedr.io app, a message will be displayed similar to: 'Shared with Skedr.io to X groups.'. We do this as a way of promoting our app.<br><br> We will not allow ads on our pages or resell any data as a way of promotion or for getting incomes."
         }
       ]
     },
@@ -121,14 +121,9 @@
             "In order to add a photo to a group Flickr needs <strong>WRITE PERMISSIONS</strong> from you account. Under the '<i>Authentication</i>' headline you can read all the related information <a href=\"https://www.flickr.com/services/api/flickr.groups.pools.add.html\">https://www.flickr.com/services/api/flickr.groups.pools.add.html</a>"
         },
         {
-          question: "How do I start using Skedr.io?",
+          question: "How to start using Skedr.io?",
           answer:
-            "Skedr.io is a Flickr App ( <a href='https://www.flickr.com/services/apps/about/'>https://www.flickr.com/services/apps/about/</a> ) therefore it follows all the Community Guidelines. Its page under Flickr is <a href='https://www.flickr.com/services/apps/72157686812430944/'>https://www.flickr.com/services/apps/72157686812430944/</a>."
-        },
-        {
-          question: "How will I know what photos are posted in which groups?",
-          answer:
-            "At the top right of the toolbar there is a Notification center with all the notifications from your actions."
+            "Skedr.io is an Flickr App. This is the reason that it follows all community guidelines. You may go to the website <a href='https://skedr.io' class='underline'>https://skedr.io</a> and register yourself to start using the site."
         },
         {
           question: "Do we need to upload our photos to Skedr.io?",
@@ -136,14 +131,9 @@
             "No. We don't want you to alter your workflow. Whether you work with Lightroom, Apple Photos or any kind of Flickr Uploader you will continue working with them. We just need you to use our Group Tagging feature."
         },
         {
-          question: "My photos are not being added to groups. Is there something wrong?",
+          question: "Is there a need to install any software?",
           answer:
-            "We update all your photos every hour on the hour. It means that if you upload a photo to Flickr let’s say at 6.36pm, it will not be uploaded until 7pm."
-        },
-        {
-          question: "Do I need to install any software?",
-          answer:
-            "Skedr.io is a web based app so you it does not require to install any software. You can access with any browser in any device. It has been optimized to work better in the latests versions of browsers such as Firefox, Chrome, Edge, Safari and Opera. You can use it on Mac, Linux or Windows."
+            "Skedr is a web-based app, so you do not need to install any software; instead, enter yourself on the website. It has been improved and works much better in various browsers, including Chrome, Firefox, Safari, and Opera."
         }
       ]
     }
