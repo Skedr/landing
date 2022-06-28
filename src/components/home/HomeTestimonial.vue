@@ -2,27 +2,12 @@
   <section class="bg-gradient-to-r from-indigo-800 via-indigo-700 to-indigo-800">
     <div class="max-w-7xl mx-auto md:grid md:grid-cols-2 md:px-6 lg:px-8">
       <div
-        class="
-          py-12
-          px-4
-          sm:px-6
-          md:flex md:flex-col md:py-16 md:pl-0 md:pr-10 md:border-r md:border-indigo-900
-          lg:pr-16
-        "
+        class="py-12 px-4 sm:px-6 md:flex md:flex-col md:py-16 md:pl-0 md:pr-10 md:border-r md:border-indigo-900 lg:pr-16"
       >
         <blockquote class="mt-6 md:flex-grow md:flex md:flex-col">
           <div class="relative text-lg font-medium text-white md:flex-grow">
             <svg
-              class="
-                absolute
-                top-0
-                left-0
-                transform
-                -translate-x-3 -translate-y-2
-                h-8
-                w-8
-                text-indigo-600
-              "
+              class="absolute top-0 left-0 -translate-x-3 -translate-y-2 h-8 w-8 text-indigo-600"
               fill="currentColor"
               viewBox="0 0 32 32"
               aria-hidden="true"
@@ -55,28 +40,12 @@
         </blockquote>
       </div>
       <div
-        class="
-          py-12
-          px-4
-          border-t-2 border-indigo-900
-          sm:px-6
-          md:py-16 md:pr-0 md:pl-10 md:border-t-0 md:border-l
-          lg:pl-16
-        "
+        class="py-12 px-4 border-t-2 border-indigo-900 sm:px-6 md:py-16 md:pr-0 md:pl-10 md:border-t-0 md:border-l lg:pl-16"
       >
         <blockquote class="mt-6 md:flex-grow md:flex md:flex-col">
           <div class="relative text-lg font-medium text-white md:flex-grow">
             <svg
-              class="
-                absolute
-                top-0
-                left-0
-                transform
-                -translate-x-3 -translate-y-2
-                h-8
-                w-8
-                text-indigo-600
-              "
+              class="absolute top-0 left-0 -translate-x-3 -translate-y-2 h-8 w-8 text-indigo-600"
               fill="currentColor"
               viewBox="0 0 32 32"
             >

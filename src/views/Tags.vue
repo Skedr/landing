@@ -46,15 +46,7 @@
         </div>
         <div class="mt-12 relative text-base max-w-prose mx-auto lg:mt-0 lg:max-w-none">
           <svg
-            class="
-              absolute
-              top-0
-              right-0
-              -mt-20
-              -mr-20
-              lg:top-auto lg:right-auto lg:bottom-1/2 lg:left-1/2 lg:mt-0 lg:mr-0
-              xl:top-0 xl:right-0 xl:-mt-20 xl:-mr-20
-            "
+            class="absolute top-0 right-0 -mt-20 -mr-20 lg:top-auto lg:right-auto lg:bottom-1/2 lg:left-1/2 lg:mt-0 lg:mr-0 xl:top-0 xl:right-0 xl:-mt-20 xl:-mr-20"
             width="404"
             height="384"
             fill="none"
@@ -84,16 +76,7 @@
               />
               <div class="relative text-lg text-gray-700 font-medium mt-8">
                 <svg
-                  class="
-                    absolute
-                    top-0
-                    left-0
-                    transform
-                    -translate-x-3 -translate-y-2
-                    h-8
-                    w-8
-                    text-gray-200
-                  "
+                  class="absolute top-0 left-0 -translate-x-3 -translate-y-2 h-8 w-8 text-gray-200"
                   fill="currentColor"
                   viewBox="0 0 32 32"
                   aria-hidden="true"
@@ -110,26 +93,10 @@
               </div>
             </div>
             <cite
-              class="
-                relative
-                flex
-                items-center
-                sm:items-start
-                bg-indigo-600
-                rounded-b-lg
-                not-italic
-                py-5
-                px-6
-                sm:py-5 sm:pl-12 sm:pr-10 sm:mt-10
-              "
+              class="relative flex items-center sm:items-start bg-indigo-600 rounded-b-lg not-italic py-5 px-6 sm:py-5 sm:pl-12 sm:pr-10 sm:mt-10"
             >
               <div
-                class="
-                  relative
-                  rounded-full
-                  border-2 border-white
-                  sm:absolute sm:top-0 sm:transform sm:-translate-y-1/2
-                "
+                class="relative rounded-full border-2 border-white sm:absolute sm:top-0 sm:-translate-y-1/2"
               >
                 <img
                   class="w-12 h-12 sm:w-20 sm:h-20 rounded-full bg-indigo-300"
@@ -209,13 +176,7 @@
             <p class="text-lg text-gray-500">That is accomplished in a few steps:</p>
           </div>
           <div
-            class="
-              mt-5
-              prose prose-indigo
-              text-gray-500
-              mx-auto
-              lg:max-w-none lg:row-start-1 lg:col-start-1
-            "
+            class="mt-5 prose prose-indigo text-gray-500 mx-auto lg:max-w-none lg:row-start-1 lg:col-start-1"
           >
             <ul role="list">
               <li>

@@ -26,7 +26,7 @@
                 </span>
                 <span class="ml-6 h-7 flex items-center">
                   <ChevronDownIcon
-                    :class="[open ? '-rotate-180' : 'rotate-0', 'h-6 w-6 transform']"
+                    :class="[open ? '-rotate-180' : 'rotate-0', 'h-6 w-6']"
                     aria-hidden="true"
                   />
                 </span>

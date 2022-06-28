@@ -11,29 +11,12 @@
         your images are auto-shared when a limit is reached.
       </p>
       <div
-        class="
-          mt-12
-          grid grid-cols-1
-          gap-x-6 gap-y-12
-          sm:grid-cols-2
-          lg:mt-16 lg:grid-cols-3 lg:gap-x-8 lg:gap-y-16
-        "
+        class="mt-12 grid grid-cols-1 gap-x-6 gap-y-12 sm:grid-cols-2 lg:mt-16 lg:grid-cols-3 lg:gap-x-8 lg:gap-y-16"
       >
         <div v-for="feature in features" :key="feature.name">
           <div>
             <span
-              class="
-                flex
-                items-center
-                justify-center
-                h-12
-                w-min
-                text-white
-                px-3
-                py-2
-                rounded-md
-                bg-white bg-opacity-10
-              "
+              class="flex items-center justify-center h-12 w-min text-white px-3 py-2 rounded-md bg-white/10"
             >
               <component :is="feature.icon" class="h-6 w-6 text-white mr-1.5" aria-hidden="true" />
               {{ feature.name }}

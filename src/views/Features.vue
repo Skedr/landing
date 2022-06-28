@@ -3,25 +3,13 @@
   <div class="relative bg-gray-50 pt-16 pb-32 overflow-hidden">
     <div class="relative">
       <div
-        class="
-          lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-24
-        "
+        class="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-24"
       >
         <div class="px-4 max-w-xl mx-auto sm:px-6 lg:py-16 lg:max-w-none lg:mx-0 lg:px-0">
           <div>
             <div>
               <span
-                class="
-                  h-12
-                  w-min
-                  text-white
-                  p-4
-                  rounded-md
-                  flex
-                  items-center
-                  justify-center
-                  bg-indigo-600
-                "
+                class="h-12 w-min text-white p-4 rounded-md flex items-center justify-center bg-indigo-600"
               >
                 <CollectionIcon class="h-6 w-6 mr-1.5" />
                 Group
@@ -49,7 +37,7 @@
                 <li>
                   The fastest way to know if a group has been opted-out of Flickr default photo
                   limit sharing is by the
-                  <span class="text-green-500">green ( opted out )</span>
+                  <span class="text-emerald-500">green ( opted out )</span>
                   or
                   <span class="text-red-500">red ( not opted out )</span>
                   circle on each logo's group. You can hover to read a little description.
@@ -66,14 +54,7 @@
         <div class="mt-12 sm:mt-16 lg:mt-0">
           <div class="pl-4 -mr-48 sm:pl-6 md:-mr-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
             <video
-              class="
-                w-full
-                rounded-xl
-                shadow-xl
-                max-h-full
-                ring-1 ring-black ring-opacity-5
-                lg:absolute lg:left-0 lg:w-auto lg:max-w-none
-              "
+              class="w-full rounded-xl shadow-xl max-h-full ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:w-auto lg:max-w-none"
               autoplay
               loop
             >
@@ -85,25 +66,13 @@
     </div>
     <div class="mt-24">
       <div
-        class="
-          lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-24
-        "
+        class="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-24"
       >
         <div class="px-4 max-w-xl mx-auto sm:px-6 lg:max-w-none lg:mx-0 lg:px-0 lg:col-start-2">
           <div>
             <div>
               <span
-                class="
-                  h-12
-                  w-min
-                  text-white
-                  p-4
-                  rounded-md
-                  flex
-                  items-center
-                  justify-center
-                  bg-indigo-600
-                "
+                class="h-12 w-min text-white p-4 rounded-md flex items-center justify-center bg-indigo-600"
               >
                 <CogIcon class="h-6 w-6 mr-1.5" aria-hidden="true" />
                 Configuration
@@ -142,14 +111,7 @@
         <div class="mt-12 sm:mt-16 lg:mt-0 lg:col-start-1">
           <div class="pr-4 -ml-48 sm:pr-6 md:-ml-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
             <video
-              class="
-                w-full
-                rounded-xl
-                shadow-xl
-                max-h-full
-                ring-1 ring-black ring-opacity-5
-                lg:absolute lg:right-0 lg:w-auto lg:max-w-none
-              "
+              class="w-full rounded-xl shadow-xl max-h-full ring-1 ring-black ring-opacity-5 lg:absolute lg:right-0 lg:w-auto lg:max-w-none"
               autoplay
               loop
             >

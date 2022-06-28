@@ -49,7 +49,6 @@
           <img
             v-lazy="'/screenshot_scheduled.png'"
             class="
-              transform
               translate-x-6 translate-y-6
               rounded-md
               shadow-lg

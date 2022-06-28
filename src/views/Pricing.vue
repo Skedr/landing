@@ -12,23 +12,7 @@
         <div class="bg-indigo-700 p-0.5 rounded-lg flex">
           <button
             type="button"
-            class="
-              relative
-              py-2
-              px-6
-              border-indigo-700
-              rounded-md
-              shadow-sm
-              text-sm
-              font-medium
-              whitespace-nowrap
-              focus:ring-offset-indigo-700
-              focus:ring-white
-              focus:outline-none
-              focus:ring-2
-              focus:ring-offset-2
-              focus:z-10
-            "
+            class="relative py-2 px-6 border-indigo-700 rounded-md shadow-sm text-sm font-medium whitespace-nowrap focus:ring-offset-indigo-700 focus:ring-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:z-10"
             :class="{
               'text-indigo-700 hover:bg-indigo-50  bg-white': billingModeMonthly,
               'text-indigo-200 hover:bg-indigo-800 ': !billingModeMonthly
@@ -39,23 +23,7 @@
           </button>
           <button
             type="button"
-            class="
-              ml-0.5
-              relative
-              py-2
-              px-6
-              border border-transparent
-              rounded-md
-              text-sm
-              font-medium
-              whitespace-nowrap
-              focus:outline-none
-              focus:ring-2
-              focus:ring-offset-2
-              focus:ring-offset-indigo-700
-              focus:ring-white
-              focus:z-10
-            "
+            class="ml-0.5 relative py-2 px-6 border border-transparent rounded-md text-sm font-medium whitespace-nowrap focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-indigo-700 focus:ring-white focus:z-10"
             :class="{
               'text-indigo-200 hover:bg-indigo-800 ': billingModeMonthly,
               'text-indigo-700 hover:bg-indigo-50 bg-white': !billingModeMonthly
@@ -69,32 +37,12 @@
 
       <!-- Cards -->
       <div
-        class="
-          relative
-          mt-8
-          max-w-2xl
-          mx-auto
-          px-4
-          pb-8
-          sm:mt-12 sm:px-6
-          lg:max-w-7xl lg:px-8 lg:pb-0
-        "
+        class="relative mt-8 max-w-2xl mx-auto px-4 pb-8 sm:mt-12 sm:px-6 lg:max-w-7xl lg:px-8 lg:pb-0"
       >
         <!-- Decorative background -->
         <div
           aria-hidden="true"
-          class="
-            hidden
-            absolute
-            top-4
-            bottom-6
-            left-8
-            right-8
-            inset-0
-            bg-indigo-700
-            rounded-tl-lg rounded-tr-lg
-            lg:block
-          "
+          class="hidden absolute top-4 bottom-6 left-8 right-8 inset-0 bg-indigo-700 rounded-tl-lg rounded-tr-lg lg:block"
         />
 
         <div class="relative space-y-6 lg:space-y-0 lg:grid lg:grid-cols-3">
@@ -119,31 +67,12 @@
               </h3>
               <p
                 v-if="plan.mostPopular"
-                class="
-                  absolute
-                  top-0
-                  py-1.5
-                  px-4
-                  rounded-full
-                  text-xs
-                  font-semibold
-                  uppercase
-                  tracking-wide
-                  text-white
-                  transform
-                  -translate-y-3
-                  bg-amber-500
-                "
+                class="absolute top-0 py-1.5 px-4 rounded-full text-xs font-semibold uppercase tracking-wide text-white -translate-y-3 bg-amber-500"
               >
                 2 mo for free with Yearly
               </p>
               <div
-                class="
-                  flex flex-col
-                  items-start
-                  sm:flex-row sm:items-center sm:justify-between
-                  lg:flex-col lg:items-start
-                "
+                class="flex flex-col items-start sm:flex-row sm:items-center sm:justify-between lg:flex-col lg:items-start"
               >
                 <div v-if="plan.priceMonthly > 0" class="mt-3 flex items-center">
                   <p
@@ -576,7 +505,7 @@
   <div class="bg-indigo-700">
     <div class="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
       <h2 class="text-3xl font-extrabold text-white">Frequently asked questions</h2>
-      <div class="mt-6 border-t border-indigo-300 border-opacity-25 pt-10">
+      <div class="mt-6 border-t border-indigo-300/25 pt-10">
         <dl class="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-12">
           <div v-for="faq in faqs" :key="faq.id">
             <dt class="text-lg leading-6 font-medium text-white">

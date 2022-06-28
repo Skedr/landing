@@ -9,7 +9,7 @@
         <div v-for="feature in features" :key="feature.name">
           <dt class="flex">
             <div
-              class="flex items-center justify-center h-12 w-12 rounded-md bg-white bg-opacity-10"
+              class="flex items-center justify-center h-12 w-12 rounded-md bg-white/10"
             >
               <component :is="feature.icon" class="h-6 w-6" aria-hidden="true" />
             </div>

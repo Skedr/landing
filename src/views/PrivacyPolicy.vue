@@ -3,7 +3,7 @@
     <div class="hidden lg:block lg:absolute lg:inset-y-0 lg:h-full lg:w-full">
       <div class="relative h-full text-lg max-w-prose mx-auto" aria-hidden="true">
         <svg
-          class="absolute top-12 left-full transform translate-x-32"
+          class="absolute top-12 left-full translate-x-32"
           width="404"
           height="384"
           fill="none"
@@ -24,7 +24,7 @@
           <rect width="404" height="384" fill="url(#74b3fd99-0a6f-4271-bef2-e80eeafdf357)" />
         </svg>
         <svg
-          class="absolute top-1/2 right-full transform -translate-y-1/2 -translate-x-32"
+          class="absolute top-1/2 right-full -translate-y-1/2 -translate-x-32"
           width="404"
           height="384"
           fill="none"
@@ -45,7 +45,7 @@
           <rect width="404" height="384" fill="url(#f210dbf6-a58d-4871-961e-36d5016a0f49)" />
         </svg>
         <svg
-          class="absolute bottom-12 left-full transform translate-x-32"
+          class="absolute bottom-12 left-full translate-x-32"
           width="404"
           height="384"
           fill="none"
@@ -71,29 +71,15 @@
       <div class="text-lg max-w-prose mx-auto">
         <h2>
           <span
-            class="
-              block
-              text-base text-center text-indigo-600
-              font-semibold
-              tracking-wide
-              uppercase
-            "
+            class="block text-base text-center text-indigo-600 font-semibold tracking-wide uppercase"
           >
             October 16, 2018
           </span>
           <span
-            class="
-              mt-2
-              block
-              text-3xl text-center
-              leading-8
-              font-extrabold
-              tracking-tight
-              text-gray-900
-              sm:text-4xl
-            "
-            >Summary</span
+            class="mt-2 block text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl"
           >
+            Summary
+          </span>
         </h2>
       </div>
       <div class="mt-6 prose prose-indigo prose-lg text-gray-500 mx-auto">
@@ -122,28 +108,14 @@
       <div class="text-lg max-w-prose mx-auto">
         <h2>
           <span
-            class="
-              block
-              text-base text-center text-indigo-600
-              font-semibold
-              tracking-wide
-              uppercase
-            "
+            class="block text-base text-center text-indigo-600 font-semibold tracking-wide uppercase"
           >
             Personal Data
           </span>
           <span
-            class="
-              mt-2
-              block
-              text-3xl text-center
-              leading-8
-              font-extrabold
-              tracking-tight
-              text-gray-900
-              sm:text-4xl
-            "
-            >Information collection and use
+            class="mt-2 block text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl"
+          >
+            Information collection and use
           </span>
         </h2>
       </div>
@@ -193,12 +165,18 @@
         </p>
         <p>Examples of Cookies we use:</p>
         <ul role="list">
-          <li><strong>Session cookies</strong>: We use Session Cookies to operate our Service.</li>
           <li>
-            <strong>Preference Cookies</strong>: We use Preference Cookies to remember your
-            preferences and various settings.
+            <strong>Session cookies</strong>
+            : We use Session Cookies to operate our Service.
           </li>
-          <li><strong>Security Cookies</strong>: We use Security Cookies for security purposes.</li>
+          <li>
+            <strong>Preference Cookies</strong>
+            : We use Preference Cookies to remember your preferences and various settings.
+          </li>
+          <li>
+            <strong>Security Cookies</strong>
+            : We use Security Cookies for security purposes.
+          </li>
         </ul>
         <h3>Use of data</h3>
         <p>Skedr.io uses the collected data for various purposes:</p>
@@ -237,29 +215,15 @@
       <div class="text-lg max-w-prose mx-auto">
         <h2>
           <span
-            class="
-              block
-              text-base text-center text-indigo-600
-              font-semibold
-              tracking-wide
-              uppercase
-            "
+            class="block text-base text-center text-indigo-600 font-semibold tracking-wide uppercase"
           >
             Legal Requirements
           </span>
           <span
-            class="
-              mt-2
-              block
-              text-3xl text-center
-              leading-8
-              font-extrabold
-              tracking-tight
-              text-gray-900
-              sm:text-4xl
-            "
-            >Disclosure Of Data</span
+            class="mt-2 block text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl"
           >
+            Disclosure Of Data
+          </span>
         </h2>
       </div>
       <div class="mt-6 prose prose-indigo prose-lg text-gray-500 mx-auto">
@@ -307,9 +271,9 @@
             <p>
               For more information on the privacy practices of Google, please visit the Google
               Privacy & Terms web page:
-              <a href="https://policies.google.com/privacy?hl=en"
-                >https://policies.google.com/privacy?hl=en</a
-              >
+              <a href="https://policies.google.com/privacy?hl=en">
+                https://policies.google.com/privacy?hl=en
+              </a>
             </p>
           </li>
         </ul>
@@ -329,18 +293,10 @@
       <div class="text-lg max-w-prose mx-auto">
         <h2>
           <span
-            class="
-              mt-2
-              block
-              text-3xl text-center
-              leading-8
-              font-extrabold
-              tracking-tight
-              text-gray-900
-              sm:text-4xl
-            "
-            >Children's Privacy</span
+            class="mt-2 block text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl"
           >
+            Children's Privacy
+          </span>
         </h2>
       </div>
       <div class="mt-6 prose prose-indigo prose-lg text-gray-500 mx-auto">
@@ -358,29 +314,15 @@
       <div class="text-lg max-w-prose mx-auto">
         <h2>
           <span
-            class="
-              block
-              text-base text-center text-indigo-600
-              font-semibold
-              tracking-wide
-              uppercase
-            "
+            class="block text-base text-center text-indigo-600 font-semibold tracking-wide uppercase"
           >
             October 16, 2018
           </span>
           <span
-            class="
-              mt-2
-              block
-              text-3xl text-center
-              leading-8
-              font-extrabold
-              tracking-tight
-              text-gray-900
-              sm:text-4xl
-            "
-            >Changes To This Privacy Policy</span
+            class="mt-2 block text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl"
           >
+            Changes To This Privacy Policy
+          </span>
         </h2>
       </div>
       <div class="mt-6 prose prose-indigo prose-lg text-gray-500 mx-auto">
