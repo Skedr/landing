@@ -13,6 +13,9 @@ export const ssrTransformCustomDir = () => {
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  ssgOptions: {
+    format: "cjs"
+  },
   plugins: [
     vue({
       template: {

@@ -3,7 +3,7 @@ export const routes = [
     path: "/",
     name: "home",
     components: {
-      default: () => import("./views/Home.vue"),
+      default: () => import("./views/HomePage.vue"),
       header: () => import("./components/headers/HeaderHome.vue")
     },
     meta: {
@@ -15,7 +15,7 @@ export const routes = [
     path: "/pricing",
     name: "pricing",
     components: {
-      default: () => import("./views/Pricing.vue"),
+      default: () => import("./views/PricingPage.vue"),
       header: () => import("./components/headers/HeaderPricing.vue")
     },
     meta: {
@@ -28,7 +28,7 @@ export const routes = [
     path: "/features",
     name: "features",
     components: {
-      default: () => import("./views/Features.vue"),
+      default: () => import("./views/FeaturesPage.vue"),
       header: () => import("././components/headers/HeaderFeatures.vue")
     },
     meta: {
@@ -40,7 +40,7 @@ export const routes = [
     path: "/faq",
     name: "faq",
     components: {
-      default: () => import("./views/Faq.vue"),
+      default: () => import("./views/FaqPage.vue"),
       header: () => import("./components/headers/HeaderFaq.vue")
     },
     meta: {
@@ -52,7 +52,7 @@ export const routes = [
     path: "/privacy-policy",
     name: "privacy",
     components: {
-      default: () => import("./views/PrivacyPolicy.vue"),
+      default: () => import("./views/PrivacyPolicyPage.vue"),
       header: () => import("./components/headers/HeaderPrivacyPolicy.vue")
     },
     meta: { title: "Privacy Policy - Skedr.io", description: "Privacy Policy for Skedr.io" }
@@ -61,7 +61,7 @@ export const routes = [
     path: "/terms-and-conditions",
     name: "terms",
     components: {
-      default: () => import("./views/TermsAndConditions.vue"),
+      default: () => import("./views/TermsAndConditionsPage.vue"),
       header: () => import("./components/headers/HeaderTermsAndConditions.vue")
     },
     meta: {
@@ -73,7 +73,7 @@ export const routes = [
     path: "/articles/group-tagging",
     name: "tags",
     components: {
-      default: () => import("./views/Tags.vue"),
+      default: () => import("./views/TagsPage.vue"),
       header: () => import("./components/headers/HeaderTags.vue")
     }
   },
