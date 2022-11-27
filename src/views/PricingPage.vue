@@ -69,7 +69,7 @@
                 v-if="plan.mostPopular"
                 class="absolute top-0 py-1.5 px-4 rounded-full text-xs font-semibold uppercase tracking-wide text-white -translate-y-3 bg-amber-500"
               >
-                2 mo for free with Yearly
+                Use CYBRWEEK22 discount code for 50% off
               </p>
               <div
                 class="flex flex-col items-start sm:flex-row sm:items-center sm:justify-between lg:flex-col lg:items-start"
@@ -81,9 +81,28 @@
                       'text-4xl font-extrabold tracking-tight'
                     ]"
                   >
-                    {{ billingModeMonthly ? plan.priceMonthly : plan.priceYearly }}€
+                    {{
+                      parseInt(
+                        (billingModeMonthly ? plan.priceMonthly : plan.priceYearly) *
+                          (discount / 100) *
+                          100
+                      ) / 100
+                    }}€
                   </p>
-                  <div class="ml-4">
+                  <div v-if="discount" class="ml-4">
+                    <p
+                      :class="[
+                        plan.featured ? 'text-gray-700' : 'text-white',
+                        'text-sm line-through'
+                      ]"
+                    >
+                      {{ billingModeMonthly ? plan.priceMonthly : plan.priceYearly }}€
+                    </p>
+                    <p :class="[plan.featured ? 'text-amber-500' : 'text-amber-500', 'text-sm']">
+                      Save {{ discount }}% off
+                    </p>
+                  </div>
+                  <div v-else class="ml-4">
                     <p :class="[plan.featured ? 'text-gray-700' : 'text-white', 'text-sm']">
                       EUR / {{ billingModeMonthly ? "mo" : "yr" }}
                     </p>
@@ -524,6 +543,7 @@
   import { ref } from "vue"
 
   const upToGroups = 25
+  const discount = 50
 
   const plans = [
     {
@@ -678,6 +698,7 @@
     setup() {
       const billingModeMonthly = ref(true)
       return {
+        discount,
         plans,
         features,
         perks,

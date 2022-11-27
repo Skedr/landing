@@ -1,4 +1,19 @@
 <template>
+  <BaseBanner color="amber">
+    Use discount code CYBERWEEK22 and get 50% off for a lifetime
+    <template #icon>
+      <SpeakerphoneIcon />
+    </template>
+    <template #action>
+      <span class="text-white">Ending in: {{ formated }}</span>
+      <a
+        href="https://app.skedr.io/"
+        class="cyberweek22 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-gray-600 hover:bg-gray-700"
+      >
+        Subscribe
+      </a>
+    </template>
+  </BaseBanner>
   <div class="relative bg-gray-800 overflow-hidden pb-8 sm:pb-12 lg:pb-12">
     <div class="hidden sm:block sm:absolute sm:inset-0" aria-hidden="true">
       <svg
@@ -170,9 +185,10 @@
   </div>
 </template>
 
-<script>
+<script setup>
   import { Popover, PopoverButton, PopoverPanel } from "@headlessui/vue"
-  import { MenuIcon, XIcon } from "@heroicons/vue/outline"
+  import { MenuIcon, XIcon, SpeakerphoneIcon } from "@heroicons/vue/outline"
+  import { useTimeCounter } from "../../composables/useTimerCounter"
 
   const navigation = [
     { name: "Features", to: { name: "features" } },
@@ -184,19 +200,5 @@
     window.Beacon("toggle")
   }
 
-  export default {
-    components: {
-      Popover,
-      PopoverButton,
-      PopoverPanel,
-      MenuIcon,
-      XIcon
-    },
-    setup() {
-      return {
-        navigation,
-        openBeacon
-      }
-    }
-  }
+  const { formated } = useTimeCounter({ endIsoTime: "2022-12-05" })
 </script>
