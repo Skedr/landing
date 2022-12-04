@@ -69,7 +69,7 @@
                 v-if="plan.mostPopular"
                 class="absolute top-0 py-1.5 px-4 rounded-full text-xs font-semibold uppercase tracking-wide text-white -translate-y-3 bg-amber-500"
               >
-                Use CYBRWEEK22 discount code for 50% off
+                2 mo for free with yearly
               </p>
               <div
                 class="flex flex-col items-start sm:flex-row sm:items-center sm:justify-between lg:flex-col lg:items-start"
@@ -89,7 +89,7 @@
                       ) / 100
                     }}€
                   </p>
-                  <div v-if="discount" class="ml-4">
+                  <div v-if="discount !== 100" class="ml-4">
                     <p
                       :class="[
                         plan.featured ? 'text-gray-700' : 'text-white',
@@ -543,7 +543,7 @@
   import { ref } from "vue"
 
   const upToGroups = 25
-  const discount = 50
+  const discount = 100
 
   const plans = [
     {
