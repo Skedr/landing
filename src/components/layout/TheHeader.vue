@@ -1,5 +1,5 @@
 <template>
-  <BaseBanner color="amber">
+  <!-- <BaseBanner color="amber">
     Use discount code CYBERWEEK22 and get 50% off for a lifetime
     <template #icon>
       <SpeakerphoneIcon />
@@ -13,7 +13,7 @@
         Subscribe
       </a>
     </template>
-  </BaseBanner>
+  </BaseBanner> -->
   <div class="relative bg-gray-800 overflow-hidden pb-8 sm:pb-12 lg:pb-12">
     <div class="hidden sm:block sm:absolute sm:inset-0" aria-hidden="true">
       <svg
@@ -187,8 +187,8 @@
 
 <script setup>
   import { Popover, PopoverButton, PopoverPanel } from "@headlessui/vue"
-  import { MenuIcon, XIcon, SpeakerphoneIcon } from "@heroicons/vue/outline"
-  import { useTimeCounter } from "../../composables/useTimerCounter"
+  import { MenuIcon, XIcon } from "@heroicons/vue/outline"
+  //import { useTimeCounter } from "../../composables/useTimerCounter"
 
   const navigation = [
     { name: "Features", to: { name: "features" } },
@@ -200,5 +200,5 @@
     window.Beacon("toggle")
   }
 
-  const { formated } = useTimeCounter({ endIsoTime: "2022-12-05" })
+  //const { formated } = useTimeCounter({ endIsoTime: "2022-12-05" })
 </script>
