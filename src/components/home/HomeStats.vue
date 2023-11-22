@@ -23,7 +23,7 @@
         </div>
         <div class="flex flex-col mt-10 sm:mt-0">
           <dt class="order-2 mt-2 text-lg leading-6 font-medium text-indigo-200">shared photos</dt>
-          <dd class="order-1 text-5xl font-extrabold text-white">{{ totalShares }}</dd>
+          <dd class="order-1 text-5xl font-extrabold text-white">{{ amount }}</dd>
         </div>
       </dl>
     </div>
@@ -39,7 +39,7 @@
       }
       const configuredGroups = ref(0)
       const scheduledPhotos = ref(0)
-      const totalShares = ref(0)
+      const amount = ref(0)
 
       onMounted(async () => {
         const fetchedData = await fetch(`${import.meta.env.VITE_URL}/totals`).then((res) =>
@@ -47,9 +47,9 @@
         )
         configuredGroups.value = parseInt(fetchedData.configuredGroups)
         scheduledPhotos.value = parseInt(fetchedData.scheduledPhotos)
-        totalShares.value = parseInt(fetchedData.totalShares)
+        amount.value = parseInt(fetchedData.amount)
       })
-      return { configuredGroups, scheduledPhotos, totalShares }
+      return { configuredGroups, scheduledPhotos, amount }
     }
   }
 </script>
