@@ -99,6 +99,11 @@
           question: "What is Group Tagging?",
           answer:
             "To bind any tag of your choice to one or more groups. That is, to define the content of the photos included in the group by keywords (tags).<br><br>Every photo uploaded with one tag will be automatically added to every group that has been tagged with this same keyword.<br><br>For example: If you choose the tag #landscape to be bound to 3 different groups which are related to landscape photography, whenever a photo with that tag is uploaded to your photostream it will be automatically added to those 3 groups."
+        },
+        {
+          question: "What are credits?",
+          answer:
+            "Sharing a photo to a single group uses 1 credit. Credits are the pay/use as you go model for Skedr users that don't like subscriptions or share less photos. Everyone will earn 250 free credits each week."
         }
       ]
     },

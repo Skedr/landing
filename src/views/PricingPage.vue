@@ -53,7 +53,7 @@
               plan.featured
                 ? 'bg-white ring-2 ring-indigo-700 shadow-md'
                 : 'bg-indigo-700 lg:bg-transparent',
-              'relative pt-6 px-6 pb-3 rounded-lg lg:px-8 lg:pt-12'
+              'relative pt-6 px-6 pb-6 rounded-lg lg:px-8 lg:pt-12'
             ]"
           >
             <div>
@@ -124,7 +124,7 @@
                   </p>
                   <div class="ml-4">
                     <p :class="[plan.featured ? 'text-gray-700' : 'text-white', 'text-sm']">
-                      (forever)
+                      (spending credits)
                     </p>
                   </div>
                 </div>
@@ -230,7 +230,7 @@
                 plan.featured
                   ? 'ring-2 ring-indigo-600 shadow-md'
                   : 'ring-1 ring-black ring-opacity-5 shadow',
-                'relative py-3 px-4 bg-white rounded-lg sm:p-0 sm:bg-transparent sm:rounded-none sm:ring-0 sm:shadow-none'
+                'relative py-3 px-6 bg-white rounded-lg sm:p-0 sm:bg-transparent sm:rounded-none sm:ring-0 sm:shadow-none'
               ]"
             >
               <dl class="divide-y divide-gray-200">
@@ -279,59 +279,74 @@
             </div>
           </div>
 
-          <h4 class="mt-10 text-sm font-bold text-gray-900">Other perks</h4>
+          <template v-for="perk in perks" :key="perk.title">
+            <h4 class="mt-10 text-sm font-bold text-gray-900">{{ perk.title }}</h4>
 
-          <div class="mt-6 relative">
-            <!-- Fake card background -->
-            <div aria-hidden="true" class="hidden absolute inset-0 pointer-events-none sm:block">
-              <div
-                :class="[
-                  plan.featured ? 'shadow-md' : 'shadow',
-                  'absolute right-0 w-1/2 h-full bg-white rounded-lg'
-                ]"
-              />
-            </div>
-
-            <div
-              :class="[
-                plan.featured
-                  ? 'ring-2 ring-indigo-600 shadow-md'
-                  : 'ring-1 ring-black ring-opacity-5 shadow',
-                'relative py-3 px-4 bg-white rounded-lg sm:p-0 sm:bg-transparent sm:rounded-none sm:ring-0 sm:shadow-none'
-              ]"
-            >
-              <dl class="divide-y divide-gray-200">
+            <div class="mt-6 relative">
+              <!-- Fake card background -->
+              <div aria-hidden="true" class="hidden absolute inset-0 pointer-events-none sm:block">
                 <div
-                  v-for="perk in perks"
-                  :key="perk.title"
-                  class="py-3 flex justify-between sm:grid sm:grid-cols-2"
-                >
-                  <dt class="text-sm font-medium text-gray-600 sm:pr-4">{{ perk.title }}</dt>
-                  <dd class="text-center sm:px-4">
-                    <CheckIcon
-                      v-if="perk.tiers[mobilePlanIndex].value === true"
-                      class="mx-auto h-5 w-5 text-indigo-600"
-                      aria-hidden="true"
-                    />
-                    <XIcon v-else class="mx-auto h-5 w-5 text-gray-400" aria-hidden="true" />
-                    <span class="sr-only">
-                      {{ perk.tiers[mobilePlanIndex].value === true ? "Yes" : "No" }}
-                    </span>
-                  </dd>
-                </div>
-              </dl>
-            </div>
+                  :class="[
+                    plan.featured ? 'shadow-md' : 'shadow',
+                    'absolute right-0 w-1/2 h-full bg-white rounded-lg'
+                  ]"
+                />
+              </div>
 
-            <!-- Fake card border -->
-            <div aria-hidden="true" class="hidden absolute inset-0 pointer-events-none sm:block">
               <div
                 :class="[
-                  plan.featured ? 'ring-2 ring-indigo-600' : 'ring-1 ring-black ring-opacity-5',
-                  'absolute right-0 w-1/2 h-full rounded-lg'
+                  plan.featured
+                    ? 'ring-2 ring-indigo-600 shadow-md'
+                    : 'ring-1 ring-black ring-opacity-5 shadow',
+                  'relative py-3 px-4 bg-white rounded-lg sm:p-0 sm:bg-transparent sm:rounded-none sm:ring-0 sm:shadow-none'
                 ]"
-              />
+              >
+                <dl class="divide-y divide-gray-200">
+                  <div
+                    v-for="item in perk.items"
+                    :key="item.title"
+                    class="py-3 flex justify-between sm:grid sm:grid-cols-2"
+                  >
+                    <dt class="text-sm font-medium text-gray-600 sm:pr-4">{{ item.title }}</dt>
+                    <dd class="text-center sm:px-4">
+                      <span
+                        v-if="typeof item.tiers[mobilePlanIndex].value === 'string'"
+                        :class="[
+                          item.tiers[mobilePlanIndex].featured
+                            ? 'text-indigo-600'
+                            : 'text-gray-900',
+                          'text-sm font-medium'
+                        ]"
+                      >
+                        {{ item.tiers[mobilePlanIndex].value }}
+                      </span>
+                      <template v-else>
+                        <CheckIcon
+                          v-if="item.tiers[mobilePlanIndex].value === true"
+                          class="mx-auto h-5 w-5 text-indigo-600"
+                          aria-hidden="true"
+                        />
+                        <XIcon v-else class="mx-auto h-5 w-5 text-gray-400" aria-hidden="true" />
+                        <span class="sr-only">
+                          {{ item.tiers[mobilePlanIndex].value === true ? "Yes" : "No" }}
+                        </span>
+                      </template>
+                    </dd>
+                  </div>
+                </dl>
+              </div>
+
+              <!-- Fake card border -->
+              <div aria-hidden="true" class="hidden absolute inset-0 pointer-events-none sm:block">
+                <div
+                  :class="[
+                    plan.featured ? 'ring-2 ring-indigo-600' : 'ring-1 ring-black ring-opacity-5',
+                    'absolute right-0 w-1/2 h-full rounded-lg'
+                  ]"
+                />
+              </div>
             </div>
-          </div>
+          </template>
         </div>
       </div>
     </section>
@@ -447,76 +462,92 @@
           </div>
         </div>
 
-        <h3 class="mt-10 text-sm font-bold text-gray-900">Other perks</h3>
+        <template v-for="perk in perks" :key="perk.title">
+          <h3 class="mt-10 text-sm font-bold text-gray-900">{{ perk.title }}</h3>
 
-        <div class="mt-6 relative">
-          <!-- Fake card backgrounds -->
-          <div class="absolute inset-0 flex items-stretch pointer-events-none" aria-hidden="true">
-            <div class="w-1/4 pr-4" />
-            <div class="w-1/4 px-4">
-              <div class="w-full h-full bg-white rounded-lg shadow" />
+          <div class="mt-6 relative">
+            <!-- Fake card backgrounds -->
+            <div class="absolute inset-0 flex items-stretch pointer-events-none" aria-hidden="true">
+              <div class="w-1/4 pr-4" />
+              <div class="w-1/4 px-4">
+                <div class="w-full h-full bg-white rounded-lg shadow" />
+              </div>
+              <div class="w-1/4 px-4">
+                <div class="w-full h-full bg-white rounded-lg shadow-md" />
+              </div>
+              <div class="w-1/4 pl-4">
+                <div class="w-full h-full bg-white rounded-lg shadow" />
+              </div>
             </div>
-            <div class="w-1/4 px-4">
-              <div class="w-full h-full bg-white rounded-lg shadow-md" />
-            </div>
-            <div class="w-1/4 pl-4">
-              <div class="w-full h-full bg-white rounded-lg shadow" />
+
+            <table class="relative w-full">
+              <caption class="sr-only">Perk comparison</caption>
+              <thead>
+                <tr class="text-left">
+                  <th scope="col">
+                    <span class="sr-only">Perk</span>
+                  </th>
+                  <th v-for="plan in plans" :key="plan.title" scope="col">
+                    <span class="sr-only">{{ plan.title }} plan</span>
+                  </th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-gray-100">
+                <tr v-for="item in perk.items" :key="item.title">
+                  <th
+                    scope="row"
+                    class="w-1/4 py-3 pr-4 text-left text-sm font-medium text-gray-600"
+                  >
+                    {{ item.title }}
+                  </th>
+                  <td
+                    v-for="(tier, tierIdx) in item.tiers"
+                    :key="tier.title"
+                    :class="[
+                      tierIdx === item.tiers.length - 1 ? 'pl-4' : 'px-4',
+                      'relative w-1/4 py-0 text-center'
+                    ]"
+                  >
+                    <span class="relative w-full h-full py-3">
+                      <span
+                        v-if="typeof tier.value === 'string'"
+                        :class="[
+                          tier.featured ? 'text-indigo-600' : 'text-gray-900',
+                          'text-sm font-medium'
+                        ]"
+                      >
+                        {{ tier.value }}
+                      </span>
+                      <template v-else>
+                        <CheckIcon
+                          v-if="tier.value === true"
+                          class="mx-auto h-5 w-5 text-indigo-600"
+                          aria-hidden="true"
+                        />
+                        <XIcon v-else class="mx-auto h-5 w-5 text-gray-400" aria-hidden="true" />
+                        <span class="sr-only">{{ tier.value === true ? "Yes" : "No" }}</span>
+                      </template>
+                    </span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <!-- Fake card borders -->
+            <div class="absolute inset-0 flex items-stretch pointer-events-none" aria-hidden="true">
+              <div class="w-1/4 pr-4" />
+              <div class="w-1/4 px-4">
+                <div class="w-full h-full rounded-lg ring-1 ring-black ring-opacity-5" />
+              </div>
+              <div class="w-1/4 px-4">
+                <div class="w-full h-full rounded-lg ring-2 ring-indigo-600 ring-opacity-100" />
+              </div>
+              <div class="w-1/4 pl-4">
+                <div class="w-full h-full rounded-lg ring-1 ring-black ring-opacity-5" />
+              </div>
             </div>
           </div>
-
-          <table class="relative w-full">
-            <caption class="sr-only">Perk comparison</caption>
-            <thead>
-              <tr class="text-left">
-                <th scope="col">
-                  <span class="sr-only">Perk</span>
-                </th>
-                <th v-for="plan in plans" :key="plan.title" scope="col">
-                  <span class="sr-only">{{ plan.title }} plan</span>
-                </th>
-              </tr>
-            </thead>
-            <tbody class="divide-y divide-gray-100">
-              <tr v-for="perk in perks" :key="perk.title">
-                <th scope="row" class="w-1/4 py-3 pr-4 text-left text-sm font-medium text-gray-600">
-                  {{ perk.title }}
-                </th>
-                <td
-                  v-for="(tier, tierIdx) in perk.tiers"
-                  :key="tier.title"
-                  :class="[
-                    tierIdx === perk.tiers.length - 1 ? 'pl-4' : 'px-4',
-                    'relative w-1/4 py-0 text-center'
-                  ]"
-                >
-                  <span class="relative w-full h-full py-3">
-                    <CheckIcon
-                      v-if="tier.value === true"
-                      class="mx-auto h-5 w-5 text-indigo-600"
-                      aria-hidden="true"
-                    />
-                    <XIcon v-else class="mx-auto h-5 w-5 text-gray-400" aria-hidden="true" />
-                    <span class="sr-only">{{ tier.value === true ? "Yes" : "No" }}</span>
-                  </span>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-
-          <!-- Fake card borders -->
-          <div class="absolute inset-0 flex items-stretch pointer-events-none" aria-hidden="true">
-            <div class="w-1/4 pr-4" />
-            <div class="w-1/4 px-4">
-              <div class="w-full h-full rounded-lg ring-1 ring-black ring-opacity-5" />
-            </div>
-            <div class="w-1/4 px-4">
-              <div class="w-full h-full rounded-lg ring-2 ring-indigo-600 ring-opacity-100" />
-            </div>
-            <div class="w-1/4 pl-4">
-              <div class="w-full h-full rounded-lg ring-1 ring-black ring-opacity-5" />
-            </div>
-          </div>
-        </div>
+        </template>
       </div>
     </section>
   </div>
@@ -542,7 +573,6 @@
   import { CheckIcon, XIcon } from "@heroicons/vue/solid"
   import { ref } from "vue"
 
-  const upToGroups = 25
   const discount = 100
 
   const plans = [
@@ -553,10 +583,8 @@
       priceMonthly: "Free",
       priceYearly: "Free",
       mainFeatures: [
-        { id: 1, value: `You can join up to ${upToGroups} groups` },
-        { id: 2, value: "Auto scheduling dismissed photos" },
-        { id: 3, value: "Get tag suggestions" },
-        { id: 4, value: "Ad comment [*]" }
+        { id: 2, value: "Share photos with credits" },
+        { id: 3, value: "Ad comment on every share [*]" }
       ]
     },
     {
@@ -567,12 +595,8 @@
       priceMonthly: 3.99,
       priceYearly: 39.99,
       mainFeatures: [
-        { id: 1, value: "Join unlimited groups" },
-        { id: 2, value: "Auto scheduling dismissed photos" },
-        { id: 3, value: "Get tag suggestions" },
-        { id: 4, value: "24/7 Helpline" },
-        { id: 5, value: "Planning and instructions" },
-        { id: 6, value: "Ad comment [*]" }
+        { id: 2, value: "Share unlimited photos" },
+        { id: 3, value: "Ad comment on every share [*]" }
       ]
     },
     {
@@ -581,20 +605,14 @@
       description: "No ad comments or promotional comments by Skedr.io",
       priceMonthly: 7.99,
       priceYearly: 79.99,
-      mainFeatures: [
-        { id: 1, value: "Join unlimited groups" },
-        { id: 2, value: "Auto scheduling dismissed photos" },
-        { id: 3, value: "Get tag suggestions" },
-        { id: 4, value: "24/7 Helpline" },
-        { id: 5, value: "Planning and instructions" }
-      ]
+      mainFeatures: [{ id: 2, value: "Share unlimited photos" }]
     }
   ]
   const features = [
     {
       title: "Auto sharing photos",
       tiers: [
-        { title: "starter", value: `Up to ${upToGroups} groups` },
+        { title: "starter", value: "Unlimited with credits" },
         { title: "popular", featured: false, value: "Join unlimited groups" },
         { title: "intermediate", value: "Join unlimited groups" }
       ]
@@ -618,40 +636,72 @@
   ]
   const perks = [
     {
-      title: "24/7 Helpline",
-      tiers: [
-        { title: "starter", value: false },
-        { title: "popular", featured: true, value: true },
-        { title: "intermediate", value: true }
+      title: "Credits *",
+      items: [
+        {
+          title: "Free credits",
+          tiers: [
+            { title: "starter", value: "Earn 250 weekly" },
+            { title: "popular", featured: true, value: false },
+            { title: "intermediate", value: false }
+          ]
+        },
+        {
+          title: "Can buy credits",
+          tiers: [
+            { title: "starter", value: true },
+            { title: "popular", featured: true, value: "Unlimited credits" },
+            { title: "intermediate", value: "Unlimited credits" }
+          ]
+        }
       ]
     },
     {
-      title: "Basic tools",
-      tiers: [
-        { title: "starter", value: true },
-        { title: "popular", featured: true, value: true },
-        { title: "intermediate", value: true }
-      ]
-    },
-    {
-      title: "Planning and instructions",
-      tiers: [
-        { title: "starter", value: false },
-        { title: "popular", featured: true, value: true },
-        { title: "intermediate", value: true }
-      ]
-    },
-    {
-      title: "Ad Comment by Skedr.io [*]",
-      tiers: [
-        { title: "starter", value: true },
-        { title: "popular", featured: true, value: true },
-        { title: "intermediate", value: false }
+      title: "Other perks",
+      items: [
+        {
+          title: "24/7 Helpline",
+          tiers: [
+            { title: "starter", value: true },
+            { title: "popular", featured: true, value: true },
+            { title: "intermediate", value: true }
+          ]
+        },
+        {
+          title: "Basic tools",
+          tiers: [
+            { title: "starter", value: true },
+            { title: "popular", featured: true, value: true },
+            { title: "intermediate", value: true }
+          ]
+        },
+        {
+          title: "Planning and instructions",
+          tiers: [
+            { title: "starter", value: true },
+            { title: "popular", featured: true, value: true },
+            { title: "intermediate", value: true }
+          ]
+        },
+        {
+          title: "Ad Comment by Skedr.io [*]",
+          tiers: [
+            { title: "starter", value: true },
+            { title: "popular", featured: true, value: true },
+            { title: "intermediate", value: false }
+          ]
+        }
       ]
     }
   ]
 
   const faqs = [
+    {
+      id: 0,
+      question: "Credits",
+      answer:
+        "Sharing a photo to a single group uses 1 credit. Credits are the pay/use as you go model for Skedr users that don't like subscriptions or share less photos. Everyone will earn 250 free credits each week."
+    },
     {
       id: 1,
       question: "Payment Methods used",
