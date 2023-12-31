@@ -81,12 +81,12 @@
               >
                 {{ item.name }}
               </router-link>
-              <a
+              <button
                 class="font-medium text-white hover:text-gray-300 cursor-pointer"
                 @click.prevent="openBeacon()"
               >
                 Support
-              </a>
+              </button>
             </div>
           </div>
           <div class="hidden md:flex md:space-x-2">
