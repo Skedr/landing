@@ -1,4 +1,6 @@
 ---
+import TheHeader from '../components/layout/TheHeader.astro';
+import HeaderHome from '../components/headers/HeaderHome.astro'; 
 import Layout from '../layouts/Layout.astro';
 import HomeStats from '../components/home/HomeStats.vue';
 import HomeGrid from '../components/home/HomeGrid.astro';
@@ -10,6 +12,9 @@ import HomeCta from '../components/home/HomeCta.astro';
 ---
 
 <Layout title="Welcome to Landing page">
+  <TheHeader >
+    <HeaderHome />
+  </TheHeader>
   <HomeStats />
   <HomeGrid />
   <HomeTestimonial />

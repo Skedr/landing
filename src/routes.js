@@ -4,7 +4,7 @@ export const routes = [
     name: "home",
     components: {
       default: () => import("./views/HomePage.vue"),
-      header: () => import("./components/headers/HeaderHome.vue")
+      header: () => import("./components/headers/HeaderHome.astro")
     },
     meta: {
       title: "Automated sharing and scheduling for Flickr Groups",
