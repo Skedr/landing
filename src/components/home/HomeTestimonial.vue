@@ -24,7 +24,7 @@
             <div class="flex items-start">
               <div class="flex-shrink-0 inline-flex rounded-full border-2 border-white">
                 <img
-                  v-lazy="'https://farm5.staticflickr.com/4571/buddyicons/159869034@N02_r.jpg'"
+                  src="https://farm5.staticflickr.com/4571/buddyicons/159869034@N02_r.jpg"
                   class="h-12 w-12 rounded-full"
                   width="48"
                   height="48"
@@ -62,7 +62,7 @@
             <div class="flex items-start">
               <div class="flex-shrink-0 inline-flex rounded-full border-2 border-white">
                 <img
-                  v-lazy="'https://farm6.staticflickr.com/5602/buddyicons/91905103@N02_r.jpg'"
+                  src="https://farm6.staticflickr.com/5602/buddyicons/91905103@N02_r.jpg"
                   class="h-12 w-12 rounded-full"
                   width="48"
                   height="48"

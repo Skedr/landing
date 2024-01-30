@@ -93,7 +93,7 @@
                 class="relative rounded-full border-2 border-white sm:absolute sm:top-0 sm:-translate-y-1/2"
               >
                 <img
-                  v-lazy="'https://farm66.staticflickr.com/65535/buddyicons/140249051@N03_r.jpg'"
+                  src="https://farm66.staticflickr.com/65535/buddyicons/140249051@N03_r.jpg"
                   class="w-12 h-12 sm:w-20 sm:h-20 rounded-full bg-indigo-300"
                   alt=""
                 />

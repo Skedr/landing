@@ -157,7 +157,7 @@
                 "
               >
                 <img
-                  v-lazy="'/screenshot.png'"
+                  src="/screenshot.png"
                   class="
                     w-full
                     rounded-md

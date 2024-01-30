@@ -49,14 +49,14 @@
               <router-link :to="{ name: 'home' }" class="flex">
                 <span class="sr-only">Skedr.io</span>
                 <img
-                  v-lazy="'/logo/brand_logo.svg'"
+                  src="/logo/brand_logo.svg"
                   class="h-9 w-auto sm:h-10"
                   width="48"
                   height="40"
                   alt="Skedr.io logo"
                 />
                 <img
-                  v-lazy="'/logo/brand_name.svg'"
+                  src="/logo/brand_name.svg"
                   class="ml-4 h-9 w-auto hidden sm:flex"
                   alt="Skedr.io brand"
                   width="120"
@@ -124,14 +124,14 @@
                 <div class="flex">
                   <span class="sr-only">Skedr.io</span>
                   <img
-                    v-lazy="'/logo/brand_logo_white.svg'"
+                    src="/logo/brand_logo_white.svg"
                     class="h-10 w-auto"
                     alt="Skedr.io logo"
                     width="48"
                     height="40"
                   />
                   <img
-                    v-lazy="'/logo/brand_name_white.svg'"
+                    src="/logo/brand_name_white.svg"
                     class="ml-4 h-9 w-auto flex"
                     alt="'Skedr.io brand'"
                     width="120"

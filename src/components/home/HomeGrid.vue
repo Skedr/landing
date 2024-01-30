@@ -48,7 +48,8 @@
 </template>
 
 <script>
-  import { AnnotationIcon, ClockIcon, HashtagIcon, RefreshIcon } from "@heroicons/vue/outline"
+  import pkg from '@heroicons/vue/outline';
+const {AnnotationIcon, ClockIcon, HashtagIcon, RefreshIcon} = pkg;
 
   const features = [
     {

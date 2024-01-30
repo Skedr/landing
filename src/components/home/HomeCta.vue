@@ -47,7 +47,7 @@
         </div>
         <div class="-mt-6 aspect-w-5 aspect-h-3 md:aspect-w-2 md:aspect-h-1">
           <img
-            v-lazy="'/screenshot_scheduled.png'"
+            src="/public/screenshot_scheduled.png"
             class="
               translate-x-6 translate-y-6
               rounded-md
