@@ -1,4 +1,8 @@
-<template>
+
+---
+import { Image } from "astro:assets";
+import ScheduledImage from '../../assets/screenshot_scheduled.png'
+---
   <div class="bg-white">
     <div class="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
       <div
@@ -46,16 +50,9 @@
           </div>
         </div>
         <div class="-mt-6 aspect-w-5 aspect-h-3 md:aspect-w-2 md:aspect-h-1">
-          <img
-            src="/public/screenshot_scheduled.png"
-            class="
-              translate-x-6 translate-y-6
-              rounded-md
-              shadow-lg
-              object-cover object-left-top
-              sm:translate-x-16
-              lg:translate-y-20
-            "
+          <Image
+            src={ScheduledImage}
+            class="translate-x-6 translate-y-6 rounded-md shadow-lg object-cover object-left-top sm:translate-x-16 lg:translate-y-20"
             width="554"
             height="418"
             alt="Skedr auto scheduled view"
@@ -64,4 +61,4 @@
       </div>
     </div>
   </div>
-</template>
+
