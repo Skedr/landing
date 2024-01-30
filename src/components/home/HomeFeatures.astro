@@ -1,5 +1,7 @@
-<!-- This example requires Tailwind CSS v2.0+ -->
-<template>
+---
+import { Image } from 'astro:assets';
+import ManageTags from '../../assets/screenshot_manage_tags.png';
+---
   <div class="relative bg-white pt-16 pb-32 overflow-hidden">
     <div
       class="
@@ -53,21 +55,12 @@
       </div>
       <div class="mt-12 sm:mt-16 lg:mt-0 lg:col-start-1">
         <div class="pr-4 -ml-48 sm:pr-6 md:-ml-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
-          <img
-            src="/public/screenshot_manage_tags.png"
-            class="
-              w-full
-              rounded-xl
-              shadow-xl
-              ring-1 ring-black ring-opacity-5
-              lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-none
-            "
-            width="1135"
-            height="624"
+          <Image src={ManageTags}
+            class="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-none"
             alt="Customer profile user interface"
           />
         </div>
       </div>
     </div>
   </div>
-</template>
+
