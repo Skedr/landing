@@ -1,18 +1,8 @@
-const colors = require("tailwindcss/colors")
-
-module.exports = {
-  content: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
   theme: {
-    extend: {
-      colors: {
-        amber: colors.amber
-      }
-    }
+    extend: {},
   },
-
-  plugins: [
-    require("@tailwindcss/forms"),
-    require("@tailwindcss/aspect-ratio"),
-    require("@tailwindcss/typography")
-  ]
-}
+  plugins: [],
+};
