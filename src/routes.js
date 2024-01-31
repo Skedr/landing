@@ -15,8 +15,8 @@ export const routes = [
     path: "/pricing",
     name: "pricing",
     components: {
-      default: () => import("./views/PricingPage.vue"),
-      header: () => import("./components/headers/HeaderPricing.vue")
+      default: () => import("./pages/PricingPage.vue"),
+      header: () => import("./components/headers/HeaderPricing.astro")
     },
     meta: {
       title: "Pricing for Skedr.io",

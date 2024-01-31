@@ -1,0 +1,10 @@
+---
+import Pricing from '../components/Pricing.vue';
+import Layout from '../layouts/Layout.astro';
+import HeaderPricing from '../components/headers/HeaderPricing.astro';
+---
+
+<Layout title="Welcome to Landing page">
+  <HeaderPricing />
+  <Pricing client:only="vue" />	
+</Layout>
