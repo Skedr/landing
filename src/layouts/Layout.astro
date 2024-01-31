@@ -4,6 +4,7 @@ interface Props {
 }
 
 const { title } = Astro.props;
+import TheHeader from '../components/layout/TheHeader.astro';
 import TheFooter from '../components/layout/TheFooter.astro';
 ---
 
@@ -34,7 +35,10 @@ import TheFooter from '../components/layout/TheFooter.astro';
     </script> -->
 	</head>
 	<body>
+    <TheHeader />
+    <main>
 		<slot />
+    </main>
     <TheFooter />
 	</body>
 </html>
