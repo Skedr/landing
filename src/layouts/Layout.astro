@@ -14,6 +14,9 @@ import Screenshot from "../assets/screenshot.png";
 import HelpScout from "./scripts/HelpScout.astro";
 import Profitwell from "./scripts/Profitwell.astro";
 import Hotjar from "./scripts/Hotjar.astro";
+
+const gtmId = import.meta.env.PUBLIC_GTM;
+const gtmUrl = `https://www.googletagmanager.com/gtag/js?id=${gtmId}`;
 ---
 
 <!doctype html>
@@ -44,6 +47,19 @@ import Hotjar from "./scripts/Hotjar.astro";
     <HelpScout />
     <Profitwell />
     <Hotjar />
+
+    <script type="text/partytown" src={gtmUrl}></script>
+    <script type="text/partytown" id="gtm-js" data-id={gtmId}>
+      const id = document.getElementById("gtm-js").getAttribute("data-id");
+
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", id);
+    </script>
 
     <SpeedInsights />
   </head>
