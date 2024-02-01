@@ -61,7 +61,7 @@ export default {
 
     onMounted(async () => {
       const fetchedData = await fetch(
-        `${import.meta.env.VITE_URL}/totals`,
+        `${import.meta.env.PUBLIC_URL}/totals`,
       ).then((res) => res.json());
       configuredGroups.value = parseInt(fetchedData.configuredGroups);
       scheduledPhotos.value = parseInt(fetchedData.scheduledPhotos);

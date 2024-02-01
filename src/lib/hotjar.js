@@ -1,7 +1,7 @@
 const loadHotjar = async () => {
   if (import.meta.env.SSR) return;
 
-  const hotjarId = import.meta.env.VITE_HOTJAR_ID;
+  const hotjarId = import.meta.env.PUBLIC_HOTJAR_ID;
 
   if (!hotjarId) return;
   (function (h, o, t, j, a, r) {
