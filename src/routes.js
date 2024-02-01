@@ -6,10 +6,7 @@ export const routes = [
       default: () => import("./views/HomePage.vue"),
       header: () => import("./components/headers/HeaderHome.astro")
     },
-    meta: {
-      title: "Automated sharing and scheduling for Flickr Groups",
-      description: "Skedr helps you spend less time sharing photos to Flickr groups."
-    }
+    
   },
   {
     path: "/pricing",
@@ -18,11 +15,7 @@ export const routes = [
       default: () => import("./pages/PricingPage.vue"),
       header: () => import("./components/headers/HeaderPricing.astro")
     },
-    meta: {
-      title: "Pricing for Skedr.io",
-      description:
-        "Skedr.io you will save hundreds of hours of sharing your photos to differents groups"
-    }
+    
   },
   {
     path: "/features",
@@ -31,10 +24,7 @@ export const routes = [
       default: () => import("./views/FeaturesPage.vue"),
       header: () => import("././components/headers/HeaderFeatures.vue")
     },
-    meta: {
-      title: "Features of Skedr.io",
-      description: "Learn how Skedr.io helps you share your photos more easily"
-    }
+    
   },
   {
     path: "/faq",
@@ -43,10 +33,7 @@ export const routes = [
       default: () => import("./views/FaqPage.vue"),
       header: () => import("./components/headers/HeaderFaq.vue")
     },
-    meta: {
-      title: "Frequently Asked Questions - Skedr.io",
-      description: "Answers to common questions about Skedr.io for Flickr."
-    }
+    
   },
   {
     path: "/privacy-policy",
@@ -55,7 +42,6 @@ export const routes = [
       default: () => import("./views/PrivacyPolicyPage.vue"),
       header: () => import("./components/headers/HeaderPrivacyPolicy.astro")
     },
-    meta: { title: "Privacy Policy - Skedr.io", description: "Privacy Policy for Skedr.io" }
   },
   {
     path: "/terms-and-conditions",
@@ -64,10 +50,7 @@ export const routes = [
       default: () => import("./views/TermsAndConditionsPage.vue"),
       header: () => import("./components/headers/HeaderTermsAndConditions.vue")
     },
-    meta: {
-      title: "Terms and Conditions - Skedr.io",
-      description: "Terms and Conditions for Skedr.io"
-    }
+    
   },
   {
     path: "/articles/group-tagging",

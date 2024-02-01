@@ -9,6 +9,11 @@ import Photo from 'astro-heroicons/outline/Photo.astro';
 import ArrowTopRightOnSquare from 'astro-heroicons/outline/ArrowTopRightOnSquare.astro';        
 import Cog from 'astro-heroicons/outline/Cog.astro';        
 
+const meta= {
+      title: "Features of Skedr.io",
+      description: "Learn how Skedr.io helps you share your photos more easily"
+    }
+
 const features = [
   {
     name: "Groups",
@@ -31,7 +36,7 @@ const features = [
 ]
 
 ---
-<Layout title="Welcome to Landing page">
+<Layout meta={meta}>
 <HeaderFeatures/>
   <div class="bg-indigo-700">
     <div

@@ -8,9 +8,14 @@ import HomeFeatures from '../components/home/HomeFeatures.astro';
 import HomeUserTypes from '../components/home/HomeUserTypes.astro';
 import HomeHowToUse from '../components/home/HomeHowToUse.astro';
 import HomeCta from '../components/home/HomeCta.astro';
+
+const meta= {
+      title: "Automated sharing and scheduling for Flickr Groups",
+      description: "Skedr helps you spend less time sharing photos to Flickr groups."
+    }
 ---
 
-<Layout title="Welcome to Landing page">
+<Layout meta={meta}>
   <HeaderHome />
   <HomeStats />
   <HomeGrid />

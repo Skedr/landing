@@ -1,8 +1,10 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import HeaderPrivacyPolicy from '../components/headers/HeaderPrivacyPolicy.astro';
+
+const meta= { title: "Privacy Policy - Skedr.io", description: "Privacy Policy for Skedr.io" }
 ---
-<Layout title="Welcome to Landing page">
+<Layout meta={meta}>
   <HeaderPrivacyPolicy />
   
   <div class="relative py-8 bg-white space-y-8 overflow-hidden">

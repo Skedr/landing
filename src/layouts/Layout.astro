@@ -1,9 +1,10 @@
 ---
-interface Props {
+interface Props { meta: {
 	title: string;
-}
+  description: string;
+} }
 
-const { title } = Astro.props;
+const { title, description } = Astro.props.meta;
 import TheHeader from './TheHeader.astro';
 import TheFooter from './TheFooter.astro';
 ---
@@ -17,6 +18,7 @@ import TheFooter from './TheFooter.astro';
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+    <meta name="description" content={description} />
 		<!-- <script id="profitwell-js" data-pw-auth="76630afb50e57f5789b6e83c2124fd87">
       ;(function (i, s, o, g, r, a, m) {
         i[o] =

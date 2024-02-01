@@ -2,8 +2,13 @@
 import Faq from '../components/FaqPage.vue';
 import Layout from '../layouts/Layout.astro';
 import HeaderFaq from '../components/headers/HeaderFaq.astro';
+
+const meta= {
+      title: "Frequently Asked Questions - Skedr.io",
+      description: "Answers to common questions about Skedr.io for Flickr."
+    }
 ---
-<Layout title="Welcome to Landing page">
+<Layout meta={meta}>
   <HeaderFaq />
   <Faq client:only="vue" />	
 </Layout>
