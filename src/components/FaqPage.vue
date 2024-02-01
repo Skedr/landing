@@ -1,5 +1,5 @@
 <template>
-  <div class="">
+  <div class="bg-white">
     <div
       v-for="faqGroup in faqs"
       :key="faqGroup.title"

@@ -1,0 +1,9 @@
+---
+import Faq from '../components/FaqPage.vue';
+import Layout from '../layouts/Layout.astro';
+import HeaderFaq from '../components/headers/HeaderFaq.astro';
+---
+<Layout title="Welcome to Landing page">
+  <HeaderFaq />
+  <Faq client:only="vue" />	
+</Layout>
