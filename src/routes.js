@@ -53,7 +53,7 @@ export const routes = [
     name: "privacy",
     components: {
       default: () => import("./views/PrivacyPolicyPage.vue"),
-      header: () => import("./components/headers/HeaderPrivacyPolicy.vue")
+      header: () => import("./components/headers/HeaderPrivacyPolicy.astro")
     },
     meta: { title: "Privacy Policy - Skedr.io", description: "Privacy Policy for Skedr.io" }
   },
