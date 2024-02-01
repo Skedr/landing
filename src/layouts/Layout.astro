@@ -7,7 +7,7 @@ interface Props { meta: {
 const { title, description } = Astro.props.meta;
 import TheHeader from './TheHeader.astro';
 import TheFooter from './TheFooter.astro';
-
+import  SpeedInsights  from "@vercel/speed-insights/astro"
 import Screenshot from '../assets/screenshot.png'
 ---
 
@@ -49,6 +49,7 @@ import Screenshot from '../assets/screenshot.png'
 
       profitwell("start")
     </script> -->
+    <SpeedInsights/>
 	</head>
 	<body class="bg-gray-800 pt-6">
     <TheHeader />
