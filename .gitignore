@@ -1,7 +1,7 @@
 # build output
 dist/
 
-.env.local
+*.local
 
 # generated types
 .astro/
