@@ -571,8 +571,10 @@
 
 <script setup>
   import { CheckIcon, XIcon } from "@heroicons/vue/solid"
+  import { ref } from "vue"
 
   const discount = 100
+  const billingModeMonthly = ref(true)
 
   const plans = [
     {

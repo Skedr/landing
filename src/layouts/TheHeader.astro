@@ -14,12 +14,9 @@ import XMark from 'astro-heroicons/outline/XMark.astro';
     { name: "Faq", to:  "faq" }
   ]
 
-  const openBeacon = () => {
-    window.Beacon("toggle")
-  }
+  
 
 ---
-
 
 <nav
   class="relative max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6"
@@ -64,11 +61,15 @@ import XMark from 'astro-heroicons/outline/XMark.astro';
         </a>
       ))}
       <button
+        data-open-beacon
         class="font-medium text-white hover:text-gray-300 cursor-pointer"
-        @click.prevent="openBeacon()"
       >
         Support
       </button>
+      <script type="text/javascript">
+        const button = document.querySelector('[data-open-beacon]');
+        button?.addEventListener('click',() => window.Beacon("toggle"));
+      </script>
     </div>
   </div>
   <div class="hidden md:flex md:space-x-2">
