@@ -43,7 +43,7 @@
   <home-cta />
 </template>
 
-<script>
+<script setup>
   import { Disclosure, DisclosureButton, DisclosurePanel } from "@headlessui/vue"
   import { ChevronDownIcon } from "@heroicons/vue/outline"
   const faqs = [
@@ -143,18 +143,4 @@
       ]
     }
   ]
-
-  export default {
-    components: {
-      Disclosure,
-      DisclosureButton,
-      DisclosurePanel,
-      ChevronDownIcon
-    },
-    setup() {
-      return {
-        faqs
-      }
-    }
-  }
 </script>

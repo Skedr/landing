@@ -569,9 +569,8 @@
   </div>
 </template>
 
-<script>
+<script setup>
   import { CheckIcon, XIcon } from "@heroicons/vue/solid"
-  import { ref } from "vue"
 
   const discount = 100
 
@@ -739,22 +738,4 @@
         "Ad comment is a promotion comment added by Skedr on the photos that you upload. If you take the premium offer, you never face such ad comments. Otherwise, there will be a 50 per cent discount, and Skedr.io will also spread through the promotional commenting."
     }
   ]
-
-  export default {
-    components: {
-      CheckIcon,
-      XIcon
-    },
-    setup() {
-      const billingModeMonthly = ref(true)
-      return {
-        discount,
-        plans,
-        features,
-        perks,
-        faqs,
-        billingModeMonthly
-      }
-    }
-  }
 </script>
