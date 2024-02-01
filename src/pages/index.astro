@@ -1,18 +1,19 @@
 ---
-import HeaderHome from '../components/headers/HeaderHome.astro'; 
-import Layout from '../layouts/Layout.astro';
-import HomeStats from '../components/home/HomeStats.vue';
-import HomeGrid from '../components/home/HomeGrid.astro';
-import HomeTestimonial from '../components/home/HomeTestimonial.astro';
-import HomeFeatures from '../components/home/HomeFeatures.astro';
-import HomeUserTypes from '../components/home/HomeUserTypes.astro';
-import HomeHowToUse from '../components/home/HomeHowToUse.astro';
-import HomeCta from '../components/home/HomeCta.astro';
+import HeaderHome from "../components/headers/HeaderHome.astro";
+import Layout from "../layouts/Layout.astro";
+import HomeStats from "../components/home/HomeStats.vue";
+import HomeGrid from "../components/home/HomeGrid.astro";
+import HomeTestimonial from "../components/home/HomeTestimonial.astro";
+import HomeFeatures from "../components/home/HomeFeatures.astro";
+import HomeUserTypes from "../components/home/HomeUserTypes.astro";
+import HomeHowToUse from "../components/home/HomeHowToUse.astro";
+import HomeCta from "../components/home/HomeCta.astro";
 
-const meta= {
-      title: "Automated sharing and scheduling for Flickr Groups",
-      description: "Skedr helps you spend less time sharing photos to Flickr groups."
-    }
+const meta = {
+  title: "Automated sharing and scheduling for Flickr Groups",
+  description:
+    "Skedr helps you spend less time sharing photos to Flickr groups.",
+};
 ---
 
 <Layout meta={meta}>
@@ -23,7 +24,5 @@ const meta= {
   <HomeFeatures />
   <HomeUserTypes />
   <HomeHowToUse />
-  <HomeCta />	
+  <HomeCta />
 </Layout>
-
-

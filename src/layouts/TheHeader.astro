@@ -1,21 +1,18 @@
 ---
-import Bars3 from 'astro-heroicons/outline/Bars3.astro';
-import XMark from 'astro-heroicons/outline/XMark.astro';
-  import { Image } from 'astro:assets';
+import Bars3 from "astro-heroicons/outline/Bars3.astro";
+import XMark from "astro-heroicons/outline/XMark.astro";
+import { Image } from "astro:assets";
 
-  import BrandLogoWhite from "../assets/logo/brand_logo_white.svg"
-  import BrandLogo from "../assets/logo/brand_logo.svg"
-  import BrandNameWhite from "../assets/logo/brand_name_white.svg"
-  import BrandName from "../assets/logo/brand_name.svg"
+import BrandLogoWhite from "../assets/logo/brand_logo_white.svg";
+import BrandLogo from "../assets/logo/brand_logo.svg";
+import BrandNameWhite from "../assets/logo/brand_name_white.svg";
+import BrandName from "../assets/logo/brand_name.svg";
 
-  const navigation = [
-    { name: "Features", to:  "features" },
-    { name: "Pricing", to:  "pricing" },
-    { name: "Faq", to:  "faq" }
-  ]
-
-  
-
+const navigation = [
+  { name: "Features", to: "features" },
+  { name: "Pricing", to: "pricing" },
+  { name: "Faq", to: "faq" },
+];
 ---
 
 <nav
@@ -43,7 +40,7 @@ import XMark from 'astro-heroicons/outline/XMark.astro';
       </a>
       <div class="-mr-2 flex items-center md:hidden">
         <button
-        popovertarget="mobile-menu"
+          popovertarget="mobile-menu"
           class="bg-gray-800 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:bg-gray-700 focus:outline-none focus:ring-2 focus-ring-inset focus:ring-white"
         >
           <span class="sr-only">Open main menu</span>
@@ -52,14 +49,13 @@ import XMark from 'astro-heroicons/outline/XMark.astro';
       </div>
     </div>
     <div class="hidden space-x-10 md:flex md:ml-10">
-      {navigation.map((item) => (
-        <a
-          href={item.to}
-          class="font-medium text-white hover:text-gray-300"
-        >
-          {item.name}
-        </a>
-      ))}
+      {
+        navigation.map((item) => (
+          <a href={item.to} class="font-medium text-white hover:text-gray-300">
+            {item.name}
+          </a>
+        ))
+      }
       <button
         data-open-beacon
         class="font-medium text-white hover:text-gray-300 cursor-pointer"
@@ -67,8 +63,8 @@ import XMark from 'astro-heroicons/outline/XMark.astro';
         Support
       </button>
       <script type="text/javascript">
-        const button = document.querySelector('[data-open-beacon]');
-        button?.addEventListener('click',() => window.Beacon("toggle"));
+        const button = document.querySelector("[data-open-beacon]");
+        button?.addEventListener("click", () => window.Beacon("toggle"));
       </script>
     </div>
   </div>
@@ -88,79 +84,75 @@ import XMark from 'astro-heroicons/outline/XMark.astro';
   </div>
 </nav>
 
+<div id="mobile-menu" popover class="popover">
   <div
-  id="mobile-menu"
-  popover
-  class="popover"
+    class="rounded-lg shadow-md bg-white ring-1 ring-black ring-opacity-5 overflow-hidden"
   >
-    <div
-      class="rounded-lg shadow-md bg-white ring-1 ring-black ring-opacity-5 overflow-hidden"
-    >
-      <div class="px-5 pt-4 flex items-center justify-between">
-        <div class="flex">
-          <span class="sr-only">Skedr.io</span>
-          <Image
-            src={BrandLogoWhite}
-            class="h-10 w-auto"
-            alt="Skedr.io logo"
-            width="48"
-            height="40"
-          />
-          <Image
-            src={BrandNameWhite}
-            class="ml-4 h-9 w-auto flex"
-            alt="'Skedr.io brand'"
-            width="120"
-            height="36"
-          />
-        </div>
-        <div class="-mr-2">
-          <button
-          popovertarget="mobile-menu"
-            class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
-          >
-            <span class="sr-only">Close menu</span>
-            <XMark class="h-6 w-6" aria-hidden="true" />
-          </button>
-        </div>
+    <div class="px-5 pt-4 flex items-center justify-between">
+      <div class="flex">
+        <span class="sr-only">Skedr.io</span>
+        <Image
+          src={BrandLogoWhite}
+          class="h-10 w-auto"
+          alt="Skedr.io logo"
+          width="48"
+          height="40"
+        />
+        <Image
+          src={BrandNameWhite}
+          class="ml-4 h-9 w-auto flex"
+          alt="'Skedr.io brand'"
+          width="120"
+          height="36"
+        />
       </div>
-      <div class="px-2 pt-2 pb-3 space-y-1">
-        {navigation.map((item) => (
+      <div class="-mr-2">
+        <button
+          popovertarget="mobile-menu"
+          class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+        >
+          <span class="sr-only">Close menu</span>
+          <XMark class="h-6 w-6" aria-hidden="true" />
+        </button>
+      </div>
+    </div>
+    <div class="px-2 pt-2 pb-3 space-y-1">
+      {
+        navigation.map((item) => (
           <a
             href={item.to}
             class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50"
           >
             {item.name}
           </a>
-        ))}
-        
-        <a
-          class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50"
-          @click.prevent="openBeacon()"
-        >
-          Support
-        </a>
-      </div>
+        ))
+      }
+
       <a
-        href="https://app.skedr.io"
-        class="log-in block w-full px-5 py-3 text-center font-medium text-indigo-600 bg-gray-50 hover:bg-gray-100"
+        class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50"
+        @click.prevent="openBeacon()"
       >
-        Log in
-      </a>
-      <a
-        href="https://app.skedr.io/auth/create-account"
-        class="sign-up block w-full px-5 py-3 text-center font-medium text-white bg-amber-500 hover:bg-amber-600 border-amber-600"
-      >
-        Sign up
+        Support
       </a>
     </div>
+    <a
+      href="https://app.skedr.io"
+      class="log-in block w-full px-5 py-3 text-center font-medium text-indigo-600 bg-gray-50 hover:bg-gray-100"
+    >
+      Log in
+    </a>
+    <a
+      href="https://app.skedr.io/auth/create-account"
+      class="sign-up block w-full px-5 py-3 text-center font-medium text-white bg-amber-500 hover:bg-amber-600 border-amber-600"
+    >
+      Sign up
+    </a>
   </div>
-    
-  
-
+</div>
 
 <style is:global>
-.popover {
-  @apply !absolute !top-0 p-2 z-50 bg-transparent w-full;
-  inset: unset
-}</style>
+  .popover {
+    @apply !absolute !top-0 p-2 z-50 bg-transparent w-full;
+    inset: unset;
+  }
+</style>

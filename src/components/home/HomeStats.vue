@@ -10,20 +10,38 @@
           Spending less time sharing photos to Flickr groups.
         </p>
       </div>
-      <dl class="mt-10 text-center sm:max-w-3xl sm:mx-auto sm:grid sm:grid-cols-3 sm:gap-8">
+      <dl
+        class="mt-10 text-center sm:max-w-3xl sm:mx-auto sm:grid sm:grid-cols-3 sm:gap-8"
+      >
         <div class="flex flex-col">
-          <dt class="order-2 mt-2 text-lg leading-6 font-medium text-indigo-200">tagged groups</dt>
-          <dd class="order-1 text-5xl font-extrabold text-white">{{ configuredGroups }}</dd>
+          <dt
+            class="order-2 mt-2 text-lg leading-6 font-medium text-indigo-200"
+          >
+            tagged groups
+          </dt>
+          <dd class="order-1 text-5xl font-extrabold text-white">
+            {{ configuredGroups }}
+          </dd>
         </div>
         <div class="flex flex-col mt-10 sm:mt-0">
-          <dt class="order-2 mt-2 text-lg leading-6 font-medium text-indigo-200">
+          <dt
+            class="order-2 mt-2 text-lg leading-6 font-medium text-indigo-200"
+          >
             auto scheduled photos
           </dt>
-          <dd class="order-1 text-5xl font-extrabold text-white">{{ scheduledPhotos }}</dd>
+          <dd class="order-1 text-5xl font-extrabold text-white">
+            {{ scheduledPhotos }}
+          </dd>
         </div>
         <div class="flex flex-col mt-10 sm:mt-0">
-          <dt class="order-2 mt-2 text-lg leading-6 font-medium text-indigo-200">shared photos</dt>
-          <dd class="order-1 text-5xl font-extrabold text-white">{{ amount }}</dd>
+          <dt
+            class="order-2 mt-2 text-lg leading-6 font-medium text-indigo-200"
+          >
+            shared photos
+          </dt>
+          <dd class="order-1 text-5xl font-extrabold text-white">
+            {{ amount }}
+          </dd>
         </div>
       </dl>
     </div>
@@ -31,25 +49,25 @@
 </template>
 
 <script>
-  import { onMounted, ref } from "vue"
-  export default {
-    setup() {
-      const parseInt = (value) => {
-        return value.toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1.")
-      }
-      const configuredGroups = ref(0)
-      const scheduledPhotos = ref(0)
-      const amount = ref(0)
+import { onMounted, ref } from "vue";
+export default {
+  setup() {
+    const parseInt = (value) => {
+      return value.toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1.");
+    };
+    const configuredGroups = ref(0);
+    const scheduledPhotos = ref(0);
+    const amount = ref(0);
 
-      onMounted(async () => {
-        const fetchedData = await fetch(`${import.meta.env.VITE_URL}/totals`).then((res) =>
-          res.json()
-        )
-        configuredGroups.value = parseInt(fetchedData.configuredGroups)
-        scheduledPhotos.value = parseInt(fetchedData.scheduledPhotos)
-        amount.value = parseInt(fetchedData.amount)
-      })
-      return { configuredGroups, scheduledPhotos, amount }
-    }
-  }
+    onMounted(async () => {
+      const fetchedData = await fetch(
+        `${import.meta.env.VITE_URL}/totals`,
+      ).then((res) => res.json());
+      configuredGroups.value = parseInt(fetchedData.configuredGroups);
+      scheduledPhotos.value = parseInt(fetchedData.scheduledPhotos);
+      amount.value = parseInt(fetchedData.amount);
+    });
+    return { configuredGroups, scheduledPhotos, amount };
+  },
+};
 </script>

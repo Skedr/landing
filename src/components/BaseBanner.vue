@@ -4,7 +4,11 @@
       <div class="max-w-7xl mx-auto py-3 px-3 sm:px-6 lg:px-8">
         <div class="flex items-center justify-between flex-wrap">
           <div class="w-0 flex-1 flex items-center">
-            <span v-if="$slots.icon" class="flex p-2 rounded-lg" :class="class800">
+            <span
+              v-if="$slots.icon"
+              class="flex p-2 rounded-lg"
+              :class="class800"
+            >
               <span class="text-white h-6 w-6">
                 <slot name="icon" />
               </span>
@@ -43,40 +47,40 @@
   </div>
 </template>
 <script setup>
-  import { computed } from "vue"
+import { computed } from "vue";
 
-  const props = defineProps({
-    color: {
-      type: String,
-      default: "indigo"
-    },
-    fixed: {
-      type: Boolean,
-      default: false
-    }
-  })
+const props = defineProps({
+  color: {
+    type: String,
+    default: "indigo",
+  },
+  fixed: {
+    type: Boolean,
+    default: false,
+  },
+});
 
-  const class600 = computed(() => {
-    switch (props.color) {
-      case "indigo":
-      default:
-        return "bg-indigo-600"
-      case "amber":
-        return "bg-amber-600"
-      case "black":
-        return "bg-zinc-800"
-    }
-  })
+const class600 = computed(() => {
+  switch (props.color) {
+    case "indigo":
+    default:
+      return "bg-indigo-600";
+    case "amber":
+      return "bg-amber-600";
+    case "black":
+      return "bg-zinc-800";
+  }
+});
 
-  const class800 = computed(() => {
-    switch (props.color) {
-      case "indigo":
-      default:
-        return "bg-indigo-800"
-      case "amber":
-        return "bg-amber-800"
-      case "black":
-        return "bg-zinc-600"
-    }
-  })
+const class800 = computed(() => {
+  switch (props.color) {
+    case "indigo":
+    default:
+      return "bg-indigo-800";
+    case "amber":
+      return "bg-amber-800";
+    case "black":
+      return "bg-zinc-600";
+  }
+});
 </script>

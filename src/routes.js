@@ -4,11 +4,11 @@ export const routes = [
     name: "tags",
     components: {
       default: () => import("./views/TagsPage.vue"),
-      header: () => import("./components/headers/HeaderTags.vue")
-    }
+      header: () => import("./components/headers/HeaderTags.vue"),
+    },
   },
   {
     path: "/articles/share-single-photo",
-    redirect: "/features"
-  }
-]
+    redirect: "/features",
+  },
+];

@@ -1,7 +1,7 @@
 ---
-import AcademicCap from 'astro-heroicons/outline/ArrowPath.astro';
-import Beaker from 'astro-heroicons/outline/Beaker.astro';
-import Camera from 'astro-heroicons/outline/Camera.astro';
+import AcademicCap from "astro-heroicons/outline/ArrowPath.astro";
+import Beaker from "astro-heroicons/outline/Beaker.astro";
+import Camera from "astro-heroicons/outline/Camera.astro";
 
 const features = [
   {
@@ -9,46 +9,48 @@ const features = [
     name: "For experts",
     description:
       "Please share your work effectively by sharing it with various groups. We will share your photographs. Show what you got, receive appreciation, and get recognized globally.",
-    icon: AcademicCap
+    icon: AcademicCap,
   },
   {
     id: 2,
     name: "For devotees",
     description:
       "Acquire perspectives and preferences by effectively sharing your photographs in loads of groups. Try not to burn through your time and further develop your photography abilities.",
-    icon: Camera
+    icon: Camera,
   },
   {
     id: 3,
     name: "For newbies",
     description:
       "Work on your shots and photography through other photographic artists’  eyes. Share and find. What's more, consistently have a good time",
-    icon: Beaker
-  }
-]
+    icon: Beaker,
+  },
+];
 ---
 
-  <div class="py-12 bg-indigo-700">
-    <div class="max-w-xl mx-auto px-4 sm:px-6 lg:max-w-7xl lg:px-8 text-white">
-      <h2 class="text-3xl font-extrabold text-white tracking-tight sr-only">
-        Skedr helps everyone
-      </h2>
-      <dl class="space-y-10 lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-8">
-        {features.map(feature => (
+<div class="py-12 bg-indigo-700">
+  <div class="max-w-xl mx-auto px-4 sm:px-6 lg:max-w-7xl lg:px-8 text-white">
+    <h2 class="text-3xl font-extrabold text-white tracking-tight sr-only">
+      Skedr helps everyone
+    </h2>
+    <dl class="space-y-10 lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-8">
+      {
+        features.map((feature) => (
           <div>
-          <dt class="flex">
-            <div
-              class="flex items-center justify-center h-12 w-12 rounded-md bg-white/10"
-            >
-              <feature.icon class="h-6 w-6" aria-hidden="true" />
-            </div>
-            <p class="ml-4 my-auto text-lg leading-6 font-medium">{ feature.name }</p>
-          </dt>
-          <dd class="mt-2 text-base text-indigo-200">
-            {feature.description}
-          </dd>
-        </div>
-        ))}
-      </dl>
-    </div>
+            <dt class="flex">
+              <div class="flex items-center justify-center h-12 w-12 rounded-md bg-white/10">
+                <feature.icon class="h-6 w-6" aria-hidden="true" />
+              </div>
+              <p class="ml-4 my-auto text-lg leading-6 font-medium">
+                {feature.name}
+              </p>
+            </dt>
+            <dd class="mt-2 text-base text-indigo-200">
+              {feature.description}
+            </dd>
+          </div>
+        ))
+      }
+    </dl>
   </div>
+</div>

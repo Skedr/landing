@@ -1,10 +1,10 @@
-import { ViteSSG } from "vite-ssg"
-import App from "./App.vue"
-import "./index.css"
-import { routes } from "./routes"
-import VueGtag from "vue-gtag"
-import { createGtm } from "@gtm-support/vue-gtm"
-import VueLazyLoad from "vue3-lazyload"
+import { ViteSSG } from "vite-ssg";
+import App from "./App.vue";
+import "./index.css";
+import { routes } from "./routes";
+import VueGtag from "vue-gtag";
+import { createGtm } from "@gtm-support/vue-gtm";
+import VueLazyLoad from "vue3-lazyload";
 
 export const createApp = ViteSSG(
   App,
@@ -12,19 +12,19 @@ export const createApp = ViteSSG(
     routes,
     scrollBehavior() {
       // always scroll to top
-      return { top: 0 }
-    }
+      return { top: 0 };
+    },
   },
   ({ app, router }) => {
     app.use(
       VueGtag,
       {
         config: {
-          id: import.meta.env.VITE_GTAG
-        }
+          id: import.meta.env.VITE_GTAG,
+        },
       },
-      router
-    )
+      router,
+    );
 
     app.use(
       createGtm({
@@ -35,10 +35,10 @@ export const createApp = ViteSSG(
         debug: import.meta.env.DEV,
         loadScript: import.meta.env.PROD,
         vueRouter: router,
-        trackOnNextTick: false
-      })
-    )
+        trackOnNextTick: false,
+      }),
+    );
 
-    app.use(VueLazyLoad)
-  }
-)
+    app.use(VueLazyLoad);
+  },
+);
