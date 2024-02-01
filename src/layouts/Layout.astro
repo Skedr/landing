@@ -7,6 +7,8 @@ interface Props { meta: {
 const { title, description } = Astro.props.meta;
 import TheHeader from './TheHeader.astro';
 import TheFooter from './TheFooter.astro';
+
+import Screenshot from '../assets/screenshot.png'
 ---
 
 <!doctype html>
@@ -14,11 +16,23 @@ import TheFooter from './TheFooter.astro';
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.ico" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
     <meta name="description" content={description} />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={Astro.url} />
+    <meta property="og:image" content={Screenshot.src} />
+
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:url" content={Astro.url} />
+    <meta property="twitter:image" content={Screenshot.src}/>
+    <meta property="twitter:card" content="summary_large_image" />
 		<!-- <script id="profitwell-js" data-pw-auth="76630afb50e57f5789b6e83c2124fd87">
       ;(function (i, s, o, g, r, a, m) {
         i[o] =
