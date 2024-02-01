@@ -1,5 +1,5 @@
 ---
-import Faq from '../components/FaqPage.vue';
+import FaqPage from '../components/FaqPage.vue';
 import Layout from '../layouts/Layout.astro';
 import HeaderFaq from '../components/headers/HeaderFaq.astro';
 
@@ -10,5 +10,5 @@ const meta= {
 ---
 <Layout meta={meta}>
   <HeaderFaq />
-  <Faq client:only="vue" />	
+  <FaqPage client:only="vue" />	
 </Layout>

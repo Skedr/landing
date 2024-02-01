@@ -1,5 +1,5 @@
 ---
-import Pricing from '../components/Pricing.vue';
+import PricingPage from '../components/Pricing.vue';
 import Layout from '../layouts/Layout.astro';
 import HeaderPricing from '../components/headers/HeaderPricing.astro';
 
@@ -12,5 +12,5 @@ const meta= {
 
 <Layout meta={meta}>
   <HeaderPricing />
-  <Pricing client:only="vue" />	
+  <PricingPage client:only="vue" />	
 </Layout>
