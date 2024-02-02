@@ -6,15 +6,6 @@ import partytown from "@astrojs/partytown";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [
-    vue(),
-    tailwind(),
-    sitemap(),
-    partytown({
-      config: {
-        forward: ["dataLayer.push", "fbq"],
-      },
-    }),
-  ],
+  integrations: [vue(), tailwind(), sitemap()],
   site: "https://skedr.io",
 });
