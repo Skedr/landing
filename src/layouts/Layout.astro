@@ -11,9 +11,6 @@ import TheHeader from "./TheHeader.astro";
 import TheFooter from "./TheFooter.astro";
 import SpeedInsights from "@vercel/speed-insights/astro";
 import Screenshot from "../assets/screenshot.png";
-import HelpScout from "./scripts/HelpScout.astro";
-import Profitwell from "./scripts/Profitwell.astro";
-import Hotjar from "./scripts/Hotjar.astro";
 
 const gtmId = import.meta.env.PUBLIC_GTM;
 const gtmUrl = `https://www.googletagmanager.com/gtag/js?id=${gtmId}`;
@@ -44,12 +41,8 @@ const gtmUrl = `https://www.googletagmanager.com/gtag/js?id=${gtmId}`;
 
     <link rel="sitemap" href="/sitemap-index.xml" />
 
-    <HelpScout />
-    <Profitwell />
-    <Hotjar />
-
-    <script type="text/javascript" src={gtmUrl}></script>
-    <script type="text/javascript" id="gtm-js" data-id={gtmId}>
+    <script type="text/partytown" src={gtmUrl}></script>
+    <script type="text/partytown" id="gtm-js" data-id={gtmId}>
       const id = document.getElementById("gtm-js").getAttribute("data-id");
 
       window.dataLayer = window.dataLayer || [];
