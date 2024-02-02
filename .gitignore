@@ -5,6 +5,7 @@ dist/
 
 # generated types
 .astro/
+.unlighthouse/
 
 # dependencies
 node_modules/
