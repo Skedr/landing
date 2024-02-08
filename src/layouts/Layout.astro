@@ -1,0 +1,108 @@
+---
+interface Props {
+  meta: {
+    title: string;
+    description: string;
+  };
+}
+
+const { title, description } = Astro.props.meta;
+import TheHeader from "./TheHeader.astro";
+import TheFooter from "./TheFooter.astro";
+import SpeedInsights from "@vercel/speed-insights/astro";
+import Screenshot from "../assets/screenshot.png";
+
+const gtmId = import.meta.env.PUBLIC_GTM;
+const gtmUrl = `https://www.googletagmanager.com/ns.html?id=${gtmId}`;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={Astro.url} />
+    <meta property="og:image" content={Screenshot.src} />
+
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:url" content={Astro.url} />
+    <meta property="twitter:image" content={Screenshot.src} />
+    <meta property="twitter:card" content="summary_large_image" />
+
+    <link rel="sitemap" href="/sitemap-index.xml" />
+
+    <!-- Google Tag Manager -->
+    <script id="gtm-js" data-id={gtmId}>
+      const id = document.getElementById("gtm-js").getAttribute("data-id");
+
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", id);
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <SpeedInsights />
+  </head>
+  <body class="bg-gray-800 pt-6">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src={gtmUrl}
+        height="0"
+        width="0"
+        style="display:none;visibility:hidden"></iframe></noscript
+    >
+    <!-- End Google Tag Manager (noscript) -->
+
+    <TheHeader />
+    <main class="relative overflow-hidden">
+      <div class="hidden sm:block sm:absolute sm:inset-0" aria-hidden="true">
+        <svg
+          class="absolute bottom-0 right-0 translate-x-1/2 mb-48 text-gray-700 lg:top-0 lg:mt-28 lg:mb-0 xl:transform-none xl:translate-x-0"
+          width="364"
+          height="384"
+          viewBox="0 0 364 384"
+          fill="none"
+        >
+          <defs>
+            <pattern
+              id="eab71dd9-9d7a-47bd-8044-256344ee00d0"
+              x="0"
+              y="0"
+              width="20"
+              height="20"
+              patternUnits="userSpaceOnUse"
+            >
+              <rect x="0" y="0" width="4" height="4" fill="currentColor"></rect>
+            </pattern>
+          </defs>
+          <rect
+            width="364"
+            height="384"
+            fill="url(#eab71dd9-9d7a-47bd-8044-256344ee00d0)"></rect>
+        </svg>
+      </div>
+      <div class="relative">
+        <slot />
+      </div>
+    </main>
+    <TheFooter />
+  </body>
+</html>

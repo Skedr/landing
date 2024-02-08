@@ -1,0 +1,74 @@
+---
+import { Image } from "astro:assets";
+import ManageTags from "../../assets/screenshot_manage_tags.png";
+---
+
+<div class="relative bg-white pt-16 pb-32 overflow-hidden">
+  <div
+    class="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-24"
+  >
+    <div
+      class="px-4 max-w-xl mx-auto sm:px-6 lg:max-w-none lg:mx-0 lg:px-0 lg:col-start-2"
+    >
+      <div class="text-base max-w-prose mx-auto lg:max-w-none">
+        <p
+          class="text-base text-indigo-600 font-semibold tracking-wide uppercase"
+        >
+          basic usage
+        </p>
+        <h2
+          class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl"
+        >
+          How to use Skedr.io?
+        </h2>
+      </div>
+      <div class="relative z-10 text-base max-w-prose mx-auto">
+        <p class="text-lg text-gray-500">
+          Drinking a coffee or tea every day certainly costs you more than the
+          yearly payment required by Skedr.io, which offers you the lowest
+          possible price. Yes, you read that right.
+        </p>
+      </div>
+
+      <div class="relative z-10">
+        <div class="prose prose-indigo text-gray-500 mx-auto lg:max-w-none">
+          <p>
+            Moreover, there is a free rendition that permits you to share with a
+            limited number of 25 groups. Save your time and look at the
+            following guide to start using Skedr.io without any difficulty.
+          </p>
+          <ul role="list">
+            <li>
+              As soon as you approve Skedr.io to post to your Flickr on your
+              behalf, your record will show you all the Flickr groups
+              automatically.
+            </li>
+            <li>
+              You have to be careful by labeling or tagging your photos. Make
+              sure to tag them according to the rules of each group. A tag must
+              be a keyword or something meaningful to the group.
+            </li>
+            <li>
+              After tagging the photograph with the desired category or group,
+              use the sync button under each picture on the stream.
+              <br />
+              Skedr.io will go through all of the tags in that photo and share it
+              with all groups that match those tags
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="mt-12 sm:mt-16 lg:mt-0 lg:col-start-1">
+      <div
+        class="pr-4 -ml-48 sm:pr-6 md:-ml-16 lg:px-0 lg:m-0 lg:relative lg:h-full"
+      >
+        <Image
+          src={ManageTags}
+          class="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-none"
+          alt="Customer profile user interface"
+        />
+      </div>
+    </div>
+  </div>
+</div>
