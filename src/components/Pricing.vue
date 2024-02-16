@@ -183,7 +183,7 @@
                     plan.featured
                       ? 'bg-indigo-600 text-white hover:bg-indigo-700'
                       : 'bg-white text-indigo-600 hover:bg-indigo-50',
-                    'pricing-buy mt-6 w-full inline-block py-2 px-8 border border-transparent rounded-md shadow-sm text-center text-sm font-medium sm:mt-0 sm:w-auto lg:mt-6 lg:w-full',
+                    'try-it-for-free mt-6 w-full inline-block py-2 px-8 border border-transparent rounded-md shadow-sm text-center text-sm font-medium sm:mt-0 sm:w-auto lg:mt-6 lg:w-full',
                   ]"
                 >
                   Try it for free
