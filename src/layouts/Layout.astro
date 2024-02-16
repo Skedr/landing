@@ -14,11 +14,14 @@ import Screenshot from "../assets/screenshot.png";
 
 const gtmId = import.meta.env.PUBLIC_GTM;
 const gtmUrl = `https://www.googletagmanager.com/ns.html?id=${gtmId}`;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
 
 <!doctype html>
 <html lang="en">
   <head>
+    <link rel="canonical" href={canonicalURL} />
     <meta charset="UTF-8" />
     <meta name="description" content="Astro description" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
