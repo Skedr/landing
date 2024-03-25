@@ -9,7 +9,6 @@ interface Props {
 const { title, description } = Astro.props.meta;
 import TheHeader from "./TheHeader.astro";
 import TheFooter from "./TheFooter.astro";
-import SpeedInsights from "@vercel/speed-insights/astro";
 import Screenshot from "../assets/screenshot.png";
 
 const gtmId = import.meta.env.PUBLIC_GTM;
@@ -60,8 +59,6 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
       })(window, document, "script", "dataLayer", id);
     </script>
     <!-- End Google Tag Manager -->
-
-    <SpeedInsights />
   </head>
   <body class="bg-gray-800 pt-6">
     <!-- Google Tag Manager (noscript) -->
