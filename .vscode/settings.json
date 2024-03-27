@@ -7,5 +7,8 @@
       "request": "launch",
       "type": "node-terminal"
     }
-  ]
+  ],
+  "files.associations": {
+    "*.mdoc": "markdown"
+  }
 }
