@@ -1,0 +1,38 @@
+---
+import { getCollection } from "astro:content";
+import Article from "../../components/Article.astro";
+import Layout from "../../layouts/Layout.astro";
+import HeaderFaq from "../../components/headers/HeaderFaq.astro";
+
+export async function getStaticPaths() {
+  const allPosts = await getCollection("posts");
+  const uniqueTags = [
+    ...new Set(allPosts.map((post) => post.data.tags).flat()),
+  ];
+
+  return uniqueTags.map((tag) => {
+    const filteredPosts = allPosts.filter((post) =>
+      post.data.tags.includes(tag)
+    );
+    return {
+      params: { tag },
+      props: { posts: filteredPosts },
+    };
+  });
+}
+
+const { tag } = Astro.params;
+const { posts } = Astro.props;
+const meta = {
+  title: "something",
+  description: "something else",
+};
+---
+
+<Layout meta={meta}>
+  <HeaderFaq />
+  <p>Posts tagged with {tag}</p>
+  <ul>
+    {posts.map((post) => <Article post={post} />)}
+  </ul>
+</Layout>

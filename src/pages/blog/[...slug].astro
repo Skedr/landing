@@ -4,6 +4,7 @@ import Layout from "../../layouts/Layout.astro";
 import Prose from "../../components/Prose.astro";
 import ClockIcon from "astro-heroicons/outline/Clock.astro";
 import CalendarIcon from "astro-heroicons/outline/Calendar.astro";
+import Tag from "../../components/Tag.astro";
 
 export async function getStaticPaths() {
   const blogEntries = await getCollection("posts");
@@ -44,19 +45,13 @@ const meta = {
     </div>
   </div>
   <div class="bg-white px-6 py-20 lg:px-8">
-    <div class="mx-auto max-w-3xl text-base leading-7 text-gray-700">
+    <div class="mx-auto max-w-3xl text-xs leading-7 text-gray-700">
       <div class="flex justify-between">
         <div class="space-x-2">
-          {
-            tags.map((tag) => (
-              <span class="inline-flex items-center rounded-md bg-gray-50 px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
-                {tag}
-              </span>
-            ))
-          }
+          {tags.map((tag) => <Tag tag={tag} />)}
         </div>
 
-        <div class="inline-flex items-center text-sm">
+        <div class="inline-flex items-center">
           <ClockIcon class="h-3 w-3 mr-1" />
           {time} min read -
           <CalendarIcon class="h-3 w-3 mx-1" />
