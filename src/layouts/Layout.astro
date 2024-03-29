@@ -7,9 +7,10 @@ interface Props {
 }
 
 const { title, description } = Astro.props.meta;
-import TheHeader from "./TheHeader.astro";
 import TheFooter from "./TheFooter.astro";
 import Screenshot from "../assets/screenshot.png";
+import TheHeader from "./TheHeader.vue";
+import { ViewTransitions } from "astro:transitions";
 
 const gtmId = import.meta.env.PUBLIC_GTM;
 const gtmUrl = `https://www.googletagmanager.com/ns.html?id=${gtmId}`;
@@ -44,7 +45,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <link rel="sitemap" href="/sitemap-index.xml" />
 
     <!-- Google Tag Manager -->
-    <script id="gtm-js" data-id={gtmId}>
+    <script is:inline id="gtm-js" data-id={gtmId}>
       const id = document.getElementById("gtm-js").getAttribute("data-id");
 
       (function (w, d, s, l, i) {
@@ -59,50 +60,28 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
       })(window, document, "script", "dataLayer", id);
     </script>
     <!-- End Google Tag Manager -->
+
+    <ViewTransitions />
   </head>
-  <body class="bg-gray-800 pt-6">
+  <body class="bg-gray-800">
     <!-- Google Tag Manager (noscript) -->
-    <noscript
-      ><iframe
+    <noscript>
+      <iframe
         src={gtmUrl}
         height="0"
         width="0"
-        style="display:none;visibility:hidden"></iframe></noscript
-    >
+        style="display:none;visibility:hidden"></iframe>
+    </noscript>
     <!-- End Google Tag Manager (noscript) -->
 
-    <TheHeader />
-    <main class="relative overflow-hidden">
-      <div class="hidden sm:block sm:absolute sm:inset-0" aria-hidden="true">
-        <svg
-          class="absolute bottom-0 right-0 translate-x-1/2 mb-48 text-gray-700 lg:top-0 lg:mt-28 lg:mb-0 xl:transform-none xl:translate-x-0"
-          width="364"
-          height="384"
-          viewBox="0 0 364 384"
-          fill="none"
-        >
-          <defs>
-            <pattern
-              id="eab71dd9-9d7a-47bd-8044-256344ee00d0"
-              x="0"
-              y="0"
-              width="20"
-              height="20"
-              patternUnits="userSpaceOnUse"
-            >
-              <rect x="0" y="0" width="4" height="4" fill="currentColor"></rect>
-            </pattern>
-          </defs>
-          <rect
-            width="364"
-            height="384"
-            fill="url(#eab71dd9-9d7a-47bd-8044-256344ee00d0)"></rect>
-        </svg>
-      </div>
-      <div class="relative">
-        <slot />
-      </div>
+    <TheHeader client:load />
+    <main>
+      <slot />
     </main>
     <TheFooter />
+    <script is:inline type="text/javascript">
+      const button = document.querySelector("[data-open-beacon]");
+      button?.addEventListener("click", () => window.Beacon("toggle"));
+    </script>
   </body>
 </html>
