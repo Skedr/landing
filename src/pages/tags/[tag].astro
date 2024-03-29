@@ -2,7 +2,7 @@
 import { getCollection } from "astro:content";
 import Article from "../../components/Article.astro";
 import Layout from "../../layouts/Layout.astro";
-import HeaderFaq from "../../components/headers/HeaderFaq.astro";
+import SimpleHeader from "../../components/headers/SimpleHeader.astro";
 
 export async function getStaticPaths() {
   const allPosts = await getCollection("posts");
@@ -24,15 +24,29 @@ export async function getStaticPaths() {
 const { tag } = Astro.params;
 const { posts } = Astro.props;
 const meta = {
-  title: "something",
+  title: `Articles for ${tag} tag`,
   description: "something else",
 };
+const image = "https://images.unsplash.com/photo-1550490652-ce6a20d4ee76";
+
+function capitalizeFirstLetter(str: string) {
+  return str.charAt(0).toUpperCase() + str.slice(1);
+}
 ---
 
 <Layout meta={meta}>
-  <HeaderFaq />
-  <p>Posts tagged with {tag}</p>
-  <ul>
-    {posts.map((post) => <Article post={post} />)}
-  </ul>
+  <SimpleHeader
+    title={capitalizeFirstLetter(tag)}
+    description="desc"
+    image={image}
+  />
+  <div class="bg-white py-24 sm:py-32">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <div class="mx-auto max-w-2xl lg:max-w-4xl">
+        <div class="space-y-20 lg:space-y-20">
+          {posts.map((post) => <Article post={post} />)}
+        </div>
+      </div>
+    </div>
+  </div>
 </Layout>

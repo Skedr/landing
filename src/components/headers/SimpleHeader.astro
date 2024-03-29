@@ -5,34 +5,36 @@ interface Props {
   image?: string;
 }
 
-const { title, description, image = "" } = Astro.props;
+const { title, description, image } = Astro.props;
 
-const imgUrl = new URL(image);
-imgUrl.searchParams.set("auto", "format");
-imgUrl.searchParams.set("fit", "crop");
-imgUrl.searchParams.set("crop", "focalpoint");
-imgUrl.searchParams.set("w", "2830");
-imgUrl.searchParams.set("h", "1500");
-imgUrl.searchParams.set("q", "80");
-imgUrl.searchParams.set("blend", "111827");
-imgUrl.searchParams.set("sat", "-100");
-imgUrl.searchParams.set("exp", "15");
-imgUrl.searchParams.set("blend-mode", "multiply");
+let imgUrl: URL | undefined;
+
+if (image) {
+  imgUrl = new URL(image);
+  imgUrl.searchParams.set("auto", "format");
+  imgUrl.searchParams.set("fit", "crop");
+  imgUrl.searchParams.set("crop", "focalpoint");
+  imgUrl.searchParams.set("w", "2830");
+  imgUrl.searchParams.set("h", "1500");
+  imgUrl.searchParams.set("q", "80");
+  imgUrl.searchParams.set("blend", "111827");
+  imgUrl.searchParams.set("sat", "-100");
+  imgUrl.searchParams.set("exp", "15");
+  imgUrl.searchParams.set("blend-mode", "multiply");
+}
 ---
 
 <div
   class="relative isolate overflow-hidden bg-gray-900 px-6 py-24 sm:py-32 lg:px-8"
 >
   {
-    image ? (
+    imgUrl ? (
       <img
         src={imgUrl.toString()}
         alt={title}
         class="absolute inset-0 -z-10 h-full w-full object-cover"
       />
-    ) : (
-      ""
-    )
+    ) : null
   }
   <div
     class="hidden sm:absolute sm:-top-10 sm:right-1/2 sm:-z-10 sm:mr-10 sm:block sm:transform-gpu sm:blur-3xl"
