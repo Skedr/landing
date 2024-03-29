@@ -308,7 +308,7 @@
                         class="mx-auto h-5 w-5 text-indigo-600"
                         aria-hidden="true"
                       />
-                      <XIcon
+                      <XMarkIcon
                         v-else
                         class="mx-auto h-5 w-5 text-gray-400"
                         aria-hidden="true"
@@ -398,7 +398,7 @@
                           class="mx-auto h-5 w-5 text-indigo-600"
                           aria-hidden="true"
                         />
-                        <XIcon
+                        <XMarkIcon
                           v-else
                           class="mx-auto h-5 w-5 text-gray-400"
                           aria-hidden="true"
@@ -537,7 +537,7 @@
                         class="mx-auto h-5 w-5 text-indigo-600"
                         aria-hidden="true"
                       />
-                      <XIcon
+                      <XMarkIcon
                         v-else
                         class="mx-auto h-5 w-5 text-gray-400"
                         aria-hidden="true"
@@ -645,7 +645,7 @@
                           class="mx-auto h-5 w-5 text-indigo-600"
                           aria-hidden="true"
                         />
-                        <XIcon
+                        <XMarkIcon
                           v-else
                           class="mx-auto h-5 w-5 text-gray-400"
                           aria-hidden="true"
@@ -710,7 +710,7 @@
 </template>
 
 <script setup>
-import { CheckIcon, XIcon } from "@heroicons/vue/solid";
+import { CheckIcon, XMarkIcon} from "@heroicons/vue/24/solid";
 import { ref } from "vue";
 
 const discount = 100;
