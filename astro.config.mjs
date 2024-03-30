@@ -7,4 +7,7 @@ import sitemap from "@astrojs/sitemap";
 export default defineConfig({
   integrations: [vue(), tailwind(), sitemap()],
   site: "https://skedr.io",
+  image: {
+    domains: ['images.unsplash.com']
+  }
 });

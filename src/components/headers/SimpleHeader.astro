@@ -1,4 +1,6 @@
 ---
+import Image from "astro/components/Image.astro";
+
 interface Props {
   title: string;
   description: string;
@@ -7,12 +9,15 @@ interface Props {
 
 const { title, description, image = "" } = Astro.props;
 
+const w = "2830";
+const h = "1500";
+
 const imgUrl = new URL(image);
 imgUrl.searchParams.set("auto", "format");
 imgUrl.searchParams.set("fit", "crop");
 imgUrl.searchParams.set("crop", "focalpoint");
-imgUrl.searchParams.set("w", "2830");
-imgUrl.searchParams.set("h", "1500");
+imgUrl.searchParams.set("w", w);
+imgUrl.searchParams.set("h", h);
 imgUrl.searchParams.set("q", "80");
 imgUrl.searchParams.set("blend", "111827");
 imgUrl.searchParams.set("sat", "-100");
@@ -25,9 +30,11 @@ imgUrl.searchParams.set("blend-mode", "multiply");
 >
   {
     image ? (
-      <img
+      <Image
         src={imgUrl.toString()}
         alt={title}
+        width={w}
+        height={h}
         class="absolute inset-0 -z-10 h-full w-full object-cover"
       />
     ) : (
