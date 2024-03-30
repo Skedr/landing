@@ -1,11 +1,13 @@
 ---
 interface Props {
+  pageNotFound?: boolean;
   meta: {
     title: string;
     description: string;
   };
 }
 
+const is404Page = Astro.props.pageNotFound ?? false;
 const { title, description } = Astro.props.meta;
 import TheFooter from "./TheFooter.astro";
 import Screenshot from "../assets/screenshot.png";
@@ -19,7 +21,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en" class={is404Page ? "h-full" : ""}>
   <head>
     <link rel="canonical" href={canonicalURL} />
     <meta charset="UTF-8" />
@@ -63,7 +65,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
     <ViewTransitions />
   </head>
-  <body class="bg-gray-800">
+  <body class={is404Page ? "h-full" : "bg-gray-800"}>
     <!-- Google Tag Manager (noscript) -->
     <noscript>
       <iframe
@@ -74,11 +76,12 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     </noscript>
     <!-- End Google Tag Manager (noscript) -->
 
-    <TheHeader client:load />
-    <main>
+    {!is404Page ? <TheHeader client:load /> : undefined}
+    <main class={is404Page ? "relative isolate min-h-full" : ""}>
       <slot />
     </main>
-    <TheFooter />
+    {!is404Page ? <TheFooter /> : undefined}
+
     <script is:inline type="text/javascript">
       const button = document.querySelector("[data-open-beacon]");
       button?.addEventListener("click", () => window.Beacon("toggle"));
