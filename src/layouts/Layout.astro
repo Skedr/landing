@@ -3,10 +3,11 @@ interface Props {
   meta: {
     title: string;
     description: string;
+    image?: string;
   };
 }
 
-const { title, description } = Astro.props.meta;
+const { title, description, image } = Astro.props.meta;
 import TheFooter from "./TheFooter.astro";
 import Screenshot from "../assets/screenshot.png";
 import TheHeader from "./TheHeader.vue";
@@ -34,12 +35,12 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={Astro.url} />
-    <meta property="og:image" content={Screenshot.src} />
+    <meta property="og:image" content={image ?? Screenshot.src} />
 
     <meta property="twitter:title" content={title} />
     <meta property="twitter:description" content={description} />
     <meta property="twitter:url" content={Astro.url} />
-    <meta property="twitter:image" content={Screenshot.src} />
+    <meta property="twitter:image" content={image ?? Screenshot.src} />
     <meta property="twitter:card" content="summary_large_image" />
 
     <link rel="sitemap" href="/sitemap-index.xml" />
