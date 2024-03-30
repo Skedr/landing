@@ -1,7 +1,7 @@
 ---
-import AcademicCap from "astro-heroicons/outline/ArrowPath.astro";
-import Beaker from "astro-heroicons/outline/Beaker.astro";
-import Camera from "astro-heroicons/outline/Camera.astro";
+import AcademicCap from "astro-heroicons/solid/Arrowpath.astro";
+import Beaker from "astro-heroicons/solid/Beaker.astro";
+import Camera from "astro-heroicons/solid/Camera.astro";
 
 const features = [
   {
@@ -28,29 +28,29 @@ const features = [
 ];
 ---
 
-<div class="py-12 bg-indigo-700">
-  <div class="max-w-xl mx-auto px-4 sm:px-6 lg:max-w-7xl lg:px-8 text-white">
-    <h2 class="text-3xl font-extrabold text-white tracking-tight sr-only">
-      Skedr helps everyone
-    </h2>
-    <dl class="space-y-10 lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-8">
-      {
-        features.map((feature) => (
-          <div>
-            <dt class="flex">
-              <div class="flex items-center justify-center h-12 w-12 rounded-md bg-white/10">
-                <feature.icon class="h-6 w-6" aria-hidden="true" />
-              </div>
-              <p class="ml-4 my-auto text-lg leading-6 font-medium">
+<div class="bg-gray-900 py-12 sm:py-20">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <div class="mx-auto max-w-2xl lg:max-w-none">
+      <dl
+        class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3"
+      >
+        {
+          features.map((feature) => (
+            <div class="flex flex-col">
+              <dt class="flex items-center gap-x-3 text-base font-semibold leading-7 text-white">
+                <feature.icon
+                  class="h-5 w-5 flex-non text-indigo-400"
+                  aria-hidden="true"
+                />
                 {feature.name}
-              </p>
-            </dt>
-            <dd class="mt-2 text-base text-indigo-200">
-              {feature.description}
-            </dd>
-          </div>
-        ))
-      }
-    </dl>
+              </dt>
+              <dd class="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-300">
+                <p class="flex-auto">{feature.description}</p>
+              </dd>
+            </div>
+          ))
+        }
+      </dl>
+    </div>
   </div>
 </div>
