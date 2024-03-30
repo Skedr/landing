@@ -140,12 +140,12 @@ const faqs = [
       {
         question: "Do we need to upload our photos to Skedr.io?",
         answer:
-          "No. We don't want you to change your workflow. Whether you work with Lightroom, Apple Photos or any kind of Flickr Uploader you can continue working with them. We just need you to use our Group Tagging feature then it’s easy as pie.",
+          "No.<br/> We don't want you to change your workflow. Whether you work with Lightroom, Apple Photos or any kind of Flickr Uploader you can continue working with them. We just need you to use our Group Tagging feature then it’s easy as pie.",
       },
       {
         question: "Is there a need to install any software?",
         answer:
-          "Skedr is a web-based app, so you do not need to install any software; simply go to our website: <a class='font-semibold text-indigo-600' href='https://app.skedr.io'>https://app.skedr.io/</a>  to get started. We are compatible with popular browsers including Chrome, Firefox, Safari, and Opera.",
+          "Skedr is a web-based app, so you do not need to install any software; simply go to our website: <a class='font-semibold text-indigo-600' href='https://app.skedr.io'>https://app.skedr.io/</a>  to get started.<br/> We are compatible with popular browsers including Chrome, Firefox, Safari, and Opera.",
       },
     ],
   },
