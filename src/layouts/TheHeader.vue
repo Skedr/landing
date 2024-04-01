@@ -1,25 +1,16 @@
 <template>
   <header class="absolute inset-x-0 top-0 z-50">
     <nav
-      class="flex items-center justify-between p-6 lg:px-8"
+      class="flex items-center justify-between p-2 lg:pl-4 lg:pr-8"
       aria-label="Global"
     >
       <div class="flex lg:flex-1">
-        <a href="/" class="-m-1.5 p-1.5 inline-flex space-x-2">
+        <a href="/" class="-m-1.5 p-1.5 inline-flex">
           <span class="sr-only">Skedr</span>
           <img
-            src="/logo/brand_logo.svg"
-            class="h-8 w-auto"
-            alt="Skedr logo"
-            width="48"
-            height="40"
-          />
-          <img
-            src="/logo/brand_name.svg"
-            class="h-8 w-auto"
-            alt="Skedr logo"
-            width="48"
-            height="40"
+            src="/SkedrBrand.svg"
+            class="h-16 w-auto"
+            alt="Skedr"
           />
         </a>
       </div>
@@ -69,19 +60,12 @@
         class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-gray-900 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-white/10"
       >
         <div class="flex items-center justify-between">
-          <a href="#" class="-m-1.5 p-1.5 inline-flex space-x-2">
+          <a href="/" class="-m-4 p-1.5 inline-flex">
             <span class="sr-only">Skedr</span>
             <img
-              src="/logo/brand_logo.svg"
-              class="h-8 w-auto"
-              alt="Skedr logo"
-              width="48"
-              height="40"
-            />
-            <img
-              src="/logo/brand_name.svg"
-              class="h-8 w-auto"
-              alt="Skedr logo"
+              src="/SkedrBrand.svg"
+              class="h-16 w-auto"
+              alt="Skedr"
               width="48"
               height="40"
             />
