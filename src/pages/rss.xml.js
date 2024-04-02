@@ -5,7 +5,7 @@ export async function GET(context) {
   const posts = await getCollection('posts')
   return rss({
     title: 'Skedr | Blog',
-    description: 'Learn to use Skedr',
+    description: 'Learn how to use Skedr',
     site: context.site,
     items: posts.map((post) => ({
       title: post.data.title,
