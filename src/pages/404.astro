@@ -1,27 +1,45 @@
 ---
 import Image from "astro/components/Image.astro";
 import Layout from "../layouts/Layout.astro";
+import NotFound from "../assets/404_notfound.jpg";
 
 const meta = {
   title: "404 Page not Found",
-  description: "Sorry, we couldn't find the page you're looking for.",
+  description: "Sorry! There's been a glitch.",
 };
 ---
 
 <Layout pageNotFound={true} meta={meta}>
   <Image
-    src="https://images.unsplash.com/photo-1545972154-9bb223aac798?auto=format&fit=crop&w=3050&q=80&exp=8&con=-15&sat=-75"
+    src={NotFound}
     width="3050"
     height="2440"
     alt="Represeantation of 404 page not found. Bus lost in the middle of the mountains."
     class="absolute inset-0 -z-10 h-full w-full object-cover object-top"
   />
+  <div class="absolute text-gray-200 bottom-0 p-2 text-xs">
+    Photo by <a
+      href="https://unsplash.com/@jeremybishop?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+      rel="nofollow"
+    >
+      Jeremy Bishop
+    </a> on <a
+      href="https://unsplash.com/photos/person-sitting-on-black-surface-looking-to-sky-DLICfSD33as?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+      rel="nofollow"
+    >
+      Unsplash
+    </a>
+  </div>
+
   <div class="mx-auto max-w-7xl px-6 py-32 text-center sm:py-40 lg:px-8">
     <p class="text-base font-semibold leading-8 text-white">404</p>
     <h1 class="mt-4 text-3xl font-bold tracking-tight text-white sm:text-5xl">
       Page not found
     </h1>
-    <p class="mt-4 text-base text-white/70 sm:mt-6">{meta.description}</p>
+    <p class="mt-4 text-base text-white/70 sm:mt-6">
+      {meta.description}
+      <br /> Check out this beautiful image to find your way home.
+    </p>
     <div class="mt-10 flex justify-center">
       <a href="/" class="text-sm font-semibold leading-7 text-white"
         ><span aria-hidden="true">&larr;</span> Back to home</a
