@@ -109,6 +109,14 @@
   dependencies:
     prismjs "^1.29.0"
 
+"@astrojs/rss@^4.0.5":
+  version "4.0.5"
+  resolved "https://registry.yarnpkg.com/@astrojs/rss/-/rss-4.0.5.tgz#226b563cb52e18f90678dc40008e92cc4071549f"
+  integrity sha512-IyJVL6z09AQtxbgLaAwebT3T5YKe4oTHDesqydJv1KLHw+zEzzMCFuuNsEyxjiqu7df9+DDCpDXLj/WRiEUXvw==
+  dependencies:
+    fast-xml-parser "^4.2.7"
+    kleur "^4.1.5"
+
 "@astrojs/sitemap@^3.1.1":
   version "3.1.2"
   resolved "https://registry.yarnpkg.com/@astrojs/sitemap/-/sitemap-3.1.2.tgz#8bb9d92d6912cf12767fa460484f879dbe4c5136"
@@ -2027,6 +2035,13 @@ fast-glob@^3.2.12, fast-glob@^3.3.0, fast-glob@^3.3.1, fast-glob@^3.3.2:
     glob-parent "^5.1.2"
     merge2 "^1.3.0"
     micromatch "^4.0.4"
+
+fast-xml-parser@^4.2.7:
+  version "4.3.6"
+  resolved "https://registry.yarnpkg.com/fast-xml-parser/-/fast-xml-parser-4.3.6.tgz#190f9d99097f0c8f2d3a0e681a10404afca052ff"
+  integrity sha512-M2SovcRxD4+vC493Uc2GZVcZaj66CCJhWurC4viynVSTvrpErCShNcDz1lAho6n9REQKvL/ll4A4/fw6Y9z8nw==
+  dependencies:
+    strnum "^1.0.5"
 
 fastq@^1.6.0:
   version "1.17.1"
@@ -3989,6 +4004,11 @@ strip-json-comments@~2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/strip-json-comments/-/strip-json-comments-2.0.1.tgz#3c531942e908c2697c0ec344858c286c7ca0a60a"
   integrity sha512-4gB8na07fecVVkOI6Rs4e7T6NOTki5EmL7TUduTs6bu3EdnSycntVJ4re8kgZA+wx9IueI2Y11bfbgwtzuE0KQ==
+
+strnum@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/strnum/-/strnum-1.0.5.tgz#5c4e829fe15ad4ff0d20c3db5ac97b73c9b072db"
+  integrity sha512-J8bbNyKKXl5qYcR36TIO8W3mVGVHrmmxsd5PAItGkmyzwJvybiw2IVq5nqd0i4LSNSkB/sx9VHllbfFdr9k1JA==
 
 sucrase@^3.32.0:
   version "3.35.0"
