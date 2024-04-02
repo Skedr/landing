@@ -116,7 +116,7 @@ const navigation = [
   { name: "Features", href: "/features" },
   { name: "Pricing", href: "/pricing" },
   { name: "Blog", href: "/blog" },
-  { name: "Faq", href: "/faq" },
+  { name: "FAQ", href: "/faq" },
 ];
 
 const mobileMenuOpen = ref(false);
