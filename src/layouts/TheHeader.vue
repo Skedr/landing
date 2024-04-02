@@ -1,3 +1,28 @@
+
+<script setup>
+import { ref } from "vue";
+import { Dialog, DialogPanel } from "@headlessui/vue";
+import { Bars3Icon, XMarkIcon } from "@heroicons/vue/24/outline";
+
+
+defineProps({
+  currentPath: {
+    type: String,
+    required: true
+  }
+})
+
+const navigation = [
+  { name: "Home", href: "/" },
+  { name: "Features", href: "/features" },
+  { name: "Pricing", href: "/pricing" },
+  { name: "Blog", href: "/blog" },
+  { name: "FAQ", href: "/faq" },
+];
+
+const mobileMenuOpen = ref(false);
+</script>
+
 <template>
   <header class="absolute inset-x-0 top-0 z-50">
     <nav
@@ -24,18 +49,19 @@
           <Bars3Icon class="h-6 w-6" aria-hidden="true" />
         </button>
       </div>
-      <div class="hidden lg:flex lg:gap-x-12">
+      <div class="hidden lg:flex lg:gap-x-10">
         <a
           v-for="item in navigation"
           :key="item.name"
           :href="item.href"
-          class="text-sm font-semibold leading-6 text-white"
+          class="text-sm font-semibold leading-6 text-white px-2 py-1 rounded-lg hover:bg-slate-700"
+          :class="{'bg-slate-700': item.href === currentPath}"
         >
           {{ item.name }}
         </a>
         <button
           data-open-beacon
-          class="text-sm font-semibold text-white cursor-pointer"
+          class="text-sm font-semibold text-white cursor-pointer px-2 py-1 rounded-lg hover:bg-slate-700"
         >
           Support
         </button>
@@ -106,18 +132,3 @@
   </header>
 </template>
 
-<script setup>
-import { ref } from "vue";
-import { Dialog, DialogPanel } from "@headlessui/vue";
-import { Bars3Icon, XMarkIcon } from "@heroicons/vue/24/outline";
-
-const navigation = [
-  { name: "Home", href: "/" },
-  { name: "Features", href: "/features" },
-  { name: "Pricing", href: "/pricing" },
-  { name: "Blog", href: "/blog" },
-  { name: "FAQ", href: "/faq" },
-];
-
-const mobileMenuOpen = ref(false);
-</script>
