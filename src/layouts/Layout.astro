@@ -18,6 +18,7 @@ const gtmId = import.meta.env.PUBLIC_GTM;
 const gtmUrl = `https://www.googletagmanager.com/ns.html?id=${gtmId}`;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const currentPath = new URL(Astro.request.url).pathname;
 ---
 
 <!doctype html>
@@ -81,7 +82,11 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     </noscript>
     <!-- End Google Tag Manager (noscript) -->
 
-    {!is404Page ? <TheHeader client:load /> : undefined}
+    {
+      !is404Page ? (
+        <TheHeader client:load currentPath={currentPath} />
+      ) : undefined
+    }
     <main class={is404Page ? "relative isolate min-h-full" : ""}>
       <slot />
     </main>
