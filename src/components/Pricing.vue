@@ -6,8 +6,8 @@
           <h2 class="mx-auto max-w-4xl text-center text-5xl font-bold tracking-tight text-white">How much do you value
             your time?</h2>
           <p class="mx-auto mt-4 max-w-2xl text-center text-lg leading-8 text-white/60">
-            Skedr.io will save you time by sharing photographs with groups and
-            automatically rescheduling them for reshare.
+            Drinking a coffee or tea every day certainly costs you more than the
+            yearly payment
           </p>
           <div class="mt-16 flex justify-center">
             <RadioGroup v-model="frequency"
