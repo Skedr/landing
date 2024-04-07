@@ -236,7 +236,7 @@ const tiers = [
     name: "Premium",
     id: "premium",
     featured: false,
-    description: "No ad comments or promotional comments by Skedr.io",
+    description: "No ad comments or promotional comments by Skedr",
     price: { monthly: "7.99", annually: "79.99" },
     mainFeatures: ["Share unlimited photos"],
   },
@@ -293,7 +293,7 @@ const sections = [
         tiers: { starter: true, tandem: true, premium: true, },
       },
       {
-        name: "Ad Comment by Skedr.io [*]",
+        name: "Ad Comment by Skedr [*]",
         tiers: { starter: true, tandem: true, premium: false, },
       },
     ],

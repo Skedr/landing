@@ -138,7 +138,7 @@ const faqs = [
           "In order to add a photo to a group Flickr needs WRITE PERMISSIONS from your account. Under the 'Authentication' headline you can read all the related information https://www.flickr.com/services/api/flickr.groups.pools.add.html",
       },
       {
-        question: "Do we need to upload our photos to Skedr.io?",
+        question: "Do we need to upload our photos to Skedr?",
         answer:
           "No.<br/> We don't want you to change your workflow. Whether you work with Lightroom, Apple Photos or any kind of Flickr Uploader you can continue working with them. We just need you to use our Group Tagging feature then it’s easy as pie.",
       },
