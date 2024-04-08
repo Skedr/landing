@@ -47,9 +47,12 @@
                 <div class="mt-2 flex items-center gap-x-4">
                   <p :class="[tier.featured ? 'text-gray-900' : 'text-white', 'text-4xl font-bold tracking-tight']">{{
               tier.price[frequency.value] }}</p>
-                  <div class="text-sm leading-5">
-                    <p :class="tier.featured ? 'text-gray-900' : 'text-white'">USD</p>
+                  <div v-if="tier.id!=='starter'" class="text-sm leading-5">
+                    <p :class="tier.featured ? 'text-gray-900' : 'text-white'">EUR</p>
                     <p :class="tier.featured ? 'text-gray-500' : 'text-gray-400'">{{ `Billed ${frequency.value}` }}</p>
+                  </div>
+                  <div v-else >
+                    <p class="text-gray-400">Uses credits</p>
                   </div>
                 </div>
                 <a :href="tier.href" :aria-describedby="tier.id"
@@ -216,29 +219,32 @@ const tiers = [
     name: "Starter",
     id: "starter",
     featured: false,
+    href: 'https://app.skedr.io',
     description: "Try it forever for free.",
     priceMonthly: "Free",
     priceYearly: "Free",
     price: { monthly: "Free", annually: "Free" },
-    mainFeatures: ["Share photos with credits", "Ad comment on every share [*]",
+    mainFeatures: ["Share images with credits", "Ad comment on every share [*]",
     ],
   },
   {
     name: "Tandem",
     id: "tandem",
     featured: true,
+    href: 'https://app.skedr.io',
     description: "50% discount and help spreading Skedr",
     mostPopular: true,
     price: { monthly: "3.99", annually: "39.99" },
-    mainFeatures: ["Share unlimited photos", "Ad comment on every share [*]"],
+    mainFeatures: ["Unlimited shares", "Ad comment on every share [*]"],
   },
   {
     name: "Premium",
     id: "premium",
     featured: false,
+    href: 'https://app.skedr.io',
     description: "No ad comments or promotional comments by Skedr",
     price: { monthly: "7.99", annually: "79.99" },
-    mainFeatures: ["Share unlimited photos"],
+    mainFeatures: ["Unlimited shares"],
   },
 ];
 
@@ -247,7 +253,7 @@ const sections = [
     name: "Features",
     features: [
       {
-        name: "Auto sharing photos",
+        name: "Auto sharing images",
         tiers: {
           starter: "Unlimited with credits",
           tandem: "Join unlimited groups",
