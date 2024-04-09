@@ -6,8 +6,7 @@
           <h2 class="mx-auto max-w-4xl text-center text-5xl font-bold tracking-tight text-white">How much do you value
             your time?</h2>
           <p class="mx-auto mt-4 max-w-2xl text-center text-lg leading-8 text-white/60">
-            Drinking a coffee or tea every day certainly costs you more than the
-            yearly payment
+            Drinking a coffee or tea every day certainly costs you more than the yearly payment. We are refreshingly good value.
           </p>
           <div class="mt-16 flex justify-center">
             <RadioGroup v-model="frequency"
@@ -198,7 +197,7 @@
             </div>
           </div>
         </section>
-        <p class="mt-10 text-sm text-gray-600">[*] Check our <a href="/faq" class="font-semibold text-indigo-600">Faq</a> for more information. </p>
+        <p class="mt-10 text-sm text-gray-600">[*] Check our <a href="/faq" class="font-semibold text-indigo-600">FAQ</a> for more information. </p>
       </div>
     </div>
   </div>
