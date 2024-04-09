@@ -2,11 +2,10 @@
 import Layout from "../layouts/Layout.astro";
 import HomeCta from "../components/home/HomeCta.astro";
 import HeaderFeatures from "../components/headers/HeaderFeatures.astro";
-import RectangleStack from "astro-heroicons/outline/RectangleStack.astro";
-import Calendar from "astro-heroicons/outline/Calendar.astro";
-import Users from "astro-heroicons/outline/Users.astro";
+import RectangleStack from "astro-heroicons/solid/RectangleStack.astro";
+import Calendar from "astro-heroicons/solid/Calendar.astro";
+import Users from "astro-heroicons/solid/Users.astro";
 import Photo from "astro-heroicons/outline/Photo.astro";
-import ArrowTopRightOnSquare from "astro-heroicons/outline/ArrowTopRightOnSquare.astro";
 import Cog from "astro-heroicons/outline/Cog.astro";
 import HomeHowToUse from "../components/home/HomeHowToUse.astro";
 
@@ -39,44 +38,46 @@ const features = [
 
 <Layout meta={meta}>
   <HeaderFeatures />
-  <div class="bg-indigo-700">
-    <div
-      class="max-w-4xl mx-auto px-4 py-16 sm:px-6 sm:pt-20 sm:pb-24 lg:max-w-7xl lg:pt-24 lg:px-8"
-    >
-      <h2 class="text-3xl font-extrabold text-white tracking-tight">
-        What you need to know
-      </h2>
-      <p class="mt-4 max-w-3xl text-lg text-indigo-200">
-        Skedr is designed to be your assistant and make it easy for you to share
-        your photos and digital art with tags. Simply upload tagged images and
-        you’ll see by using Skedr you can share them to the tagged groups
-        automatically. You’ll notice that your images are rescheduled when a
-        group posting limit is reached. Magic.
-      </p>
-      <div
-        class="mt-12 grid grid-cols-1 gap-x-6 gap-y-12 sm:grid-cols-2 lg:mt-16 lg:grid-cols-3 lg:gap-x-8 lg:gap-y-16"
-      >
-        {
-          features.map((feature) => (
-            <div>
-              <div>
-                <span class="flex items-center justify-center h-12 w-min text-white px-3 py-2 rounded-md bg-white/10">
+  <div class="bg-gray-900 py-24 sm:py-32">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <div class="mx-auto max-w-2xl lg:text-center">
+        <p class="text-base font-semibold leading-7 text-indigo-400">
+          Deploy faster
+        </p>
+        <h2
+          class="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl"
+        >
+          What you need to know
+        </h2>
+        <p class="mt-6 text-lg leading-8 text-gray-300">
+          Skedr is designed to be your assistant and make it easy for you to
+          share your photos and digital art with tags. Simply upload tagged
+          images and you will see by using Skedr you can share them to the
+          tagged groups automatically. You will notice that your images are
+          rescheduled when a group posting limit is reached. Magic.
+        </p>
+      </div>
+      <div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
+        <dl
+          class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3"
+        >
+          {
+            features.map((feature) => (
+              <div class="flex flex-col">
+                <dt class="flex items-center gap-x-3 text-base font-semibold leading-7 text-white">
                   <feature.icon
-                    class="h-6 w-6 text-white mr-1.5"
+                    class="h-5 w-5 text-indigo-400 flex-none"
                     aria-hidden="true"
                   />
                   {feature.name}
-                </span>
+                </dt>
+                <dd class="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-300">
+                  <p class="flex-auto">{feature.description}</p>
+                </dd>
               </div>
-              <div class="mt-6">
-                <h3 class="text-lg font-medium text-white" />
-                <p class="mt-2 text-base text-indigo-200">
-                  {feature.description}
-                </p>
-              </div>
-            </div>
-          ))
-        }
+            ))
+          }
+        </dl>
       </div>
     </div>
   </div>
