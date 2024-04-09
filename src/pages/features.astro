@@ -6,8 +6,16 @@ import RectangleStack from "astro-heroicons/solid/RectangleStack.astro";
 import Calendar from "astro-heroicons/solid/Calendar.astro";
 import Users from "astro-heroicons/solid/Users.astro";
 import Photo from "astro-heroicons/outline/Photo.astro";
-import Cog from "astro-heroicons/outline/Cog.astro";
 import HomeHowToUse from "../components/home/HomeHowToUse.astro";
+import {
+  ArrowTopRightOnSquareIcon,
+  ArrowsUpDownIcon,
+  InformationCircleIcon,
+  SwatchIcon,
+  TagIcon,
+  XCircleIcon,
+} from "@heroicons/vue/16/solid";
+import FeatureList from "../components/FeatureList.astro";
 
 const meta = {
   title: "Features of Skedr",
@@ -16,13 +24,13 @@ const meta = {
 
 const features = [
   {
-    name: "Groups",
+    name: "Groups+",
     description:
       "Join plenty of groups. Groups are more than just posting; they are about contributing to the experience of the site and connecting with more Flickr fans. Before tagging, track down the best tags for each group. Search the groups you have joined or discover new ones to share your images. All in one place.",
     icon: RectangleStack,
   },
   {
-    name: "Photostream",
+    name: "Photostream+",
     description:
       "The quickest approach to seeing every metric you need to know about. Views, likes, shared groups, and preferences in a single spot. You can manage every image tags as well. Comment regularly and interact as much as you can as this will make you well known and ideally well liked and of course, bring traffic to your work.",
     icon: Users,
@@ -32,6 +40,53 @@ const features = [
     description:
       "You can then see which images are auto-scheduled to be shared later according to the rules the group limits permit.",
     icon: Calendar,
+  },
+];
+
+const groupsEnhancements = [
+  {
+    icon: Photo,
+    name: "Visual metrics.",
+    description: "Show the image and users count from each group.",
+  },
+  {
+    icon: XCircleIcon,
+    name: "Group restriction limits.",
+    description:
+      "See the shared status of each group. If you haven’t joined the group, the regularity of posting will be shown instead.",
+  },
+  {
+    icon: ArrowsUpDownIcon,
+    name: "How to know if a group has been opted in or out of Flickr's photo limit.",
+    description:
+      "Look for the <span class='text-green-400'>green circle for opted out</span> and the <span class='text-red-400'>red circle for opted in</span>. You can hover over the circle to read the description so you know where you're at.",
+  },
+  {
+    icon: ArrowTopRightOnSquareIcon,
+    name: "Direct group link",
+    description:
+      "Fast track access to the Flickr group's page thanks to the external link to the group title.",
+  },
+];
+
+const configuration = [
+  {
+    icon: InformationCircleIcon,
+    name: "Read the group rules before configuring your tag/s.",
+    description:
+      "It will help avoid any of your images being banned. The search bar will show you relevant tags from photos you have already in your group.",
+  },
+  {
+    icon: TagIcon,
+    name: "One tag for simple use cases.",
+    description:
+      "Configure one tag that describes the group will simplify your tag strategy.",
+  },
+  {
+    icon: SwatchIcon,
+    name: "Tag mode for complex use cases.",
+    description:
+      "There are exceptions if you want to share more specific photos. For example for the bird watchers out there you have an epic shot of a flock of birds who are eating. Add [bird] and [eating] and then turn on the tag mode.",
   },
 ];
 ---
@@ -72,7 +127,9 @@ const features = [
                   {feature.name}
                 </dt>
                 <dd class="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-300">
-                  <p class="flex-auto">{feature.description}</p>
+                  <p class="flex-auto">
+                    <Fragment set:html={feature.description} />
+                  </p>
                 </dd>
               </div>
             ))
@@ -81,7 +138,31 @@ const features = [
       </div>
     </div>
   </div>
-  <div class="relative bg-gray-50 pt-16 pb-32 overflow-hidden">
+
+  <FeatureList
+    pretitle="Groups+"
+    title="Check whether groups are active or not"
+    description="We report on the most important data from each Flickr group. Here’s some of the cool stuff we can do:"
+    list={groupsEnhancements}
+  >
+    <video autoplay loop>
+      <source src="/groups_section.webm" type="video/webm" />
+    </video>
+  </FeatureList>
+
+  <FeatureList
+    pretitle="Configuration"
+    title="Manage your tags"
+    description="The classic mistake many of you fine people make is tagging and grouping your images randomly or intuitively. Believe or not, tagging is a minor art form, there are a bunch of tagging techniques which can transform the discoverability of your work on Flickr. We have the playbook right here:"
+    list={configuration}
+    invertOrder={true}
+  >
+    <video autoplay loop>
+      <source src="/groups_configuration.webm" type="video/webm" />
+    </video>
+  </FeatureList>
+
+  <!-- <div class="relative bg-gray-50 pt-16 pb-32 overflow-hidden">
     <div class="relative">
       <div
         class="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-24"
@@ -218,7 +299,7 @@ const features = [
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
   <HomeHowToUse />
   <HomeCta class="bg-gray-50" />
 </Layout>
