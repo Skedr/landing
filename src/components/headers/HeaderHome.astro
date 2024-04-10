@@ -1,168 +1,98 @@
 ---
 import ChevronRight from "astro-heroicons/outline/ChevronRight.astro";
-import Screenshot from "../../assets/screenshot.png";
+import Screenshot from "../../assets/groups_page.png";
 import { Image } from "astro:assets";
 ---
 
-<div class="bg-gray-800 overflow-hidden pb-8 sm:pb-12 lg:pb-12">
-  <div class="relative pt-6 pb-16 sm:pb-24">
-    <div class="mx-auto max-w-7xl">
-      <div class="lg:grid lg:grid-cols-12 lg:gap-8">
-        <div
-          class="px-4
-            sm:px-6 sm:text-center
-            md:max-w-2xl md:mx-auto
-            lg:col-span-6 lg:text-left lg:flex lg:items-center"
+<div class="relative isolate overflow-hidden bg-gray-900">
+  <svg
+    class="absolute inset-0 -z-10 h-full w-full stroke-white/10 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"
+    aria-hidden="true"
+  >
+    <defs>
+      <pattern
+        id="983e3e4c-de6d-4c3f-8d64-b9761d1534cc"
+        width="200"
+        height="200"
+        x="50%"
+        y="-1"
+        patternUnits="userSpaceOnUse"
+      >
+        <path d="M.5 200V.5H200" fill="none"></path>
+      </pattern>
+    </defs>
+    <svg x="50%" y="-1" class="overflow-visible fill-gray-800/20">
+      <path
+        d="M-200 0h201v201h-201Z M600 0h201v201h-201Z M-400 600h201v201h-201Z M200 800h201v201h-201Z"
+        stroke-width="0"></path>
+    </svg>
+    <rect
+      width="100%"
+      height="100%"
+      stroke-width="0"
+      fill="url(#983e3e4c-de6d-4c3f-8d64-b9761d1534cc)"></rect>
+  </svg>
+  <div
+    class="absolute left-[calc(50%-4rem)] top-10 -z-10 transform-gpu blur-3xl sm:left-[calc(50%-18rem)] lg:left-48 lg:top-[calc(50%-30rem)] xl:left-[calc(50%-24rem)]"
+    aria-hidden="true"
+  >
+    <div
+      class="aspect-[1108/632] w-[69.25rem] bg-gradient-to-r from-[#80caff] to-[#4f46e5] opacity-20"
+      style="clip-path: polygon(73.6% 51.7%, 91.7% 11.8%, 100% 46.4%, 97.4% 82.2%, 92.5% 84.9%, 75.7% 64%, 55.3% 47.5%, 46.5% 49.4%, 45% 62.9%, 50.3% 87.2%, 21.3% 64.1%, 0.1% 100%, 5.4% 51.1%, 21.4% 63.9%, 58.9% 0.2%, 73.6% 51.7%)"
+    >
+    </div>
+  </div>
+  <div
+    class="mx-auto max-w-7xl px-6 pb-24 pt-10 sm:pb-32 lg:flex lg:px-8 lg:py-40"
+  >
+    <div class="mx-auto max-w-2xl flex-shrink-0 lg:mx-0 lg:max-w-xl lg:pt-8">
+      <!-- <div class="mt-24 sm:mt-32 lg:mt-16">
+        <a href="#" class="inline-flex space-x-6">
+          <span
+            class="rounded-full bg-indigo-500/10 px-3 py-1 text-sm font-semibold leading-6 text-indigo-400 ring-1 ring-inset ring-indigo-500/20"
+          >
+            What's new
+          </span>
+          <span
+            class="inline-flex items-center space-x-2 text-sm font-medium leading-6 text-gray-300"
+          >
+            <span>Just shipped v1.0</span>
+            <ChevronRight class="h-5 w-5 text-gray-500" aria-hidden="true" />
+          </span>
+        </a>
+      </div> -->
+      <h1
+        class="mt-10 text-4xl font-bold tracking-tight text-white sm:text-6xl"
+      >
+        Share photos to Flickr groups faster
+      </h1>
+      <p class="mt-6 text-lg leading-8 text-gray-300">
+        Showcasing your creativity made easy with Skedr. So you can spend more
+        time doing the things you love.
+      </p>
+      <div class="mt-10 flex items-center gap-x-6">
+        <a
+          href="https://app.skedr.io/auth/create-account"
+          class="try-it-for-free rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400"
         >
-          <div>
-            <a
-              href="https://www.youtube.com/watch?v=kmrx4iBRLDc"
-              target="_blank"
-              class="inline-flex
-                items-center
-                text-white
-                bg-gray-900
-                rounded-full
-                p-1
-                pr-2
-                sm:text-base
-                lg:text-sm
-                xl:text-base
-                hover:text-gray-200"
-            >
-              <span
-                class="px-3
-                  py-0.5
-                  text-white text-xs
-                  font-semibold
-                  leading-5
-                  uppercase
-                  tracking-wide
-                  bg-indigo-500
-                  rounded-full"
-              >
-                Video
-              </span>
-              <span class="ml-4 text-sm">Automate your share workflow</span>
-              <ChevronRight
-                class="ml-2 w-5 h-5 text-gray-500"
-                aria-hidden="true"
-              />
-            </a>
-            <h1
-              class="mt-4
-                text-4xl
-                tracking-tight
-                font-extrabold
-                text-white
-                sm:mt-5 sm:leading-none
-                lg:mt-6 lg:text-5xl
-                xl:text-6xl"
-            >
-              <span class="md:block">Sharing photos</span>
-              <span class="text-indigo-400 md:block"
-                >to Flickr groups made easier</span
-              >
-            </h1>
-            <p
-              class="mt-3 text-base text-gray-300 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl"
-            >
-              Skedr.io, a tool automating the process of group photo sharing on
-              Flickr.
-              <br />
-              We have taken the time to work on the experience. Invest less energy
-              and time by sharing photos to Flickr groups automatically.
-            </p>
-            <div class="mt-5 w-full sm:mx-auto sm:max-w-lg lg:ml-0 flex">
-              <a
-                href="https://app.skedr.io/auth/create-account"
-                class="try-it-for-free
-                  mx-auto
-                  bg-amber-500
-                  hover:bg-amber-600
-                  border border-amber-600
-                  rounded-md
-                  shadow
-                  px-5
-                  py-3
-                  inline-flex
-                  items-center
-                  text-base
-                  font-medium
-                  text-white"
-              >
-                Try it for free
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="mt-16 sm:mt-24 lg:mt-0 lg:col-span-6">
-          <div class="sm:mx-auto sm:max-w-3xl sm:px-6">
-            <div
-              class="py-12
-                sm:relative sm:mt-20 sm:py-12
-                lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2"
-            >
-              <div class="hidden sm:block">
-                <div
-                  class="absolute
-                    inset-y-0
-                    left-1/2
-                    w-screen
-                    bg-gray-700
-                    rounded-l-3xl
-                    lg:left-80 lg:right-0 lg:w-full"
-                >
-                </div>
-                <svg
-                  class="absolute top-8 right-1/2 -mr-3 lg:m-0 lg:left-0"
-                  width="404"
-                  height="392"
-                  fill="none"
-                  viewBox="0 0 404 392"
-                >
-                  <defs>
-                    <pattern
-                      id="837c3e70-6c3a-44e6-8854-cc48c737b659"
-                      x="0"
-                      y="0"
-                      width="20"
-                      height="20"
-                      patternUnits="userSpaceOnUse"
-                    >
-                      <rect
-                        x="0"
-                        y="0"
-                        width="4"
-                        height="4"
-                        class="text-gray-600"
-                        fill="currentColor"></rect>
-                    </pattern>
-                  </defs>
-                  <rect
-                    width="404"
-                    height="392"
-                    fill="url(#837c3e70-6c3a-44e6-8854-cc48c737b659)"></rect>
-                </svg>
-              </div>
-              <div
-                class="relative
-                  pl-4
-                  -mr-40
-                  sm:mx-auto sm:max-w-3xl sm:px-0
-                  lg:max-w-none lg:h-full lg:pl-12"
-              >
-                <Image
-                  src={Screenshot}
-                  class="w-full rounded-md shadow-xl ring-1 ring-black ring-opacity-5 lg:h-full lg:w-auto lg:max-w-none"
-                  widths={[400, 720]}
-                  sizes={`(max-width: 768px) 400px, 720px`}
-                  alt="Groups view for skedr.io. List of joined groups and tag cloud of configured tags."
-                />
-              </div>
-            </div>
-          </div>
-        </div>
+          Try it for free
+        </a>
+        <a href="#" class="text-sm font-semibold leading-6 text-white">
+          Learn more <span aria-hidden="true">→</span>
+        </a>
+      </div>
+    </div>
+    <div
+      class="mx-auto mt-16 flex max-w-2xl sm:mt-24 lg:ml-10 lg:mr-0 lg:mt-0 lg:max-w-none lg:flex-none xl:ml-32"
+    >
+      <div class="max-w-3xl flex-none sm:max-w-5xl lg:max-w-none">
+        <Image
+          src={Screenshot}
+          class="w-[76rem] rounded-md bg-white/5 shadow-2xl ring-1 ring-white/10"
+          widths={[400, 1432]}
+          sizes={`(max-width: 768px) 400px, 720px, 1400px`}
+          alt="Groups view for Skedr. List of joined groups and tag cloud of configured tags."
+        />
       </div>
     </div>
   </div>

@@ -1,0 +1,77 @@
+---
+import type { FunctionalComponent } from "vue";
+
+interface FeatureList {
+  icon: any;
+  name: string;
+  description: string;
+}
+
+interface Props {
+  pretitle: string;
+  title: string;
+  description: string;
+  list: FeatureList[];
+  invertOrder?: boolean;
+}
+
+const { pretitle, title, description, list, invertOrder = false } = Astro.props;
+---
+
+<div class="overflow-hidden bg-gray-900 py-24 sm:py-32">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <div
+      class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2"
+    >
+      <div
+        class={invertOrder ? "order-last lg:pr-8 lg:pt-4" : "lg:pr-8 lg:pt-4"}
+      >
+        <div class="lg:max-w-lg">
+          <p class="text-base font-semibold leading-7 text-indigo-400">
+            {pretitle}
+          </p>
+          <h2
+            class="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl"
+          >
+            {title}
+          </h2>
+          <p class="mt-6 text-lg leading-8 text-gray-300">
+            {description}
+          </p>
+          <dl
+            class="mt-10 max-w-xl space-y-8 text-base leading-7 text-gray-300 lg:max-w-none"
+          >
+            {
+              list.map((item) => (
+                <div class="relative pl-9">
+                  <dt class="inline font-semibold text-white">
+                    <item.icon
+                      class="absolute left-1 top-1 h-5 w-5 text-indigo-500"
+                      aria-hidden="true"
+                    />
+                    {item.name}
+                  </dt>
+                  <dd class="inline">
+                    <Fragment set:html={item.description} />
+                  </dd>
+                </div>
+              ))
+            }
+          </dl>
+        </div>
+      </div>
+
+      <div
+        class={invertOrder
+          ? "grid grid-cols-1 place-content-center place-items-end"
+          : "grid grid-cols-1 place-content-center"}
+      >
+        <div
+          class="pw-[48rem] max-w-none rounded-xl shadow-xl ring-1 ring-white/10 sm:w-[57rem] md:-ml-4 lg:-ml-0 overflow-hidden"
+        >
+          <slot />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,92 +1,113 @@
 <template>
-  <div class="bg-white">
+  <div class="bg-gray-900">
     <div
       v-for="faqGroup in faqs"
       :key="faqGroup.title"
-      class="max-w-7xl mx-auto py-12 px-4 sm:py-16 sm:px-6 lg:px-8"
+      class="mx-auto max-w-7xl px-6 py-12 sm:py-16 lg:px-8 lg:py-20"
     >
-      <div class="max-w-3xl mx-auto divide-y-2 divide-gray-200">
-        <h2
-          class="text-center text-3xl font-extrabold text-indigo-500 sm:text-4xl"
-        >
+      <div class="mx-auto max-w-4xl divide-y divide-white/10">
+        <h2 class="text-2xl font-bold leading-10 tracking-tight text-indigo-700 uppercase">
           {{ faqGroup.title }}
         </h2>
-        <dl class="mt-6 space-y-6 divide-y divide-gray-200">
+        <dl class="mt-10 space-y-6 divide-y divide-white/10">
           <Disclosure
+            as="div"
             v-for="faq in faqGroup.items"
             :key="faq.question"
-            v-slot="{ open }"
-            as="div"
             class="pt-6"
+            v-slot="{ open }"
           >
-            <dt class="text-lg">
+            <dt>
               <DisclosureButton
-                class="text-left w-full flex justify-between items-start text-gray-400"
+                class="group flex w-full items-start justify-between text-left text-white"
               >
-                <span class="font-medium text-gray-900">
+                <span
+                  class="text-base font-semibold leading-7 group-hover:text-indigo-500"
+                  :class="{ 'text-indigo-500': open }"
+                >
                   {{ faq.question }}
                 </span>
-                <span class="ml-6 h-7 flex items-center">
-                  <ChevronDownIcon
-                    :class="[open ? '-rotate-180' : 'rotate-0', 'h-6 w-6']"
+                <span class="ml-6 flex h-7 items-center">
+                  <PlusSmallIcon
+                    v-if="!open"
+                    class="h-6 w-6 group-hover:text-indigo-500"
                     aria-hidden="true"
                   />
+                  <MinusSmallIcon v-else class="h-6 w-6 text-indigo-500" aria-hidden="true" />
                 </span>
               </DisclosureButton>
             </dt>
-            <DisclosurePanel as="dd" class="mt-2 pr-12">
-              <p class="text-base text-gray-500" v-html="faq.answer" />
+            <DisclosurePanel as="dd" class="mt-2 pr-12 ">
+              <p
+                class="text-base leading-7 text-gray-300"
+                v-html="faq.answer"
+              />
             </DisclosurePanel>
           </Disclosure>
         </dl>
       </div>
     </div>
   </div>
-  <home-cta />
 </template>
 
 <script setup>
 import { Disclosure, DisclosureButton, DisclosurePanel } from "@headlessui/vue";
-import { ChevronDownIcon } from "@heroicons/vue/24/outline";
+import { MinusSmallIcon, PlusSmallIcon } from "@heroicons/vue/24/outline";
 const faqs = [
   {
     title: "General",
     items: [
       {
-        question: "How is the founder of Skedr.io?",
+        question: "What is the aim of Skedr?",
         answer:
-          "The founder of Skedr.io is Enric Bisbe Gil, a full stack web developer also involved in many other projects.",
+          "The aim is to save your time by automatically posting photographs or digital art to groups based on the tags you attach on Flickr. So it is a Flickr photo-sharing app. It is difficult for Flickr users to share a single image in different groups as they have different restrictions; therefore, Skedr is here to make your life easier by automating the entire posting and resharing process. Sweet.",
       },
+      // {
+      //   question: "How do I get started?",
+      //   answer:
+      //     "Check out our handy how to use Skedr video just here [link to new video when live]",
+      // },
       {
-        question: "What is the aim of Skedr.io?",
+        question:
+          "Will Skedr post photos or digital art without any instructions from me?",
         answer:
-          "The aim is to save your time by automatically posting photographs to groups based on the tags you attach on Flickr. So it is a flick photo-sharing app. It is difficult for the users to share a single photograph in different groups with different restriction limits; therefore, Skedr is here to make your life easier by automating the entire posting and resharing procedure.",
-      },
-      {
-        question: "Will Skedr post pictures without any instructions?",
-        answer:
-          "No. <br><br>Skedr will never post or share your photograph until or unless you provide specific instructions. These particular instructions include the group tagging feature as well.",
-      },
-      {
-        question: "Will Skedr.io keep my photos and have rights on them?",
-        answer:
-          "No. <br><br>We just share your photos to your groups. We do not download, keep, upload or modify any of your photos.",
+          "No.<br/> Skedr will never post or share your images unless you provide specific instructions. These particular instructions include the group tagging feature as well.",
       },
       {
         question:
-          "Will Skedr.io send messages to any other member on my behalf?",
+          "Will Skedr keep my photos or digital art and have rights to them?",
         answer:
-          "No. <br><br>Flickr’s API does not have that functionality and it is out of the scope of the Skedr.io app.",
+          "No.<br/> We just share your photos or digital art to your groups. We do not download, keep, upload or modify any of your work.<br/> If you would like to grant us permission to share your amazing work across our site, Flickr and social media, with full credit to you, please click here [link to form].",
       },
       {
-        question: "Will Skedr.io join new groups on my behalf?",
+        question: "Will Skedr join new groups on my behalf?",
         answer:
-          "No. <br><br>Skedr will never join groups automatically on your behalf; instead, you will need to choose the desired groups. Skedr will only suggest groups related to your photographs and tags.",
+          "No.<br/> Skedr will never join groups automatically on your behalf; you have the power to choose which groups your would like to join. Skedr will only suggest groups related to your uploads and tags.",
       },
       {
-        question: "How will Skedr handle Private Photos from Flickr?",
+        question: "How will Skedr handle your private images from Flickr?",
         answer:
-          "All photographs are imparted to the clients enrolled in each gathering. Private pictures will show a LOCK symbol. <br/>Whenever you share a photo with a group, the photo is visible to all members.",
+          "Your private images will show a LOCK symbol so you know they are not public.<br/> Whenever you share an image with a group in Flickr, it becomes visible to all members of that group. That’s how Flickr works. To prevent sharing your private images we have filtered out by default in the groups page.",
+      },
+      {
+        question: "I have a question that’s not answered here, where do I go?",
+        answer:
+          "Check out our chatbot, surprisingly run by humans. We’ll do our very best to help.",
+      },
+      {
+        question: "What are credits?",
+        answer:
+          "Sharing a photo or piece of digital art to a single group uses 1 credit. Credits are the ‘pay as you go’ model for Skedr users who don't need subscriptions or share less images. Everyone will earn 250 free credits each week. Whoop.",
+      },
+      {
+        question: "How do I pay?",
+        answer:
+          "We accept credit or debit cards and PayPal. We use <a class='font-semibold text-indigo-600' href='https://www.paddle.com/help/start/intro-to-paddle/which-payment-methods-do-you-support' target='_blank'>Paddle</a> to manage our subscription payments.",
+      },
+      {
+        question: "Who is the founder of Skedr?",
+        answer:
+          "The founder of Skedr is Enric Bisbe Gil, a full stack web developer who is an avid photographer and saw a way to make sharing to Flickr so much easier. When he’s not leading the Skedr team, he is working on many other exciting digital projects. Top secret stuff.",
       },
     ],
   },
@@ -96,17 +117,38 @@ const faqs = [
       {
         question: "What is Automated scheduling?",
         answer:
-          "This is a function that will allow you to schedule a reshare for the photograph automatically. <br/>If the picture you have posted is dismissed due to group limitations and restrictions, Skedr.io will automatically schedule the photo for resharing. This way, you will never miss it and save your time!",
+          "This is a function that will allow you to schedule a reshare of your image automatically.<br/> How cool is that?<br/> If the picture you have posted is dismissed due to group rules and restrictions, Skedr will automatically schedule it for resharing. This way, you will never miss out and it saves you time!",
+      },
+      {
+        question: "Is Skedr basically a spamming tool?",
+        answer:
+          "That is not the aim of Skedr. We trust our users to use the tool ethically and correctly.",
       },
       {
         question: "What is Group Tagging?",
         answer:
-          "To bind any tag of your choice to one or more groups. That is, to define the content of the photos included in the group by keywords (tags).<br><br>Every photo uploaded with one tag will be automatically added to every group that has been tagged with this same keyword.<br><br>For example: If you choose the tag #landscape to be bound to 3 different groups which are related to landscape photography, whenever a photo with that tag is uploaded to your photostream it will be automatically added to those 3 groups.",
+          "A tag is a key word which describes your content. Tagging helps organise your images into relevant groups and make it easier to find.<br/> Every photo uploaded with one tag will be automatically added to every group that has been tagged with this same keyword. You need to click the “sync” button in Photostream.<br/> For example: If you choose the tag #landscape for three different groups which are related to landscape photography, whenever a photo with that tag is uploaded to your photostream it will be automatically added to those three groups. Again, click ‘sync’ button for each photo when you share.",
+      },
+    ],
+  },
+
+  {
+    title: "How the tech works",
+    items: [
+      {
+        question: "Why does Skedr require write permissions to run?",
+        answer:
+          "In order to add a photo to a group Flickr needs WRITE PERMISSIONS from your account. Under the 'Authentication' headline you can read all the related information https://www.flickr.com/services/api/flickr.groups.pools.add.html",
       },
       {
-        question: "What are credits?",
+        question: "Do we need to upload our photos to Skedr?",
         answer:
-          "Sharing a photo to a single group uses 1 credit. Credits are the pay/use as you go model for Skedr users that don't like subscriptions or share less photos. Everyone will earn 250 free credits each week.",
+          "No.<br/> We don't want you to change your workflow. Whether you work with Lightroom, Apple Photos or any kind of Flickr Uploader you can continue working with them. We just need you to use our Group Tagging feature then it’s easy as pie.",
+      },
+      {
+        question: "Is there a need to install any software?",
+        answer:
+          "Skedr is a web-based app, so you do not need to install any software; simply go to our website: <a class='font-semibold text-indigo-600' href='https://app.skedr.io'>https://app.skedr.io/</a>  to get started.<br/> We are compatible with popular browsers including Chrome, Firefox, Safari, and Opera.",
       },
     ],
   },
@@ -114,34 +156,9 @@ const faqs = [
     title: "Promotion",
     items: [
       {
-        question: "What is Autoimported comment?",
+        question: "What is an Autoimported comment?",
         answer:
-          "Every time you share a photo through the Skedr.io app, a message will be displayed similar to: 'Shared with Skedr.io to X groups.'. We do this as a way of promoting our app.<br><br> We will not allow ads on our pages or resell any data as a way of promotion or for getting incomes.",
-      },
-    ],
-  },
-  {
-    title: "How it works?",
-    items: [
-      {
-        question: "Why does Skedr.io requires write permissions to run?",
-        answer:
-          "In order to add a photo to a group Flickr needs <strong>WRITE PERMISSIONS</strong> from you account. Under the '<i>Authentication</i>' headline you can read all the related information <a href=\"https://www.flickr.com/services/api/flickr.groups.pools.add.html\">https://www.flickr.com/services/api/flickr.groups.pools.add.html</a>",
-      },
-      {
-        question: "How to start using Skedr.io?",
-        answer:
-          "Skedr.io is an Flickr App. This is the reason that it follows all community guidelines. You may go to the website <a href='https://skedr.io' class='underline'>https://skedr.io</a> and register yourself to start using the site.",
-      },
-      {
-        question: "Do we need to upload our photos to Skedr.io?",
-        answer:
-          "No. We don't want you to alter your workflow. Whether you work with Lightroom, Apple Photos or any kind of Flickr Uploader you will continue working with them. We just need you to use our Group Tagging feature.",
-      },
-      {
-        question: "Is there a need to install any software?",
-        answer:
-          "Skedr is a web-based app, so you do not need to install any software; instead, enter yourself on the website. It has been improved and works much better in various browsers, including Chrome, Firefox, Safari, and Opera.",
+          "Every time you share a photo through the Skedr, a message will be displayed similar to: 'Shared with Skedr to X groups.'. We do this as a way of promoting our app.<br/> We will not allow ads on our pages or resell any of your data. We make money simply from the fees we charge.",
       },
     ],
   },

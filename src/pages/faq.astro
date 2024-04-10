@@ -1,15 +1,22 @@
 ---
 import FaqPage from "../components/FaqPage.vue";
 import Layout from "../layouts/Layout.astro";
-import HeaderFaq from "../components/headers/HeaderFaq.astro";
+import SimpleHeader from "../components/headers/SimpleHeader.astro";
+import HomeCta from "../components/home/HomeCta.astro";
 
 const meta = {
-  title: "Frequently Asked Questions - Skedr.io",
-  description: "Answers to common questions about Skedr.io for Flickr.",
+  title: "Frequently Asked Questions - Skedr",
+  description: "Answers to common questions about Skedr for Flickr.",
 };
+
+const title = "Frequently Asked Questions";
+const description =
+  "Confused about something? Hopefully we have the answer below";
+const image = "https://images.unsplash.com/photo-1665789318391-6057c533005e";
 ---
 
 <Layout meta={meta}>
-  <HeaderFaq />
+  <SimpleHeader title={title} description={description} image={image} />
   <FaqPage client:only="vue" />
+  <HomeCta />
 </Layout>

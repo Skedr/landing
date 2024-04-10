@@ -1,72 +1,80 @@
 ---
 import { Image } from "astro:assets";
 import ManageTags from "../../assets/screenshot_manage_tags.png";
+import Hashtag from "astro-heroicons/outline/Hashtag.astro";
+import ArrowPath from "astro-heroicons/outline/ArrowPath.astro";
+import Calendar from "astro-heroicons/outline/Calendar.astro";
 ---
 
-<div class="relative bg-white pt-16 pb-32 overflow-hidden">
-  <div
-    class="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-24"
-  >
+<div class="overflow-hidden bg-gray-900 py-24 sm:py-32">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
     <div
-      class="px-4 max-w-xl mx-auto sm:px-6 lg:max-w-none lg:mx-0 lg:px-0 lg:col-start-2"
+      class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2"
     >
-      <div class="text-base max-w-prose mx-auto lg:max-w-none">
-        <p
-          class="text-base text-indigo-600 font-semibold tracking-wide uppercase"
-        >
-          basic usage
-        </p>
-        <h2
-          class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl"
-        >
-          How to use Skedr.io?
-        </h2>
-      </div>
-      <div class="relative z-10 text-base max-w-prose mx-auto">
-        <p class="text-lg text-gray-500">
-          Drinking a coffee or tea every day certainly costs you more than the
-          yearly payment required by Skedr.io, which offers you the lowest
-          possible price. Yes, you read that right.
-        </p>
-      </div>
-
-      <div class="relative z-10">
-        <div class="prose prose-indigo text-gray-500 mx-auto lg:max-w-none">
-          <p>
-            Moreover, there is a free rendition that permits you to share with a
-            limited number of 25 groups. Save your time and look at the
-            following guide to start using Skedr.io without any difficulty.
+      <div class="lg:ml-auto lg:pl-4 lg:pt-4">
+        <div class="lg:max-w-lg">
+          <p class="text-base font-semibold leading-7 text-indigo-400">
+            The Basics
           </p>
-          <ul role="list">
-            <li>
-              As soon as you approve Skedr.io to post to your Flickr on your
-              behalf, your record will show you all the Flickr groups
-              automatically.
-            </li>
-            <li>
-              You have to be careful by labeling or tagging your photos. Make
-              sure to tag them according to the rules of each group. A tag must
-              be a keyword or something meaningful to the group.
-            </li>
-            <li>
-              After tagging the photograph with the desired category or group,
-              use the sync button under each picture on the stream.
-              <br />
-              Skedr.io will go through all of the tags in that photo and share it
-              with all groups that match those tags
-            </li>
-          </ul>
+          <h2
+            class="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl"
+          >
+            How to use Skedr?
+          </h2>
+          <p class="mt-6 text-lg leading-8 text-gray-300">
+            Share your images, be that photos or digital art, to Flick groups by
+            adding tags and then Skedr does the resharing for you solving any
+            group restriction limits. Three easy steps:
+          </p>
+          <dl
+            class="mt-10 max-w-xl space-y-8 text-base leading-7 text-gray-300 lg:max-w-none"
+          >
+            <div class="relative pl-9">
+              <dt class="inline font-semibold text-white">
+                <Hashtag
+                  class="absolute left-1 top-1 h-5 w-5 text-indigo-400"
+                />
+                Use tags.
+              </dt>
+              <dd class="inline">
+                Link your images and groups through tags. A tag must be a
+                keyword or meaningful word describing that group.
+              </dd>
+            </div>
+            <div class="relative pl-9">
+              <dt class="inline font-semibold text-white">
+                <ArrowPath
+                  class="absolute left-1 top-1 h-5 w-5 text-indigo-400"
+                />
+                Sync an image.
+              </dt>
+              <dd class="inline">
+                Share that image to all groups through all of the tags you have
+                linked with that image.
+              </dd>
+            </div>
+            <div class="relative pl-9">
+              <dt class="inline font-semibold text-white">
+                <Calendar
+                  class="absolute left-1 top-1 h-5 w-5 text-indigo-400"
+                />
+                Built-in reshare.
+              </dt>
+              <dd class="inline">
+                Each dismissed image is scheduled for resharing automatically;
+                this way you will reach more Flickr fans.
+              </dd>
+            </div>
+          </dl>
         </div>
       </div>
-    </div>
-    <div class="mt-12 sm:mt-16 lg:mt-0 lg:col-start-1">
-      <div
-        class="pr-4 -ml-48 sm:pr-6 md:-ml-16 lg:px-0 lg:m-0 lg:relative lg:h-full"
-      >
+      <div class="flex items-start justify-end lg:order-first">
         <Image
           src={ManageTags}
-          class="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-none"
+          class="w-[48rem] max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem]"
           alt="Customer profile user interface"
+          width="2432"
+          height="1442"
         />
       </div>
     </div>
