@@ -1,15 +1,15 @@
 <template>
-  <div class="bg-white">
+  <div class="bg-gray-900">
     <div
       v-for="faqGroup in faqs"
       :key="faqGroup.title"
       class="mx-auto max-w-7xl px-6 py-12 sm:py-16 lg:px-8 lg:py-20"
     >
-      <div class="mx-auto max-w-4xl divide-y divide-gray-900/10">
-        <h2 class="text-2xl font-bold leading-10 tracking-tight text-gray-900">
+      <div class="mx-auto max-w-4xl divide-y divide-white/10">
+        <h2 class="text-2xl font-bold leading-10 tracking-tight text-indigo-700 uppercase">
           {{ faqGroup.title }}
         </h2>
-        <dl class="mt-10 space-y-6 divide-y divide-gray-900/10">
+        <dl class="mt-10 space-y-6 divide-y divide-white/10">
           <Disclosure
             as="div"
             v-for="faq in faqGroup.items"
@@ -19,24 +19,27 @@
           >
             <dt>
               <DisclosureButton
-                class="flex w-full items-start justify-between text-left text-gray-900"
+                class="group flex w-full items-start justify-between text-left text-white"
               >
-                <span class="text-base font-semibold leading-7">{{
-                  faq.question
-                }}</span>
+                <span
+                  class="text-base font-semibold leading-7 group-hover:text-indigo-500"
+                  :class="{ 'text-indigo-500': open }"
+                >
+                  {{ faq.question }}
+                </span>
                 <span class="ml-6 flex h-7 items-center">
                   <PlusSmallIcon
                     v-if="!open"
-                    class="h-6 w-6"
+                    class="h-6 w-6 group-hover:text-indigo-500"
                     aria-hidden="true"
                   />
-                  <MinusSmallIcon v-else class="h-6 w-6" aria-hidden="true" />
+                  <MinusSmallIcon v-else class="h-6 w-6 text-indigo-500" aria-hidden="true" />
                 </span>
               </DisclosureButton>
             </dt>
-            <DisclosurePanel as="dd" class="mt-2 pr-12">
+            <DisclosurePanel as="dd" class="mt-2 pr-12 ">
               <p
-                class="text-base leading-7 text-gray-600"
+                class="text-base leading-7 text-gray-300"
                 v-html="faq.answer"
               />
             </DisclosurePanel>
