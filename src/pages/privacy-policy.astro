@@ -3,17 +3,19 @@ import Layout from "../layouts/Layout.astro";
 import PrivacyFile from "../components/PrivacyPolicy.md";
 import SimpleHeader from "../components/headers/SimpleHeader.astro";
 
+const title = "Take a look at our privacy policy";
+
 const meta = {
-  title: "Privacy Policy - Skedr",
-  description: "Privacy Policy for Skedr",
+  title: `${title} - Skedr`,
+  description: "Please read the privacy policy carefully before using Skedr",
   image: "https://images.unsplash.com/photo-1633265486064-086b219458ec",
 };
 ---
 
 <Layout meta={meta}>
   <SimpleHeader
-    title="Read our privacy Policy"
-    description="Please read these Privacy policy carefully before using the Service."
+    title={title}
+    description={meta.description}
     image={meta.image}
   />
 
