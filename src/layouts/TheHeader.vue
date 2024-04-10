@@ -54,14 +54,14 @@ const mobileMenuOpen = ref(false);
           v-for="item in navigation"
           :key="item.name"
           :href="item.href"
-          class="text-sm font-semibold leading-6 text-white px-2 py-1 rounded-lg hover:bg-slate-700"
-          :class="{'bg-slate-700': item.href === currentPath}"
+          class="text-sm font-semibold leading-6 text-white px-2 py-1 rounded-lg hover:bg-indigo-700"
+          :class="{'bg-indigo-500': item.href === currentPath}"
         >
           {{ item.name }}
         </a>
         <button
           data-open-beacon
-          class="text-sm font-semibold text-white cursor-pointer px-2 py-1 rounded-lg hover:bg-slate-700"
+          class="text-sm font-semibold text-white cursor-pointer px-2 py-1 rounded-lg hover:bg-indigo-700"
         >
           Support
         </button>
@@ -69,7 +69,7 @@ const mobileMenuOpen = ref(false);
       <div class="hidden lg:flex lg:flex-1 lg:justify-end space-x-2">
         <a
           href="https://app.skedr.io/"
-          class="log-in text-sm font-semibold leading-6 text-white"
+          class="log-in text-sm font-semibold leading-6 text-white rounded-lg px-2 py-1 hover:bg-indigo-700"
         >
           Log in <span aria-hidden="true">&rarr;</span>
         </a>
