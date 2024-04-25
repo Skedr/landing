@@ -12,6 +12,7 @@ image: https://images.unsplash.com/photo-1713906760744-8f06fcae29a4
 import Gallery from "../../components/Gallery.vue";
 import Quote from "../../components/Quote.astro"
 
+export const credits = 'Image credits: Carsten Skodell, The Base of Bad Ideas, Carmen Buchholz da Silva, Ylura Mysterious.'
 export const images = [
   "/post-2024-04-25/1-Carsten_Skodell_2022_Portugal.jpg",
   "/post-2024-04-25/2-Bad_Ideas.jpg",
@@ -59,7 +60,7 @@ If you ever get stuck, can’t figure out a way through the process we have a ch
 
 Back to the really interesting part, the incredible range of photography and digital art that passes through Skedr. Check out the new gallery below for a taster of the work from some of our community. Get a fresh hit of inspiration whether you’re into painting with light with a digital camera, smartphone or your computer, there’s a place here at Skedr for you. 
 
-<Gallery client:only="vue" images={images} />
+<Gallery client:only="vue" images={images} credits={credits} />
 
 Here’s how to get started with Skedr in four easy steps:
 

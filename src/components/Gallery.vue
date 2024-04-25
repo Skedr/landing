@@ -20,28 +20,44 @@ const setThumbsSwiper = (swiper) => {
 };
 
 interface IProps {
-  images: string[]
+  images: string[];
+  credits?: string;
 }
-const props = defineProps<IProps>()
+const props = defineProps<IProps>();
 
-const modules = [FreeMode, Navigation, Thumbs]
+const modules = [FreeMode, Navigation, Thumbs];
 </script>
 
 <template>
-  <swiper :style="{
-    '--swiper-navigation-color': '#fff',
-    '--swiper-pagination-color': '#fff',
-  }" :loop="true" :spaceBetween="10" :navigation="true" :thumbs="{ swiper: thumbsSwiper }" :modules="modules"
-    class="mySwiper2">
+  <swiper
+    :style="{
+      '--swiper-navigation-color': '#fff',
+      '--swiper-pagination-color': '#fff',
+    }"
+    :loop="true"
+    :spaceBetween="10"
+    :navigation="true"
+    :thumbs="{ swiper: thumbsSwiper }"
+    :modules="modules"
+    class="mySwiper2"
+  >
     <swiper-slide v-for="image of images">
-      <img :src="image" class="max-h-96 object-contain w-full"/>
+      <img :src="image" class="max-h-96 object-contain w-full" />
     </swiper-slide>
-      
   </swiper>
-  <swiper @swiper="setThumbsSwiper" :loop="true" :spaceBetween="10" :slidesPerView="4" :freeMode="true"
-    :watchSlidesProgress="true" :modules="modules" class="mySwiper">
+  <swiper
+    @swiper="setThumbsSwiper"
+    :loop="true"
+    :spaceBetween="10"
+    :slidesPerView="4"
+    :freeMode="true"
+    :watchSlidesProgress="true"
+    :modules="modules"
+    class="mySwiper"
+  >
     <swiper-slide v-for="image of images">
       <img :src="image" class="max-h-24 w-full" />
     </swiper-slide>
   </swiper>
+  <div class="text-sm" v-if="credits">{{ credits }}</div>
 </template>
