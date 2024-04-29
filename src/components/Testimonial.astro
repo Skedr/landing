@@ -1,4 +1,6 @@
 ---
+import { getPeopleProfile } from "../utils/flickrHelper";
+
 interface Props {
   userId: string;
   comment: string;
@@ -6,14 +8,7 @@ interface Props {
 }
 const { userId, comment, outstanding = false } = Astro.props;
 
-import { createFlickr } from "flickr-sdk";
-
-const { flickr } = createFlickr(import.meta.env.PUBLIC_FLICKR_KEY);
-const { person } = await flickr("flickr.people.getInfo", {
-  user_id: userId,
-});
-
-const profileUrl = `https://farm${person.iconfarm}.staticflickr.com/${person.iconserver}/buddyicons/${userId}_r.jpg`;
+const { person, profileUrl } = await getPeopleProfile(userId);
 ---
 
 <figure
@@ -41,7 +36,11 @@ const profileUrl = `https://farm${person.iconfarm}.staticflickr.com/${person.ico
       alt={`Profile for user ${person.username._content}`}
     />
     <div class="flex-auto">
-      <div class="font-semibold">{person.username._content}</div>
+      <div class="font-semibold">
+        <a href={`https://www.flickr.com/${userId}`} target="_blank">
+          {person.username._content}
+        </a>
+      </div>
       <div class="text-gray-600">{person.photos.count._content} photos</div>
     </div>
   </figcaption>
