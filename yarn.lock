@@ -822,6 +822,11 @@
   resolved "https://registry.yarnpkg.com/@pkgjs/parseargs/-/parseargs-0.11.0.tgz#a77ea742fab25775145434eb1d2328cf5013ac33"
   integrity sha512-+1VkjdD0QBLPodGrJUeqarH8VAIvQODIbwh9XpP5Syisf7YoQgsJKPNFoqqLQlu+VQ/tVSshMR6loPMn8U+dPg==
 
+"@rgrove/parse-xml@^4.1.0":
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/@rgrove/parse-xml/-/parse-xml-4.1.0.tgz#ff489b59c4794569fa1b798515eef6826daeeb5e"
+  integrity sha512-pBiltENdy8SfI0AeR1e5TRpS9/9Gl0eiOEt6ful2jQfzsgvZYWqsKiBWaOCLdocQuk0wS7KOHI37n0C1pnKqTw==
+
 "@rollup/rollup-android-arm-eabi@4.13.1":
   version "4.13.1"
   resolved "https://registry.yarnpkg.com/@rollup/rollup-android-arm-eabi/-/rollup-android-arm-eabi-4.13.1.tgz#88ba199f996e0000689130ed69e47df8b0dfbc70"
@@ -2205,6 +2210,13 @@ flattie@^1.1.0:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/flattie/-/flattie-1.1.1.tgz#88182235723113667d36217fec55359275d6fe3d"
   integrity sha512-9UbaD6XdAL97+k/n+N7JwX46K/M6Zc6KcFYskrYL8wbBV/Uyk0CTAMY0VT+qiK5PM7AIc9aTWYtq65U7T+aCNQ==
+
+flickr-sdk@^7.0.0-beta.7:
+  version "7.0.0-beta.7"
+  resolved "https://registry.yarnpkg.com/flickr-sdk/-/flickr-sdk-7.0.0-beta.7.tgz#1a32b57df2743f73283d5f5c114fcfc6dea75576"
+  integrity sha512-ILmQuRSioeFht0vAhQUBfuLaHVxxmI4b9H1/GVuvj7u8kDc7Wkfb3b118Mt8L1joS0fQeAhDRb8irzxNUymtng==
+  dependencies:
+    "@rgrove/parse-xml" "^4.1.0"
 
 foreground-child@^3.1.0:
   version "3.1.1"

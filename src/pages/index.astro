@@ -2,9 +2,9 @@
 import HeaderHome from "../components/headers/HeaderHome.astro";
 import Layout from "../layouts/Layout.astro";
 import HomeOurMission from "../components/home/HomeOurMission.astro";
-import HomeTestimonial from "../components/home/HomeTestimonial.astro";
 import HomeFeatures from "../components/home/HomeFeatures.astro";
 import HomeCta from "../components/home/HomeCta.astro";
+import HomeTestimonials from "../components/home/HomeTestimonials.astro";
 
 const meta = {
   title: "Automated sharing and scheduling for Flickr Groups",
@@ -16,7 +16,7 @@ const meta = {
 <Layout meta={meta}>
   <HeaderHome />
   <HomeFeatures />
+  <HomeTestimonials />
   <HomeOurMission />
-  <HomeTestimonial />
   <HomeCta />
 </Layout>
