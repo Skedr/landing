@@ -1,0 +1,48 @@
+---
+interface Props {
+  userId: string;
+  comment: string;
+  outstanding?: boolean;
+}
+const { userId, comment, outstanding = false } = Astro.props;
+
+import { createFlickr } from "flickr-sdk";
+
+const { flickr } = createFlickr(import.meta.env.PUBLIC_FLICKR_KEY);
+const { person } = await flickr("flickr.people.getInfo", {
+  user_id: userId,
+});
+
+const profileUrl = `https://farm${person.iconfarm}.staticflickr.com/${person.iconserver}/buddyicons/${userId}_r.jpg`;
+---
+
+<figure
+  class={outstanding
+    ? "rounded-2xl bg-white shadow-lg ring-1 ring-gray-900/5 sm:col-span-2 xl:col-start-2 xl:row-end-1"
+    : "rounded-2xl bg-white p-6 shadow-lg ring-1 ring-gray-900/5"}
+>
+  <blockquote
+    class={outstanding
+      ? "p-6 text-lg font-semibold leading-7 tracking-tight text-gray-900 sm:p-12 sm:text-xl sm:leading-8"
+      : "text-gray-900"}
+  >
+    <p>
+      “<Fragment set:html={comment} />”
+    </p>
+  </blockquote>
+  <figcaption
+    class={outstanding
+      ? "flex flex-wrap items-center gap-x-4 gap-y-4 border-t border-gray-900/10 px-6 py-4 sm:flex-nowrap"
+      : "mt-6 flex items-center gap-x-4"}
+  >
+    <img
+      class="h-10 w-10 rounded-full bg-gray-50"
+      src={profileUrl}
+      alt={`Profile for user ${person.username._content}`}
+    />
+    <div class="flex-auto">
+      <div class="font-semibold">{person.username._content}</div>
+      <div class="text-gray-600">{person.photos.count._content} photos</div>
+    </div>
+  </figcaption>
+</figure>

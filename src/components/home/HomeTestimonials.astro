@@ -1,0 +1,160 @@
+---
+import Testimonial from "../Testimonial.astro";
+
+const testimonials = [
+  {
+    userId: "159869034@N02",
+    comment:
+      "Well, I remember the times when I started to post my images on flickr and the number of groups I added them raised over time. It used a lot of time to go though all of them and decide one by one if an image suits the groups themes / rules to add it. At all it was / is still a painful work as there is no assistance by flickr itself if posting into a higher number of groups.<br/> One time when I discovered skedr.io and right after a short test I was convinced, this is the solution for a better experience on posting on flickr.<br/> Thanks Enric, for designing this simple to use and very helpful tool! And not to mention the prompt support should there be any question.",
+  },
+  {
+    userId: "192472980@N03",
+    comment:
+      "I'd say convience is why I like using it the most! It makes posting to group en masse extremely easy! I love that I can customize tags to send to specific groups, especially.",
+  },
+  {
+    userId: "145434830@N04",
+    comment: "Ease of sharing,<br/> speed,<br/> complete view on the groups",
+  },
+  {
+    userId: "198867474@N03",
+    comment:
+      "I love Skedr because it allows me to upload to groups quickly and return to real life faster! It was taking me over an hour to add to all of my groups, but now I save so much time. I also like that I can upload to specific groups and omit others. Life changing!",
+  },
+  {
+    userId: "185247491@N08",
+    comment:
+      "Exposure is hugely important for what I do as a blogger, and exposure comes in part from including my content in different groups. The process itself was tedious to the point of being downright deterring. Skedr helped me convert my least favorite aspect of blogging, into something I can do easily, with the click of a button.",
+  },
+  {
+    userId: "162594208@N03",
+    comment:
+      "I can group several groups in one tag, it is very easy to use, I got a free version to test the service, they are the best!!!!",
+  },
+  {
+    userId: "49366106@N07",
+    comment: "I LIKE THE FACT THAT YOU CAN EASY SHARE IN MULTIPLE GROUPS",
+  },
+  {
+    userId: "187470846@N02",
+    comment: "Easy to use. Fast and time saving. Potential for more.",
+  },
+  {
+    userId: "152898094@N02",
+    comment:
+      "The ease of quickly posting. Being able to divide the groups for posting. Yalls customer service.",
+  },
+  {
+    userId: "199116444@N06",
+    comment:
+      "I really like Skedr because adding my photos to groups manually is very time consuming. I am a member of over 1,100 groups so it would be impossible to remember the content guidelines and rules for each of them. Even with so many groups, Skedr was still fairly quick and easy to setup!",
+  },
+  {
+    userId: "94724949@N06",
+    comment:
+      "It is a really great tool, a wonderful invention that makes the work of those of us who have to promote our work in a more intense way much easier. Before starting to use Skedr, I thought it was just a small trick to try to get more likes, but it really helps a lot even if you only want to share your image in a few groups, it saves you a lot of time since the system that it brings Flickr is really tedious to do, plus it crashes constantly lol, Thanks for creating such a cool tool! ^^",
+  },
+
+  {
+    userId: "96660892@N07",
+    comment: "Ease of use. Absolute time saver. I should use it more.",
+  },
+  {
+    userId: "192920530@N07",
+    comment:
+      "Its simply the best way to get images into multiple groups. Its also easy to make sure an image ends up in the correct group by using the keywords properly!",
+  },
+  {
+    userId: "58463429@N07",
+
+    comment:
+      "Its so easy to pit my pictures in the groups. I gives my more time to do other things. Love this a lot :-)",
+  },
+];
+---
+
+<div class="relative isolate bg-gray-900 pb-32 pt-24 sm:pt-32">
+  <div
+    class="absolute inset-x-0 top-1/2 -z-10 -translate-y-1/2 transform-gpu overflow-hidden opacity-30 blur-3xl"
+    aria-hidden="true"
+  >
+    <div
+      class="ml-[max(50%,38rem)] aspect-[1313/771] w-[82.0625rem] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc]"
+      style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"
+    >
+    </div>
+  </div>
+  <div
+    class="absolute inset-x-0 top-0 -z-10 flex transform-gpu overflow-hidden pt-32 opacity-25 blur-3xl sm:pt-40 xl:justify-end"
+    aria-hidden="true"
+  >
+    <div
+      class="ml-[-22rem] aspect-[1313/771] w-[82.0625rem] flex-none origin-top-right rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] xl:ml-0 xl:mr-[calc(50%-12rem)]"
+      style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"
+    >
+    </div>
+  </div>
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <div class="mx-auto max-w-xl text-center">
+      <h2
+        class="text-lg font-semibold leading-8 tracking-tight text-indigo-600"
+      >
+        Testimonials
+      </h2>
+      <p class="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+        What they say about us
+      </p>
+    </div>
+    <div
+      class="mx-auto mt-16 grid max-w-2xl grid-cols-1 grid-rows-1 gap-8 text-sm leading-6 text-gray-900 sm:mt-20 sm:grid-cols-2 xl:mx-0 xl:max-w-none xl:grid-flow-col xl:grid-cols-4"
+    >
+      <Testimonial
+        userId={testimonials[0].userId}
+        comment={testimonials[0].comment}
+        outstanding
+      />
+      <div class="space-y-8 xl:contents xl:space-y-0">
+        <div class="space-y-8 xl:row-span-2">
+          {
+            testimonials
+              .slice(1, 5)
+              .map(({ userId, comment }) => (
+                <Testimonial userId={userId} comment={comment} />
+              ))
+          }
+        </div>
+        <div class="space-y-8 xl:row-start-1">
+          {
+            testimonials
+              .slice(5, 8)
+              .map(({ userId, comment }) => (
+                <Testimonial userId={userId} comment={comment} />
+              ))
+          }
+        </div>
+      </div>
+      <div class="space-y-8 xl:contents xl:space-y-0">
+        <div class="space-y-8 xl:row-start-1">
+          {
+            testimonials
+              .slice(8, 10)
+              .map(({ userId, comment }) => (
+                <Testimonial userId={userId} comment={comment} />
+              ))
+          }
+          <!-- More testimonials... -->
+        </div>
+        <div class="space-y-8 xl:row-span-2">
+          {
+            testimonials
+              .slice(10)
+              .map(({ userId, comment }) => (
+                <Testimonial userId={userId} comment={comment} />
+              ))
+          }
+          <!-- More testimonials... -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
