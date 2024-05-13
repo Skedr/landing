@@ -14,7 +14,7 @@ export default {
     require("@tailwindcss/forms"),
     require("@tailwindcss/aspect-ratio"),
     require("@tailwindcss/typography"),
-    function ({ addComponents, theme }) {
+    function ({ addComponents }) {
       addComponents({
         '.link': {
           'font-weight': 600,
