@@ -62,11 +62,13 @@ import { Image } from "astro:assets";
         </div>
       </div>
       <video
-        controls=""
-        autoplay=""
+        controls
+        autoplay
+        loop
+        muted
+        poster="/public/video_poster.png"
         class="mt-16 rounded-md bg-white/5 shadow-2xl ring-1 ring-white/10 sm:mt-24"
       >
-        >
         <source
           src="https://www.flickr.com/photos/skedr/53734335193/play/1080p/a071b153fb/"
           type="video/mp4"
