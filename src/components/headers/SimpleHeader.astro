@@ -10,7 +10,7 @@ const w = "2830";
 const h = "1500";
 
 let imgUrl: URL | undefined;
-if (image) {
+if (image && image.includes("unsplash")) {
   imgUrl = new URL(image);
   imgUrl.searchParams.set("auto", "format");
   imgUrl.searchParams.set("fit", "crop");
