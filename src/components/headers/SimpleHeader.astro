@@ -8,8 +8,9 @@ interface Props {
 const { title, description, image } = Astro.props;
 const w = "2830";
 const h = "1500";
+let classStyle = "absolute inset-0 -z-10 h-full w-full object-cover";
 
-let imgUrl: URL | undefined;
+let imgUrl: string | URL | undefined;
 if (image && image.includes("unsplash")) {
   imgUrl = new URL(image);
   imgUrl.searchParams.set("auto", "format");
@@ -22,6 +23,11 @@ if (image && image.includes("unsplash")) {
   imgUrl.searchParams.set("sat", "-100");
   imgUrl.searchParams.set("exp", "15");
   imgUrl.searchParams.set("blend-mode", "multiply");
+} else {
+  imgUrl = image;
+  classStyle = classStyle.concat(
+    " mix-blend-multiply saturate-[.15] bg-blend-multiply brightness-100"
+  );
 }
 ---
 
@@ -35,7 +41,7 @@ if (image && image.includes("unsplash")) {
         alt={title}
         width={w}
         height={h}
-        class="absolute inset-0 -z-10 h-full w-full object-cover"
+        class={classStyle}
       />
     ) : null
   }
