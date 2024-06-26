@@ -5,11 +5,12 @@ import { getCollection } from "astro:content";
 import SimpleHeader from "../components/headers/SimpleHeader.astro";
 
 const allPosts = await getCollection("posts");
+const image = "https://images.unsplash.com/photo-1517842645767-c639042777db";
 const meta = {
   title: "Blog - Skedr",
   description: "Find out more about the Skedr world",
+  image,
 };
-const image = "https://images.unsplash.com/photo-1517842645767-c639042777db";
 ---
 
 <Layout meta={meta}>

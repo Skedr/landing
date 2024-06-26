@@ -6,6 +6,7 @@ import ClockIcon from "astro-heroicons/outline/Clock.astro";
 import CalendarIcon from "astro-heroicons/outline/Calendar.astro";
 import Tag from "../../components/Tag.astro";
 import SimpleHeader from "../../components/headers/SimpleHeader.astro";
+import { stripHtml } from "../../utils/general";
 
 export async function getStaticPaths() {
   const blogEntries = await getCollection("posts");
@@ -18,7 +19,11 @@ export async function getStaticPaths() {
 const { entry } = Astro.props;
 const { title, description, tags, time, pubDate, pretitle, image } = entry.data;
 const { Content } = await entry.render();
-const meta = { title, description, image };
+const meta = {
+  title: stripHtml(title),
+  description: stripHtml(description),
+  image,
+};
 ---
 
 <Layout meta={meta}>
