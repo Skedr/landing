@@ -37,7 +37,7 @@ const { data: post } = collection;
       >
         <a href={`/blog/${collection.slug}`}>
           <span class="absolute inset-0"></span>
-          <Fragment set:html={post.title} />
+          <Fragment set:text={post.title.replace(/(<([^>]+)>)/gi, "")} />
         </a>
       </h3>
       <p class="mt-5 text-sm leading-6 text-gray-600">
