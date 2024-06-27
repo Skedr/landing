@@ -1,6 +1,7 @@
 ---
 import type { CollectionEntry } from "astro:content";
 import Tag from "./Tag.astro";
+import { stripHtml } from "../utils/general";
 interface Props {
   post: CollectionEntry<"posts">;
 }
@@ -37,7 +38,7 @@ const { data: post } = collection;
       >
         <a href={`/blog/${collection.slug}`}>
           <span class="absolute inset-0"></span>
-          <Fragment set:html={post.title} />
+          <Fragment set:text={stripHtml(post.title)} />
         </a>
       </h3>
       <p class="mt-5 text-sm leading-6 text-gray-600">
