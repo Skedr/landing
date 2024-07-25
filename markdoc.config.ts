@@ -4,7 +4,7 @@ export default defineMarkdocConfig({
   tags: {
     quote: {
       ...nodes.blockquote, 
-      render: component('./src/components/Quote.astro'),
+      render: component('./src/components/QuoteFlickr.astro'),
       attributes: {
         name: { type: String },
         url: { type: String },
