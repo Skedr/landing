@@ -34,7 +34,7 @@
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.13",
     "prettier": "^3.3.3",
-    "prettier-plugin-astro": "^0.14.0",
+    "prettier-plugin-astro": "^0.14.1",
     "rehype-figure": "^1.0.1"
   }
 }
