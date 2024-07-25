@@ -1,11 +1,13 @@
 ---
+import { getPeopleProfile } from "../utils/flickrHelper";
+
 interface Props {
-  name: string;
+  userId: string;
   description: string;
-  profileUrl: string;
-  imageUrl: string;
 }
-const { profileUrl, description, name, imageUrl } = Astro.props;
+const { userId, description } = Astro.props;
+
+const { person, profileUrl } = await getPeopleProfile(userId);
 ---
 
 <figure class="not-prose mt-10 border-l border-indigo-600 pl-9">
@@ -14,16 +16,17 @@ const { profileUrl, description, name, imageUrl } = Astro.props;
       <slot />
     </p>
   </blockquote>
+
   <figcaption class="mt-6 flex gap-x-4">
     <img
       class="h-6 w-6 flex-none rounded-full bg-gray-50"
-      src={imageUrl}
-      alt={`Profile for ${name}`}
+      src={profileUrl}
+      alt={`Profile for user ${person.username._content}`}
     />
     <div class="text-sm leading-6">
       <strong class="font-semibold text-gray-900">
-        <a href={profileUrl} target="_blank">
-          {name}
+        <a href={`https://www.flickr.com/${userId}`} target="_blank">
+          {person.username._content}
         </a>
       </strong>
       {description}

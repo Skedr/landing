@@ -9,5 +9,5 @@ export const getPeopleProfile = async (userId: string) => {
 
   const profileUrl = `https://farm${person.iconfarm}.staticflickr.com/${person.iconserver}/buddyicons/${userId}_r.jpg`;
 
-  return {person, profileUrl };
+  return { person, profileUrl };
 };
