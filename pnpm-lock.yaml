@@ -45,8 +45,8 @@ importers:
         specifier: ^4.12.2
         version: 4.12.2(typescript@5.5.3)
       astro-heroicons:
-        specifier: ^2.1.1
-        version: 2.1.1
+        specifier: ^2.1.5
+        version: 2.1.5
       flickr-sdk:
         specifier: ^7.0.0-beta.7
         version: 7.0.0-beta.7
@@ -1095,8 +1095,8 @@ packages:
     resolution: {integrity: sha512-ISvCdHdlTDlH5IpxQJIex7BWBywFWgjJSVdwst+/iQCoEYnyOaQ95+X1JGshuBjGp6nxKUy1jMgE3zPqN7fQdg==}
     hasBin: true
 
-  astro-heroicons@2.1.1:
-    resolution: {integrity: sha512-NcQIhCyF85hrbJEFssEVGo2t2vha1CqQilNfy/POTl1bknZFANjOjbKG6+Wndvxmumj4O8RTmUUNU7k8UDbw9g==}
+  astro-heroicons@2.1.5:
+    resolution: {integrity: sha512-5o58jOnbxli8sec5Ht6Olmy/bgcl5nP+QyV3C7sYRP40D3OuJ3z1F9oMZn25wkwKymdQco0M9bOeJ3r90ZGGmQ==}
 
   astro@4.12.2:
     resolution: {integrity: sha512-l6OmqlL+FiuSi9x6F+EGZitteOznq1JffOil7st7cdqeMCTEIym4oagI1a6zp6QekliKWEEZWdplGhgh1k1f7Q==}
@@ -4092,7 +4092,7 @@ snapshots:
 
   astring@1.8.6: {}
 
-  astro-heroicons@2.1.1: {}
+  astro-heroicons@2.1.5: {}
 
   astro@4.12.2(typescript@5.5.3):
     dependencies:
