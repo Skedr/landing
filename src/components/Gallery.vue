@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref } from "vue";
+import { computed, ref } from "vue";
 // Import Swiper Vue.js components
 import { Swiper, SwiperSlide } from "swiper/vue";
 
@@ -25,39 +25,35 @@ interface IProps {
 }
 const props = defineProps<IProps>();
 
+const computedCredits = computed(() => {
+  if (props.credits) {
+    return props.credits
+  } else {
+    const customCredits = props.images.map((fileName) =>
+      fileName.split('-').pop()?.split('.')[0].replace('_', ' ')
+    ).join(', ')
+    return `Image credits: ${customCredits}`
+  }
+})
+
 const modules = [FreeMode, Navigation, Thumbs];
 </script>
 
 <template>
-  <swiper
-    :style="{
-      '--swiper-navigation-color': '#fff',
-      '--swiper-pagination-color': '#fff',
-    }"
-    :loop="true"
-    :spaceBetween="10"
-    :navigation="true"
-    :thumbs="{ swiper: thumbsSwiper }"
-    :modules="modules"
-    class="mySwiper2"
-  >
+  <swiper :style="{
+    '--swiper-navigation-color': '#fff',
+    '--swiper-pagination-color': '#fff',
+  }" :loop="true" :spaceBetween="10" :navigation="true" :thumbs="{ swiper: thumbsSwiper }" :modules="modules"
+    class="mySwiper2">
     <swiper-slide v-for="image of images">
       <img :src="image" class="max-h-96 object-contain w-full" />
     </swiper-slide>
   </swiper>
-  <swiper
-    @swiper="setThumbsSwiper"
-    :loop="true"
-    :spaceBetween="10"
-    :slidesPerView="4"
-    :freeMode="true"
-    :watchSlidesProgress="true"
-    :modules="modules"
-    class="mySwiper"
-  >
+  <swiper @swiper="setThumbsSwiper" :loop="true" :spaceBetween="10" :slidesPerView="4" :freeMode="true"
+    :watchSlidesProgress="true" :modules="modules" class="mySwiper">
     <swiper-slide v-for="image of images">
       <img :src="image" class="max-h-24 w-full" />
     </swiper-slide>
   </swiper>
-  <div class="text-sm" v-if="credits">{{ credits }}</div>
+  <div class="text-sm" v-if="computedCredits">{{ computedCredits }}</div>
 </template>
