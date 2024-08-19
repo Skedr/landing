@@ -31,8 +31,10 @@ const computedCredits = computed(() => {
   } else {
     const customCredits = props.images.map((fileName) =>
       fileName.split('-').pop()?.split('.')[0].replace('_', ' ')
-    ).join(', ')
-    return `Image credits: ${customCredits}`
+    )
+    const uniquePhotographers = new Set(customCredits)
+
+    return `Image credits: ${Array.from(uniquePhotographers).join(', ')}`
   }
 })
 
