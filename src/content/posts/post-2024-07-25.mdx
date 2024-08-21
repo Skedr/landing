@@ -6,29 +6,11 @@ pretitle: ''
 pubDate: 2024-07-25
 time: 3
 tags: [tips, world photography day, travel, summer]
-image: /post-2024-07-25/Endless-Enric-Bisbe-Gil.jpg
+image: /src/assets/posts/2024-07-25/Endless-Enric_Bisbe_Gil.jpg
 
 ---
-import Gallery from "../../components/Gallery.vue";
+import Gallery from "../../components/Gallery.astro";
 import Quote from "../../components/Quote.astro"
-
-export const compositionCredits = 'Image credits: Enric Bisbe Gil.'
-export const compositionGallery = [
-  "/post-2024-07-25/Amir-Temur-maqbarasi-Enric-Bisbe-Gil.jpg",
-  "/post-2024-07-25/Dawn-of-the-chinese-Enric-Bisbe-Gil.jpg",
-]
-
-export const images = [
-  "/post-2024-07-25/Tide-Pools-Carsten-Skodell.jpg",
-  "/post-2024-07-25/The-Rock-Carsten-Skodell.jpg",
-  "/post-2024-07-25/Views-from-Lion-Rock-at-Sigiriya-Enric-Bisbe-Gil.jpg",
-  "/post-2024-07-25/Skin-details-Enric-Bisbe-Gil.jpg",
-  "/post-2024-07-25/Chimpanzee-looking-at-the-trees-Enric-Bisbe-Gil.jpg",
-  "/post-2024-07-25/Pretzel-seller-at-Khan-Al-Khalili-Enric-Bisbe-Gil.jpg",
-  "/post-2024-07-25/Aral-seas-bathtub-Enric-Bisbe-Gil.jpg",
-  ...compositionGallery
-]
-export const credits = 'Image credits: Carsten Skodell, Enric Bisbe Gil.'
 
 It's World Photography Day on August 19, and we're looking to you our Skedr community to share your travel photos that we'll compile into our own amazing gallery on that day. They could be landscapes, portraits from the city or countryside. Photo postcards from your summer holidays; family and friends enjoying the sunshine or simply epic wildlife or breathtaking sunsets. Want to find out more? Well we've compiled five top travel photography tips to get you on the road.
 
@@ -46,12 +28,12 @@ There are so many camera options out there, for those who are not yet profession
   name="Robert Capa"
   description="legendary Magnum photographer"
   profileUrl="https://www.magnumphotos.com/photographer/robert-capa/"
-  imageUrl="/post-2024-07-25/Robert-Capa.webp">
+  imageUrl="/profile/Robert-Capa.webp">
 "If your pictures aren't good enough you are not close enough"
 </Quote>
 
 **Tip 2.  Composition** - a reminder of the classic rule of thirds, some cameras have this built in dividing your frame into 9 rectangles and placing the subject of the scene along one or more of the lines or where the lines intersect. Or you can center your subject and create symmetry, great for reflections and architecture. Or do you want to be more minimal, using negative space to pull focus on where you want the viewer to look. Take time to consider your composition.
-<Gallery client:only="vue" images={compositionGallery} credits={compositionCredits} />
+<Gallery folder="2024-07-25/composition" id="composition"/>
 
 **Tip 3. Message** - is there a theme you want to explore, a message to communicate? You might want to think about provocative topics like: acts of human kindness, gender equality or protecting the planet. Think about the feeling you want to express.
 
@@ -59,7 +41,7 @@ There are so many camera options out there, for those who are not yet profession
 
 **Tip 5. Originality** -  even when photographing one of the more iconic and much-photographed places, how can you make the image really shine and show that a photographer has taken the time and has the imagination to stamp their own style or vision onto it.
 
-<Gallery client:only="vue" images={images} credits={credits} />
+<Gallery folder="2024-07-25"/>
 
 Expensive camera gear and a scientific understanding of how they work are no substitute for a considered thought process and an idea which inspires people to think.
 

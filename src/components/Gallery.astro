@@ -1,0 +1,93 @@
+---
+import { Image } from "astro:assets";
+import type { ImageMetadata } from "astro";
+
+interface Props {
+  folder: string;
+  id?: string;
+}
+const { folder, id = "mySwiper" } = Astro.props;
+
+const allImages = await Astro.glob<{ default: ImageMetadata }>(
+  `../assets/posts/*/**`
+);
+
+const images = allImages.filter(({ default: { src } }) => src.includes(folder));
+
+const customCredits = images.map(({ default: { src } }) =>
+  src.split("-").pop()?.split(".")[0].replaceAll("_", " ")
+);
+const uniquePhotographers = new Set(customCredits);
+const credits = `Image credits: ${Array.from(uniquePhotographers).join(", ")}`;
+
+const altText = (name: string) =>
+  name.split(".")[0].split("/").pop()?.replaceAll("_", " ").replace("-", " - ");
+---
+
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+<script type="module" define:vars={{ id }}>
+  // core version + navigation, pagination modules:
+  //import Swiper from "swiper/bundle";
+  import Swiper from "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs";
+
+  // init Swiper:
+  var swiper = new Swiper(`.${id}`, {
+    loop: true,
+    spaceBetween: 10,
+    slidesPerView: 4,
+    freeMode: true,
+    watchSlidesProgress: true,
+  });
+  var swiper2 = new Swiper(`.${id}2`, {
+    loop: true,
+    spaceBetween: 10,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    thumbs: {
+      swiper: swiper,
+    },
+  });
+</script>
+
+<!-- Slider main container -->
+<div
+  style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff"
+  class={`swiper ${id}2`}
+>
+  <div class="swiper-wrapper">
+    {
+      images.map((image) => (
+        <div class="swiper-slide">
+          <Image
+            src={image.default}
+            class="max-h-96 object-contain w-full"
+            alt={altText(image.default.src)}
+          />
+        </div>
+      ))
+    }
+  </div>
+  <div class="swiper-button-next"></div>
+  <div class="swiper-button-prev"></div>
+</div>
+<div class={`swiper ${id}`}>
+  <div class="swiper-wrapper">
+    {
+      images.map((image) => (
+        <div class="swiper-slide">
+          <Image
+            src={image.default}
+            class="max-h-24 object-contain w-full"
+            alt={altText(image.default.src)}
+          />
+        </div>
+      ))
+    }
+  </div>
+</div>
+<div class="text-sm">{credits}</div>

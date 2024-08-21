@@ -2,6 +2,7 @@
 import type { CollectionEntry } from "astro:content";
 import Tag from "./Tag.astro";
 import { stripHtml } from "../utils/general";
+import { Image } from "astro:assets";
 interface Props {
   post: CollectionEntry<"posts">;
 }
@@ -9,17 +10,31 @@ interface Props {
 // `post` will match your 'blog' collection schema type
 const { post: collection } = Astro.props;
 const { data: post } = collection;
+
+const images = import.meta.glob<{ default: ImageMetadata }>(
+  "/src/assets/*.{jpeg,jpg,png,gif}"
+);
 ---
 
 <article class="relative isolate flex flex-col gap-8 lg:flex-row">
   <div
     class="relative aspect-[16/9] sm:aspect-[2/1] lg:aspect-square lg:w-64 lg:shrink-0"
   >
-    <img
-      src={`${post.image}?auto=format&fit=crop&w=3603&q=80 `}
-      alt={post.title}
-      class="absolute inset-0 h-full w-full rounded-2xl bg-gray-50 object-cover"
-    />
+    {
+      images[post.image] ? (
+        <Image
+          src={images[post.image]()}
+          alt={post.title}
+          class="absolute inset-0 h-full w-full rounded-2xl bg-gray-50 object-cover"
+        />
+      ) : (
+        <img
+          src={`${post.image}?auto=format&fit=crop&w=3603&q=80 `}
+          alt={post.title}
+          class="absolute inset-0 h-full w-full rounded-2xl bg-gray-50 object-cover"
+        />
+      )
+    }
     <div
       class="absolute inset-0 rounded-2xl ring-1 ring-inset ring-gray-900/10"
     >

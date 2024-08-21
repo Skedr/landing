@@ -6,22 +6,11 @@ pretitle: Today, August 19, 2024 is World Photography Day
 pubDate: 2024-08-19
 time: 4
 tags: [travel,photography,gallery,trends]
-image: /post-2024-08-19/Scotch_Mist-Images@twiston.jpg
+image: /src/assets/posts/2024-08-19/Scotch_Mist-Images@twiston.jpg
 
 ---
-import Gallery from "../../components/Gallery.vue";
+import Gallery from "../../components/Gallery.astro";
 import Quote from "../../components/Quote.astro"
-
-export const images = [
-  "/post-2024-08-19/Scotch_Mist-Images@twiston.jpg",
-  "/post-2024-08-19/Fishing_time1-Sabina_Akter.jpg",
-  "/post-2024-08-19/Untitled-DavideJ.jpg",
-  "/post-2024-08-19/The_Blocks...-Jonathan_Woods.jpg",
-  "/post-2024-08-19/BunchofPurity-Sabina_Akter.png",
-  "/post-2024-08-19/Tide_pools-Carsten_Skodell.jpg",
-  "/post-2024-08-19/dot-Adeosun_Olamide.jpg",
-]
-export const credits = 'Image credits: .'
 
 <Quote 
   name="Steve Davey"
@@ -40,7 +29,7 @@ The day also celebrates the invention and public release of the Daguerreotype, a
 Let’s take a beat to recognize photography's role in documenting history, shaping culture, and allowing for artistic expression. The importance of photography as a medium for communication, storytelling, and preserving moments in time. And this day helps promote a sense of community among photographers and enthusiasts wherever they may be in the world. We see you. 
 
 ## The magnificent seven
-<Gallery client:only="vue" images={images} />
+<Gallery folder="2024-08-19" />
 
 <Quote 
   name="Imogen Cunningham"
