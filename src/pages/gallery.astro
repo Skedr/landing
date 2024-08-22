@@ -5,12 +5,16 @@ import SimpleHeader from "../components/headers/SimpleHeader.astro";
 const meta = {
   title: "Gallery",
   description:
-    "In need of inspiration? Look no further than our Skedr gallery. Follow @Skedr.io on Instagram and Flickr to get your photos featured.",
+    "In need of inspiration? Look no further than our Skedr gallery.",
 };
+
+const extraDescription =
+  meta.description +
+  ' Follow @Skedr.io on <a href="//www.instagram.com/skedr.io" target="_blank" class="underline">Instagram</a> and <a href="https://www.flickr.com/photos/skedr" target="_blank" class="underline">Flickr</a> to get your photos featured.';
 ---
 
 <Layout meta={meta}>
-  <SimpleHeader title={meta.title} description={meta.description} />
+  <SimpleHeader title={meta.title} description={extraDescription} />
 
   <div class="relative isolate bg-gray-900 pb-32">
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
