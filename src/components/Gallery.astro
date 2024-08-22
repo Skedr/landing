@@ -20,17 +20,23 @@ const customCredits = images.map(({ default: { src } }) =>
 const uniquePhotographers = new Set(customCredits);
 const credits = `Image credits: ${Array.from(uniquePhotographers).join(", ")}`;
 
-const altText = (name: string) =>
-  name.split(".")[0].split("/").pop()?.replaceAll("_", " ").replace("-", " - ");
+const altText = (name: string) => {
+  const photo = name.split(".")[0].split("/").pop();
+
+  if (photo) {
+    return photo.replaceAll("_", " ").replace("-", " - ");
+  } else {
+    return name;
+  }
+};
 ---
 
 <link
   rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
 />
-<script type="module" define:vars={{ id }}>
+<script is:inline define:vars={{ id }}>
   // core version + navigation, pagination modules:
-  //import Swiper from "swiper/bundle";
   import Swiper from "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs";
 
   // init Swiper:
@@ -41,7 +47,7 @@ const altText = (name: string) =>
     freeMode: true,
     watchSlidesProgress: true,
   });
-  var swiper2 = new Swiper(`.${id}2`, {
+  new Swiper(`.${id}2`, {
     loop: true,
     spaceBetween: 10,
     navigation: {
