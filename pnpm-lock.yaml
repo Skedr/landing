@@ -54,8 +54,8 @@ importers:
         specifier: ^0.33.5
         version: 0.33.5
       swiper:
-        specifier: ^11.1.12
-        version: 11.1.12
+        specifier: ^11.1.14
+        version: 11.1.14
       tailwindcss:
         specifier: ^3.4.10
         version: 3.4.10
@@ -2491,8 +2491,8 @@ packages:
   svg-tags@1.0.0:
     resolution: {integrity: sha512-ovssysQTa+luh7A5Weu3Rta6FJlFBBbInjOh722LIt6klpU2/HtdUbszju/G4devcvk8PGt7FCLv5wftu3THUA==}
 
-  swiper@11.1.12:
-    resolution: {integrity: sha512-PUkCToYAZMB4kP7z+YfPnkMHOMwMO71g8vUhz2o5INGIgIMb6Sb0XiP6cEJFsiFTd7FRDn5XCbg+KVKPDZqXLw==}
+  swiper@11.1.14:
+    resolution: {integrity: sha512-VbQLQXC04io6AoAjIUWuZwW4MSYozkcP9KjLdrsG/00Q/yiwvhz9RQyt0nHXV10hi9NVnDNy1/wv7Dzq1lkOCQ==}
     engines: {node: '>= 4.7.0'}
 
   tailwindcss@3.4.10:
@@ -5994,7 +5994,7 @@ snapshots:
 
   svg-tags@1.0.0: {}
 
-  swiper@11.1.12: {}
+  swiper@11.1.14: {}
 
   tailwindcss@3.4.10:
     dependencies:
