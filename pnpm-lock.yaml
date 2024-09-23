@@ -27,8 +27,8 @@ importers:
         specifier: ^4.5.1
         version: 4.5.1(astro@4.15.7(rollup@4.21.2)(typescript@5.5.4))(rollup@4.21.2)(vite@5.4.6)(vue@3.5.5(typescript@5.5.4))
       '@headlessui/vue':
-        specifier: ^1.7.22
-        version: 1.7.22(vue@3.5.5(typescript@5.5.4))
+        specifier: ^1.7.23
+        version: 1.7.23(vue@3.5.5(typescript@5.5.4))
       '@heroicons/vue':
         specifier: ^2.1.5
         version: 2.1.5(vue@3.5.5(typescript@5.5.4))
@@ -492,8 +492,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@headlessui/vue@1.7.22':
-    resolution: {integrity: sha512-Hoffjoolq1rY+LOfJ+B/OvkhuBXXBFgd8oBlN+l1TApma2dB0En0ucFZrwQtb33SmcCqd32EQd0y07oziXWNYg==}
+  '@headlessui/vue@1.7.23':
+    resolution: {integrity: sha512-JzdCNqurrtuu0YW6QaDtR2PIYCKPUWq28csDyMvN4zmGccmE7lz40Is6hc3LA4HFeCI7sekZ/PQMTNmn9I/4Wg==}
     engines: {node: '>=10'}
     peerDependencies:
       vue: ^3.2.0
@@ -3434,7 +3434,7 @@ snapshots:
   '@esbuild/win32-x64@0.21.5':
     optional: true
 
-  '@headlessui/vue@1.7.22(vue@3.5.5(typescript@5.5.4))':
+  '@headlessui/vue@1.7.23(vue@3.5.5(typescript@5.5.4))':
     dependencies:
       '@tanstack/vue-virtual': 3.7.0(vue@3.5.5(typescript@5.5.4))
       vue: 3.5.5(typescript@5.5.4)
