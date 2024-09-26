@@ -31,4 +31,71 @@ const altText = (name: string) => {
 };
 ---
 
-<GalleryVue client:only="vue" images={images} credits={credits} />
+<!-- Slider main container -->
+<div
+  style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff"
+  class={`swiper ${id}2`}
+>
+  <div class="swiper-wrapper">
+    {
+      images.map((image) => (
+        <div class="swiper-slide">
+          <Image
+            src={image.default}
+            class="max-h-96 object-contain w-full"
+            alt={altText(image.default.src)}
+          />
+        </div>
+      ))
+    }
+  </div>
+  <div class="swiper-button-next"></div>
+  <div class="swiper-button-prev"></div>
+</div>
+<div class={`swiper ${id}`}>
+  <div class="swiper-wrapper">
+    {
+      images.map((image) => (
+        <div class="swiper-slide">
+          <Image
+            src={image.default}
+            class="max-h-24 object-contain w-full"
+            alt={altText(image.default.src)}
+          />
+        </div>
+      ))
+    }
+  </div>
+</div>
+<div class="text-sm">{credits}</div>
+
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+<script
+  is:inline
+  src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script is:inline define:vars={{ id }}>
+  // core version + navigation, pagination modules:
+
+  // init Swiper:
+  var swiper = new Swiper(`.${id}`, {
+    loop: true,
+    spaceBetween: 10,
+    slidesPerView: 4,
+    freeMode: true,
+    watchSlidesProgress: true,
+  });
+  new Swiper(`.${id}2`, {
+    loop: true,
+    spaceBetween: 10,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    thumbs: {
+      swiper: swiper,
+    },
+  });
+</script>
