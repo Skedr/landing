@@ -87,17 +87,17 @@ const faqs = [
       {
         question: "How will Skedr handle your private images from Flickr?",
         answer:
-          "Your private images will show a LOCK symbol so you know they are not public.<br/> Whenever you share an image with a group in Flickr, it becomes visible to all members of that group. That’s how Flickr works. To prevent sharing your private images we have filtered out by default in the groups page.",
+          "Your private images will show a LOCK symbol so you know they are not public.<br/> Whenever you share an image with a group in Flickr, it becomes visible to all members of that group. That's how Flickr works. To prevent sharing your private images we have filtered out by default in the groups page.",
       },
       {
-        question: "I have a question that’s not answered here, where do I go?",
+        question: "I have a question that's not answered here, where do I go?",
         answer:
-          "Check out our chatbot, surprisingly run by humans. We’ll do our very best to help.",
+          "Check out our chatbot, surprisingly run by humans. We'll do our very best to help.",
       },
       {
         question: "What are credits?",
         answer:
-          "Sharing a photo or piece of digital art to a single group uses 1 credit. Credits are the ‘pay as you go’ model for Skedr users who don't need subscriptions or share less images. Everyone will earn 250 free credits each week. Whoop.",
+          "Sharing a photo or piece of digital art to a single group uses 1 credit. Credits are the 'pay as you go' model for Skedr users who don't need subscriptions or share less images. Everyone will earn 250 free credits each week. Whoop.",
       },
       {
         question: "How do I pay?",
@@ -107,7 +107,7 @@ const faqs = [
       {
         question: "Who is the founder of Skedr?",
         answer:
-          "The founder of Skedr is Enric Bisbe Gil, a full stack web developer who is an avid photographer and saw a way to make sharing to Flickr so much easier. When he’s not leading the Skedr team, he is working on many other exciting digital projects. Top secret stuff.",
+          "The founder of Skedr is Enric Bisbe Gil, a full stack web developer who is an avid photographer and saw a way to make sharing to Flickr so much easier. When he's not leading the Skedr team, he is working on many other exciting digital projects. Top secret stuff.",
       },
     ],
   },
@@ -127,7 +127,7 @@ const faqs = [
       {
         question: "What is Group Tagging?",
         answer:
-          "A tag is a key word which describes your content. Tagging helps organise your images into relevant groups and make it easier to find.<br/> Every photo uploaded with one tag will be automatically added to every group that has been tagged with this same keyword. You need to click the “sync” button in Photostream.<br/> For example: If you choose the tag #landscape for three different groups which are related to landscape photography, whenever a photo with that tag is uploaded to your photostream it will be automatically added to those three groups. Again, click ‘sync’ button for each photo when you share.",
+          "A tag is a key word which describes your content. Tagging helps organise your images into relevant groups and make it easier to find.<br/> Every photo uploaded with one tag will be automatically added to every group that has been tagged with this same keyword. You need to click the “sync” button in Photostream.<br/> For example: If you choose the tag #landscape for three different groups which are related to landscape photography, whenever a photo with that tag is uploaded to your photostream it will be automatically added to those three groups. Again, click 'sync' button for each photo when you share.",
       },
     ],
   },
@@ -143,7 +143,7 @@ const faqs = [
       {
         question: "Do we need to upload our photos to Skedr?",
         answer:
-          "No.<br/> We don't want you to change your workflow. Whether you work with Lightroom, Apple Photos or any kind of Flickr Uploader you can continue working with them. We just need you to use our Group Tagging feature then it’s easy as pie.",
+          "No.<br/> We don't want you to change your workflow. Whether you work with Lightroom, Apple Photos or any kind of Flickr Uploader you can continue working with them. We just need you to use our Group Tagging feature then it's easy as pie.",
       },
       {
         question: "Is there a need to install any software?",
