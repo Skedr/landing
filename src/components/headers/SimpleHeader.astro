@@ -1,4 +1,5 @@
 ---
+import { Image } from "astro:assets";
 interface Props {
   title: string;
   description: string;
@@ -10,24 +11,30 @@ const w = "2830";
 const h = "1500";
 let classStyle = "absolute inset-0 -z-10 h-full w-full object-cover";
 
-let imgUrl: string | URL | undefined;
-if (image && image.includes("unsplash")) {
-  imgUrl = new URL(image);
-  imgUrl.searchParams.set("auto", "format");
-  imgUrl.searchParams.set("fit", "crop");
-  imgUrl.searchParams.set("crop", "focalpoint");
-  imgUrl.searchParams.set("w", w);
-  imgUrl.searchParams.set("h", h);
-  imgUrl.searchParams.set("q", "80");
-  imgUrl.searchParams.set("blend", "111827");
-  imgUrl.searchParams.set("sat", "-100");
-  imgUrl.searchParams.set("exp", "15");
-  imgUrl.searchParams.set("blend-mode", "multiply");
-} else {
-  imgUrl = image;
-  classStyle = classStyle.concat(
-    " mix-blend-multiply saturate-[.15] bg-blend-multiply brightness-100"
-  );
+let imgUrl: URL | undefined;
+let imgImport: { default: ImageMetadata } | undefined;
+if (image) {
+  if (image && image.includes("unsplash")) {
+    imgUrl = new URL(image);
+    imgUrl.searchParams.set("auto", "format");
+    imgUrl.searchParams.set("fit", "crop");
+    imgUrl.searchParams.set("crop", "focalpoint");
+    imgUrl.searchParams.set("w", w);
+    imgUrl.searchParams.set("h", h);
+    imgUrl.searchParams.set("q", "80");
+    imgUrl.searchParams.set("blend", "111827");
+    imgUrl.searchParams.set("sat", "-100");
+    imgUrl.searchParams.set("exp", "15");
+    imgUrl.searchParams.set("blend-mode", "multiply");
+  } else {
+    const images = import.meta.glob<{ default: ImageMetadata }>(
+      "/src/assets/**/*.{jpeg,jpg,png,gif}"
+    );
+    imgImport = await images[image]();
+    classStyle = classStyle.concat(
+      " mix-blend-multiply saturate-[.15] bg-blend-multiply brightness-100"
+    );
+  }
 }
 ---
 
@@ -43,6 +50,11 @@ if (image && image.includes("unsplash")) {
         height={h}
         class={classStyle}
       />
+    ) : null
+  }
+  {
+    imgImport ? (
+      <Image src={imgImport.default} alt={title} class={classStyle} />
     ) : null
   }
   <div
