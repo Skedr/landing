@@ -1,4 +1,5 @@
 ---
+import type { ImageMetadata } from "astro";
 import { Image } from "astro:assets";
 interface Props {
   title: string;
@@ -12,9 +13,12 @@ const h = "1500";
 let classStyle = "absolute inset-0 -z-10 h-full w-full object-cover";
 
 let imgUrl: URL | undefined;
-let imgImport: { default: ImageMetadata } | undefined;
+let hasImage: boolean = false;
+const images = import.meta.glob<{ default: ImageMetadata }>(
+  "/src/assets/**/*.{jpeg,jpg,png,gif}"
+);
 if (image) {
-  if (image && image.includes("unsplash")) {
+  if (image.includes("unsplash")) {
     imgUrl = new URL(image);
     imgUrl.searchParams.set("auto", "format");
     imgUrl.searchParams.set("fit", "crop");
@@ -27,10 +31,7 @@ if (image) {
     imgUrl.searchParams.set("exp", "15");
     imgUrl.searchParams.set("blend-mode", "multiply");
   } else {
-    const images = import.meta.glob<{ default: ImageMetadata }>(
-      "/src/assets/**/*.{jpeg,jpg,png,gif}"
-    );
-    imgImport = await images[image]();
+    hasImage = images[image] ? true : false;
     classStyle = classStyle.concat(
       " mix-blend-multiply saturate-[.15] bg-blend-multiply brightness-100"
     );
@@ -53,8 +54,8 @@ if (image) {
     ) : null
   }
   {
-    imgImport ? (
-      <Image src={imgImport.default} alt={title} class={classStyle} />
+    hasImage && image ? (
+      <Image src={images[image]()} alt={title} class={classStyle} />
     ) : null
   }
   <div
