@@ -1,22 +1,28 @@
 ---
 import { Image } from "astro:assets";
 import type { ImageMetadata } from "astro";
-import GalleryVue from "./Gallery.vue";
 
 interface Props {
   folder: string;
 }
 const { folder } = Astro.props;
 
-const allImages = await Astro.glob<{ default: ImageMetadata }>(
+const allImages = import.meta.glob<{ default: ImageMetadata }>(
   `../assets/posts/*/**`
 );
 
-const images = allImages.filter(({ default: { src } }) => src.includes(folder));
+const customCredits: string[] = [];
+const filteredImages = Object.keys(allImages).reduce((acc, key) => {
+  // Example condition: only include keys that start with 'a'
+  if (key.includes(folder) && key) {
+    acc[key] = allImages[key];
 
-const customCredits = images.map(({ default: { src } }) =>
-  src.split("-").pop()?.split(".")[0].replaceAll("_", " ")
-);
+    const credit = key.split("-").pop()?.split(".")[0].replaceAll("_", " ");
+    customCredits.push(credit ?? "");
+  }
+  return acc;
+}, {});
+
 const uniquePhotographers = new Set(customCredits);
 const credits = `Image credits: ${Array.from(uniquePhotographers).join(", ")}`;
 
@@ -38,12 +44,12 @@ const altText = (name: string) => {
 >
   <div class="swiper-wrapper">
     {
-      images.map((image) => (
+      Object.keys(filteredImages).map((key) => (
         <div class="swiper-slide">
           <Image
-            src={image.default}
+            src={filteredImages[key]()}
             class="max-h-96 object-contain w-full"
-            alt={altText(image.default.src)}
+            alt={altText(key)}
           />
         </div>
       ))
@@ -55,12 +61,12 @@ const altText = (name: string) => {
 <div class={`swiper ${id}`}>
   <div class="swiper-wrapper">
     {
-      images.map((image) => (
+      Object.keys(filteredImages).map((key) => (
         <div class="swiper-slide">
           <Image
-            src={image.default}
+            src={filteredImages[key]()}
             class="max-h-24 object-contain w-full"
-            alt={altText(image.default.src)}
+            alt={altText(key)}
           />
         </div>
       ))
