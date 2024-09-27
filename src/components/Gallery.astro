@@ -20,7 +20,7 @@ const allImages = import.meta.glob<{ default: ImageMetadata }>(
 );
 
 const customCredits: string[] = [];
-let altText: { string: string } = {};
+let altText: { [key: string]: string } = {};
 
 const filteredImages = Object.keys(allImages).reduce((acc, key) => {
   // Example condition: only include keys that start with 'a'
