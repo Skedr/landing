@@ -7,14 +7,19 @@ import SimpleHeader from "../components/headers/SimpleHeader.astro";
 const allPosts = await getCollection("posts");
 const image = "https://images.unsplash.com/photo-1517842645767-c639042777db";
 const meta = {
-  title: "Blog - Skedr",
-  description: "Find out more about the Skedr world",
+  title: "Discover articles on photography",
+  description:
+    "Explore a collection of insightful articles covering a variety of topics, from travel tips to photography advice. Dive in and discover ideas, inspiration, and engaging stories!",
   image,
 };
 ---
 
 <Layout meta={meta}>
-  <SimpleHeader title="Blog" description={meta.description} image={image} />
+  <SimpleHeader
+    title={meta.title}
+    description={meta.description}
+    image={image}
+  />
   <div class="bg-white py-24 sm:py-32">
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
       <div class="mx-auto max-w-2xl lg:max-w-4xl">
