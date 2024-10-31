@@ -3,8 +3,8 @@
     <div class="flow-root bg-gray-900 pb-16 pt-24 sm:pt-32 lg:pb-0">
       <div class="mx-auto max-w-7xl px-6 lg:px-8">
         <div class="relative z-10">
-          <h2 class="mx-auto max-w-4xl text-center text-5xl font-bold tracking-tight text-white">How much do you value
-            your time?</h2>
+          <h1 class="mx-auto max-w-4xl text-center text-5xl font-bold tracking-tight text-white">How much do you value
+            your time?</h1>
           <p class="mx-auto mt-4 max-w-2xl text-center text-lg leading-8 text-white/60">
             Drinking a coffee or tea every day certainly costs you more than the yearly payment. We are refreshingly good value.
           </p>
