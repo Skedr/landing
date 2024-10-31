@@ -22,7 +22,7 @@
     "@tailwindcss/aspect-ratio": "^0.4.2",
     "@tailwindcss/forms": "^0.5.9",
     "@vitejs/plugin-vue": "^5.1.4",
-    "astro": "^4.16.6",
+    "astro": "^4.16.8",
     "astro-heroicons": "^2.1.5",
     "flickr-sdk": "^7.0.0-beta.7",
     "lodash": "^4.17.21",
