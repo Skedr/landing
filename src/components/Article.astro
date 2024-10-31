@@ -56,16 +56,16 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
       {post.tags.map((tag) => <Tag tag={tag} />)}
     </div>
     <div class="group relative max-w-xl">
-      <h3
+      <h2
         class="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600"
       >
         <a href={`/blog/${collection.slug}`}>
           <span class="absolute inset-0"></span>
           <Fragment set:text={stripHtml(post.title)} />
         </a>
-      </h3>
+      </h2>
       <p class="mt-5 text-sm leading-6 text-gray-600">
-        <Fragment set:html={post.description} />
+        <Fragment set:html={post.intro} />
       </p>
     </div>
     <div class="mt-6 flex border-t border-gray-900/5 pt-6">

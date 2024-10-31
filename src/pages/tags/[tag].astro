@@ -23,9 +23,11 @@ export async function getStaticPaths() {
 
 const { tag } = Astro.params;
 const { posts } = Astro.props;
+const capTag = capitalizeFirstLetter(tag);
+const title = `Explore Our ${capTag} Resources`;
 const meta = {
-  title: `Articles for ${tag} tag`,
-  description: "something else",
+  title: `${title}: Guides, How-Tos & Expert Advice`,
+  description: `Discover a complete collection of ${capTag} articles. From beginner guides to expert advice, explore resources tailored to help you stay informed on ${capTag}.`,
 };
 const image = "https://images.unsplash.com/photo-1550490652-ce6a20d4ee76";
 
@@ -35,11 +37,7 @@ function capitalizeFirstLetter(str: string) {
 ---
 
 <Layout meta={meta}>
-  <SimpleHeader
-    title={capitalizeFirstLetter(tag)}
-    description="desc"
-    image={image}
-  />
+  <SimpleHeader title={title} description={meta.description} image={image} />
   <div class="bg-white py-24 sm:py-32">
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
       <div class="mx-auto max-w-2xl lg:max-w-4xl">
