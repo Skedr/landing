@@ -55,6 +55,8 @@ const credits = `Image credits: ${Array.from(uniquePhotographers).join(", ")}`;
             src={filteredImages[key]()}
             class="max-h-96 object-contain w-full"
             alt={altText[key] ?? "alt"}
+            width="700"
+            height="400"
           />
         </div>
       ))
@@ -72,6 +74,8 @@ const credits = `Image credits: ${Array.from(uniquePhotographers).join(", ")}`;
             src={filteredImages[key]()}
             class="max-h-24 object-contain w-full"
             alt={altText[key] ?? "alt"}
+            width="160"
+            height="100"
           />
         </div>
       ))
