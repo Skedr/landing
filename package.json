@@ -24,7 +24,7 @@
     "@vitejs/plugin-vue": "^5.1.4",
     "astro": "^4.16.8",
     "astro-heroicons": "^2.1.5",
-    "flickr-sdk": "^7.0.0-beta.7",
+    "flickr-sdk": "^7.0.0-beta.9",
     "lodash": "^4.17.21",
     "sharp": "^0.33.5",
     "swiper": "^11.1.14",
