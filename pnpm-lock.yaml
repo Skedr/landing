@@ -39,8 +39,8 @@ importers:
         specifier: ^0.5.9
         version: 0.5.9(tailwindcss@3.4.14)
       '@vitejs/plugin-vue':
-        specifier: ^5.1.4
-        version: 5.1.4(vite@5.4.10)(vue@3.5.5(typescript@5.6.3))
+        specifier: ^5.1.5
+        version: 5.1.5(vite@5.4.10)(vue@3.5.5(typescript@5.6.3))
       astro:
         specifier: ^4.16.8
         version: 4.16.8(rollup@4.24.3)(typescript@5.6.3)
@@ -901,8 +901,8 @@ packages:
       vite: ^5.0.0
       vue: ^3.0.0
 
-  '@vitejs/plugin-vue@5.1.4':
-    resolution: {integrity: sha512-N2XSI2n3sQqp5w7Y/AN/L2XDjBIRGqXko+eDp42sydYSBeJuSm5a1sLf8zakmo8u7tA8NmBgoDLA1HeOESjp9A==}
+  '@vitejs/plugin-vue@5.1.5':
+    resolution: {integrity: sha512-dlnib73G05CDBAUR/YpuZcQQ47fpjihnnNouAAqN62z+oqSsWJ+kh52GRzIxpkgFG3q11eXK7Di7RMmoCwISZA==}
     engines: {node: ^18.0.0 || >=20.0.0}
     peerDependencies:
       vite: ^5.0.0
@@ -3107,7 +3107,7 @@ snapshots:
 
   '@astrojs/vue@4.5.2(astro@4.16.8(rollup@4.24.3)(typescript@5.6.3))(rollup@4.24.3)(vite@5.4.10)(vue@3.5.5(typescript@5.6.3))':
     dependencies:
-      '@vitejs/plugin-vue': 5.1.4(vite@5.4.10)(vue@3.5.5(typescript@5.6.3))
+      '@vitejs/plugin-vue': 5.1.5(vite@5.4.10)(vue@3.5.5(typescript@5.6.3))
       '@vitejs/plugin-vue-jsx': 4.0.1(vite@5.4.10)(vue@3.5.5(typescript@5.6.3))
       '@vue/compiler-sfc': 3.5.12
       astro: 4.16.8(rollup@4.24.3)(typescript@5.6.3)
@@ -3823,7 +3823,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@vitejs/plugin-vue@5.1.4(vite@5.4.10)(vue@3.5.5(typescript@5.6.3))':
+  '@vitejs/plugin-vue@5.1.5(vite@5.4.10)(vue@3.5.5(typescript@5.6.3))':
     dependencies:
       vite: 5.4.10
       vue: 3.5.5(typescript@5.6.3)
