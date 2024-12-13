@@ -13,6 +13,7 @@ const { title, description, image } = Astro.props.meta;
 import TheFooter from "./TheFooter.astro";
 import Screenshot from "../assets/groups_page.png";
 import TheHeader from "./TheHeader.vue";
+import Posthog from "../components/posthog.astro";
 
 const gtmId = import.meta.env.PUBLIC_GTM;
 const gtmUrl = `https://www.googletagmanager.com/ns.html?id=${gtmId}`;
@@ -50,6 +51,8 @@ const currentPath = new URL(Astro.request.url).pathname;
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link rel="manifest" href="/site.webmanifest" />
+
+    <Posthog />
 
     <!-- Google Tag Manager -->
     <script is:inline id="gtm-js" data-id={gtmId}>
