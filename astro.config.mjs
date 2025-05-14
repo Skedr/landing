@@ -1,6 +1,6 @@
 import { defineConfig } from "astro/config";
 import vue from "@astrojs/vue";
-import tailwind from "@astrojs/tailwind";
+import tailwindcss from "@tailwindcss/vite";
 import sitemap from "@astrojs/sitemap";
 import rehypeFigure from "rehype-figure";
 import markdoc from "@astrojs/markdoc";
@@ -10,13 +10,15 @@ import mdx from "@astrojs/mdx";
 export default defineConfig({
   integrations: [
     vue(),
-    tailwind(),
     sitemap(),
     markdoc({
       allowHTML: true,
     }),
     mdx(),
   ],
+  vite: {
+    plugins: [tailwindcss()],
+  },
   site: "https://skedr.io",
   image: {
     domains: ["images.unsplash.com"],
