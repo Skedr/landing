@@ -7,6 +7,7 @@ on:
 
 env:
   NODE_ENV: test
+  PUBLIC_FLICKR_KEY: ${{ secrets.PUBLIC_FLICKR_KEY }}
 
 jobs:
   test:
