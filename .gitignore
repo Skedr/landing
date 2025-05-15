@@ -24,3 +24,9 @@ pnpm-debug.log*
 .DS_Store
 
 old
+
+# Playwright
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
