@@ -4,6 +4,10 @@ on:
     branches: [ main, master ]
   pull_request:
     branches: [ main, master ]
+
+env:
+  NODE_ENV: test
+
 jobs:
   test:
     timeout-minutes: 60
@@ -17,6 +21,8 @@ jobs:
       run: npm install -g pnpm && pnpm install
     - name: Install Playwright Browsers
       run: pnpm exec playwright install --with-deps
+    - name: Build to be able to preview
+      run: pnpm run build 
     - name: Run Playwright tests
       run: pnpm exec playwright test
     - uses: actions/upload-artifact@v4
