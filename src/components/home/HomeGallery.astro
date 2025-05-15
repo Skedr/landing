@@ -14,12 +14,17 @@
       <div
         class="mx-auto mt-16 max-w-2xl text-sm leading-6 text-gray-900 sm:mt-20 xl:mx-0 xl:max-w-none"
       >
-        <script
-          is:inline
-          type="text/javascript"
-          src="//www.juicer.io/embed/skedr-io/embed-code.js?per=3&filter=769918&columns=3"
-          async
-          defer></script>
+        {
+          import.meta.env.NODE_ENV !== "test" && (
+            <script
+              is:inline
+              type="text/javascript"
+              src="//www.juicer.io/embed/skedr-io/embed-code.js?per=3&filter=769918&columns=3"
+              async
+              defer
+            />
+          )
+        }
       </div>
     </div>
   </div>

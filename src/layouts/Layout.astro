@@ -55,8 +55,10 @@ const currentPath = new URL(Astro.request.url).pathname;
     <Posthog />
 
     <!-- Google Tag Manager -->
-    <script is:inline id="gtm-js" data-id={gtmId}>
-      const id = document.getElementById("gtm-js").getAttribute("data-id");
+    {
+      import.meta.env.NODE_ENV !== "test" && (
+        <script is:inline id="gtm-js" data-id={gtmId}>
+          const id = document.getElementById("gtm-js").getAttribute("data-id");
 
       (function (w, d, s, l, i) {
         w[l] = w[l] || [];
@@ -67,8 +69,10 @@ const currentPath = new URL(Astro.request.url).pathname;
         j.async = true;
         j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
         f.parentNode.insertBefore(j, f);
-      })(window, document, "script", "dataLayer", id);
-    </script>
+          })(window, document, "script", "dataLayer", id);
+        </script>
+      )
+    }
     <!-- End Google Tag Manager -->
   </head>
   <body class={is404Page ? "h-full" : "bg-gray-900"}>
