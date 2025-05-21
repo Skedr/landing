@@ -6,19 +6,8 @@
 version: 2
 updates:
   # Minor and patch updates (weekly)
-  - package-ecosystem: 'npm' # See documentation for possible values
-    directory: '/' # Location of package manifests
-    schedule:
-      interval: 'weekly'
-      time: '02:00'
-    ignore:
-      - dependency-name: '*'
-        update-types: ['version-update:semver-major']
-
-  # Major updates (monthly)
   - package-ecosystem: 'npm'
     directory: '/'
     schedule:
-      interval: 'monthly'
+      interval: 'weekly'
       time: '02:00'
-    update-types: ['version-update:semver-major']
