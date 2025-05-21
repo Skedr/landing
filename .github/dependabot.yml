@@ -6,8 +6,8 @@
 version: 2
 updates:
   # Minor and patch updates (weekly)
-  - package-ecosystem: 'npm'
-    directory: '/'
+  - package-ecosystem: "npm"
+    directory: "/"
     schedule:
-      interval: 'weekly'
-      time: '02:00'
+      interval: "weekly"
+      time: "02:00"
