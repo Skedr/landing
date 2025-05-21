@@ -32,7 +32,7 @@
     "sharp": "^0.33.5",
     "swiper": "^11.1.14",
     "tailwindcss": "^4.1.6",
-    "typescript": "^5.6.3",
+    "typescript": "^5.8.3",
     "vue": "^3.5.13"
   },
   "devDependencies": {
