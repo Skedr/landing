@@ -38,7 +38,7 @@
   "devDependencies": {
     "@playwright/test": "^1.52.0",
     "@tailwindcss/typography": "^0.5.15",
-    "@types/node": "^22.15.18",
+    "@types/node": "^22.15.21",
     "prettier": "^3.3.3",
     "prettier-plugin-astro": "^0.14.1",
     "rehype-figure": "^1.0.1"
