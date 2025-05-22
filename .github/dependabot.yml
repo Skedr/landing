@@ -5,11 +5,13 @@
 
 version: 2
 updates:
-  - package-ecosystem: 'npm' # See documentation for possible values
-    directory: '/' # Location of package manifests
+  - package-ecosystem: "npm" # See documentation for possible values
+    directory: "/" # Location of package manifests
     schedule:
-      interval: 'weekly'
-      time: '02:00'
-    ignore:
-      - dependency-name: '*'
-        update-types: ['version-update:semver-major']
+      interval: "weekly"
+      time: "02:00"
+    groups:
+      all:
+        patterns:
+          - "*"
+        update-types: ["minor", "patch"]
