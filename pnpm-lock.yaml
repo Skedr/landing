@@ -60,8 +60,8 @@ importers:
         specifier: ^0.34.2
         version: 0.34.2
       swiper:
-        specifier: ^11.2.7
-        version: 11.2.7
+        specifier: ^11.2.8
+        version: 11.2.8
       tailwindcss:
         specifier: ^4.1.7
         version: 4.1.7
@@ -2758,8 +2758,8 @@ packages:
     resolution: {integrity: sha512-5JRxVqC8I8NuOUjzBbvVJAKNM8qoVuH0O77h4WInc/qC2q5IreqKxYwgkga3PfA22OayK2ikceb/B26dztPl+Q==}
     engines: {node: '>=16'}
 
-  swiper@11.2.7:
-    resolution: {integrity: sha512-oPJCwdcjFMw3SoBM7AdB1RJzjT7JaE4Mg7TWceTmJ/i2OtF8L01Ct+5eOf48nG3trgR0wXFekWdfnTdl0eg6Pg==}
+  swiper@11.2.8:
+    resolution: {integrity: sha512-S5FVf6zWynPWooi7pJ7lZhSUe2snTzqLuUzbd5h5PHUOhzgvW0bLKBd2wv0ixn6/5o9vwc/IkQT74CRcLJQzeg==}
     engines: {node: '>= 4.7.0'}
 
   tailwindcss@4.1.7:
@@ -6379,7 +6379,7 @@ snapshots:
     dependencies:
       copy-anything: 3.0.5
 
-  swiper@11.2.7: {}
+  swiper@11.2.8: {}
 
   tailwindcss@4.1.7: {}
 
