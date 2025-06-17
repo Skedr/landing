@@ -3,6 +3,9 @@
   "type": "module",
   "license": "UNLICENSED",
   "version": "0.0.1",
+  "engines": {
+    "node": ">=22.0.0"
+  },
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
