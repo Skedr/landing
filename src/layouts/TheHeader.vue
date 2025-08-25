@@ -1,9 +1,9 @@
-
-<script setup>
+<script setup lang="ts">
 import { ref } from "vue";
 import { Dialog, DialogPanel } from "@headlessui/vue";
-import { Bars3Icon, XMarkIcon } from "@heroicons/vue/24/outline";
-
+import { Bars3Icon, XMarkIcon, SunIcon } from "@heroicons/vue/24/outline";
+import BaseBanner from "../components/BaseBanner.vue";
+import { useTimeCounter } from "../composables/useTimerCounter";
 
 defineProps({
   currentPath: {
@@ -22,10 +22,28 @@ const navigation = [
 ];
 
 const mobileMenuOpen = ref(false);
+
+const { formated } = useTimeCounter({ endIsoTime: "2025-08-31" })
 </script>
 
 <template>
-  <header class="absolute inset-x-0 top-0 z-50">
+  <BaseBanner color="amber">
+    Use discount code SUMMERSALE and get 50% off for a lifetime
+    <template #icon>
+      <SunIcon />
+    </template>
+    <template #action>
+      <span class="text-white">Ending in: {{ formated }}</span>
+      <a
+        href="https://app.skedr.io/"
+        target="_blank"
+        class="summer-sale inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-gray-600 hover:bg-gray-700"
+      >
+        Subscribe
+      </a>
+    </template>
+  </BaseBanner>
+  <header class="absolute inset-x-0 top-15 z-50">
     <nav
       class="flex items-center justify-between p-2 lg:pl-4 lg:pr-8"
       aria-label="Global"
