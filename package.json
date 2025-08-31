@@ -5,7 +5,7 @@
   "version": "0.0.1",
   "engines": {
     "node": ">=22.0.0",
-    "npm": "9.15.1"
+    "npm": ">=10.9.2"
   },
   "scripts": {
     "dev": "astro dev",
