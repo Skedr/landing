@@ -47,5 +47,8 @@
     "prettier": "^3.6.2",
     "prettier-plugin-astro": "^0.14.1",
     "rehype-figure": "^1.0.1"
+  },
+  "resolutions": {
+    "rollup": "npm:@rollup/wasm-node"
   }
 }
