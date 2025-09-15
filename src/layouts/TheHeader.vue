@@ -23,7 +23,7 @@ const navigation = [
 
 const mobileMenuOpen = ref(false);
 
-const { formated } = useTimeCounter({ endIsoTime: "2025-09-14" })
+const { formated } = useTimeCounter({ endIsoTime: "2025-09-16" })
 </script>
 
 <template>
