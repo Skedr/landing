@@ -27,7 +27,7 @@ const { formated } = useTimeCounter({ endIsoTime: "2025-09-16" })
 </script>
 
 <template>
-  <BaseBanner color="amber">
+  <BaseBanner v-if="false" color="amber">
     Use discount code SUMMERSALE and get 50% off for a lifetime
     <template #icon>
       <SunIcon />
