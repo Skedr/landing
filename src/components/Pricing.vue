@@ -97,7 +97,7 @@
                       'text-4xl font-bold tracking-tight',
                     ]"
                   >
-                    {{ tier.price[frequency.value] }}
+                    {{ !discount ? tier.priceNonDiscounted[frequency.value] : tier.price[frequency.value] }}
                   </p>
                   <div v-if="tier.id !== 'starter'" class="text-sm leading-5">
                     <div v-if="discount" class="ml-4">
@@ -444,7 +444,7 @@ const frequencies = [
   { value: "annually", label: "Annually" },
 ];
 
-const discount = 50;
+const discount = 0;
 
 const tiers = [
   {
@@ -456,6 +456,7 @@ const tiers = [
     priceMonthly: "Free",
     priceYearly: "Free",
     price: { monthly: "Free", annually: "Free" },
+    priceNonDiscounted: { monthly: "Free", annually: "Free" },
     mainFeatures: [
       "Share images with credits",
       "Ad comment on every share [*]",
