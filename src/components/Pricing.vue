@@ -47,7 +47,7 @@
           <svg
             viewBox="0 0 1208 1024"
             aria-hidden="true"
-            class="absolute -bottom-48 left-1/2 h-[64rem] -translate-x-1/2 translate-y-1/2 [mask-image:radial-gradient(closest-side,white,transparent)] lg:-top-48 lg:bottom-auto lg:translate-y-0"
+            class="absolute -bottom-48 left-1/2 h-256 -translate-x-1/2 translate-y-1/2 mask-[radial-gradient(closest-side,white,transparent)] lg:-top-48 lg:bottom-auto lg:translate-y-0"
           >
             <ellipse
               cx="604"
@@ -97,7 +97,7 @@
                       'text-4xl font-bold tracking-tight',
                     ]"
                   >
-                    {{ !discount ? tier.priceNonDiscounted[frequency.value] : tier.price[frequency.value] }}
+                    {{ getDisplayPriceWithSymbol(tier.id, frequency.value) }}
                   </p>
                   <div v-if="tier.id !== 'starter'" class="text-sm leading-5">
                     <div v-if="discount" class="ml-4">
@@ -107,7 +107,7 @@
                           'text-sm line-through',
                         ]"
                       >
-                        {{ tier.priceNonDiscounted[frequency.value] }}EUR
+                        {{ getCurrencySymbol(getDisplayCurrency(tier.id)) }}{{ tier.priceNonDiscounted[frequency.value] }} {{ getDisplayCurrency(tier.id) }}
                       </p>
                       <p
                         :class="[
@@ -122,7 +122,7 @@
                       <p
                         :class="tier.featured ? 'text-gray-900' : 'text-white'"
                       >
-                        EUR
+                        {{ getDisplayCurrency(tier.id) }}
                       </p>
                       <p
                         :class="
@@ -434,10 +434,13 @@
   </div>
 </template>
 
-<script setup>
-import { ref } from "vue";
+<script setup lang="ts">
+import { ref, onMounted } from "vue";
 import { RadioGroup, RadioGroupLabel, RadioGroupOption } from "@headlessui/vue";
 import { CheckIcon, XMarkIcon } from "@heroicons/vue/20/solid";
+import { fetchLocalizedPrices } from "../utils/paddlePricing";
+import { defaultPrices } from "../config/paddle";
+import { getCurrencySymbol } from "../utils/currency";
 
 const frequencies = [
   { value: "monthly", label: "Monthly" },
@@ -474,8 +477,8 @@ const tiers = [
       annually: 19.99,
     },
     priceNonDiscounted: {
-      monthly: 3.99,
-      annually: 39.99,
+      monthly: defaultPrices.tandem.monthly,
+      annually: defaultPrices.tandem.annually,
     },
     mainFeatures: ["Unlimited shares", "Ad comment on every share [*]"],
   },
@@ -490,8 +493,8 @@ const tiers = [
       annually: 39.99,
     },
     priceNonDiscounted: {
-      monthly: 7.99,
-      annually: 79.99,
+      monthly: defaultPrices.premium.monthly,
+      annually: defaultPrices.premium.annually,
     },
     mainFeatures: ["Unlimited shares"],
   },
@@ -556,4 +559,77 @@ const sections = [
 ];
 
 const frequency = ref(frequencies[0]);
+
+const localizedPrices = ref<Record<string, Record<string, { amount: number; formatted: string; currencyCode: string }>> | null>(null);
+const currencyCode = ref<string>("EUR");
+
+onMounted(async () => {
+  try {
+    const prices = await fetchLocalizedPrices();
+    localizedPrices.value = {
+      tandem: {
+        monthly: prices.tandem.monthly,
+        annually: prices.tandem.annually,
+      },
+      premium: {
+        monthly: prices.premium.monthly,
+        annually: prices.premium.annually,
+      },
+    };
+    if (prices.tandem.monthly.currencyCode) {
+      currencyCode.value = prices.tandem.monthly.currencyCode;
+    }
+  } catch (error) {
+    console.error("Failed to load localized prices:", error);
+  }
+});
+
+function getDisplayPrice(tierId: string, freq: string): string | number {
+  if (tierId === "starter") {
+    return "Free";
+  }
+
+  if (localizedPrices.value?.[tierId]?.[freq]) {
+    const price = localizedPrices.value[tierId][freq];
+    if (discount) {
+      return price.amount;
+    }
+    return price.amount.toFixed(2);
+  }
+
+  const tier = tiers.find((t) => t.id === tierId);
+  if (!tier) return 0;
+
+  if (discount) {
+    return tier.price[freq as "monthly" | "annually"];
+  }
+  return tier.priceNonDiscounted[freq as "monthly" | "annually"];
+}
+
+function getDisplayCurrency(tierId: string): string {
+  if (tierId === "starter") {
+    return "";
+  }
+
+  if (localizedPrices.value?.[tierId]?.monthly) {
+    return localizedPrices.value[tierId].monthly.currencyCode;
+  }
+
+  return currencyCode.value;
+}
+
+function getDisplayPriceWithSymbol(tierId: string, freq: string): string {
+  if (tierId === "starter") {
+    return "Free";
+  }
+
+  const price = getDisplayPrice(tierId, freq);
+  if (typeof price === "string" && price === "Free") {
+    return price;
+  }
+
+  const currency = getDisplayCurrency(tierId);
+  const symbol = getCurrencySymbol(currency);
+  return `${symbol}${price}`;
+}
 </script>
