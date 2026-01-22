@@ -31,7 +31,7 @@
     "astro": "^5.16.5",
     "astro-heroicons": "^2.1.5",
     "flickr-sdk": "^7.1.0",
-    "lodash": "^4.17.21",
+    "lodash": "^4.17.23",
     "luxon": "^3.7.2",
     "playwright": "^1.57.0",
     "sharp": "^0.34.5",
