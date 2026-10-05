@@ -34,7 +34,7 @@
     "lodash": "^4.17.23",
     "luxon": "^3.7.2",
     "playwright": "^1.58.2",
-    "sharp": "^0.34.5",
+    "sharp": "^0.35.5",
     "swiper": "^12.1.2",
     "tailwindcss": "^4.1.11",
     "typescript": "^5.9.3",
