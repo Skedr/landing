@@ -33,15 +33,15 @@
     "flickr-sdk": "^7.1.0",
     "lodash": "^4.17.23",
     "luxon": "^3.7.2",
-    "playwright": "^1.58.2",
-    "sharp": "^0.34.5",
+    "playwright": "^1.64.0",
+    "sharp": "^0.35.5",
     "swiper": "^12.1.2",
     "tailwindcss": "^4.1.11",
     "typescript": "^5.9.3",
     "vue": "^3.5.28"
   },
   "devDependencies": {
-    "@playwright/test": "^1.58.2",
+    "@playwright/test": "^1.64.0",
     "@tailwindcss/typography": "^0.5.19",
     "@types/node": "^25.9.1",
     "prettier": "^3.8.1",
