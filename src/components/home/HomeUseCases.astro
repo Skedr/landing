@@ -1,0 +1,50 @@
+---
+const examples = [
+  {
+    title: "Birds & wildlife",
+    tags: ["bird", "wildlife"],
+    copy: "A bird in flight or a quiet woodland encounter. Match your subject tags to groups with the right themes.",
+  },
+  {
+    title: "Landscapes",
+    tags: ["landscape", "mountain"],
+    copy: "From mountain trails to the coast. Use subject or location tags to organize where your photos go.",
+  },
+  {
+    title: "Street & architecture",
+    tags: ["street", "architecture"],
+    copy: "City scenes, everyday moments and striking buildings. Keep each photo connected to relevant groups.",
+  },
+];
+---
+
+<section class="home-section" aria-labelledby="use-cases-title">
+  <div class="home-container">
+    <div class="home-section-heading">
+      <p class="home-eyebrow">Make it your own</p><h2 id="use-cases-title">
+        Different subjects. The same simpler routine.
+      </h2><p>Your tags reflect what you create and the groups you choose.</p>
+    </div>
+    <div class="home-use-cases">
+      {
+        examples.map((example) => (
+          <article>
+            <>
+              <h3>{example.title}</h3>
+              <p>{example.copy}</p>
+              <div class="home-tags" aria-label="Example tags">
+                {example.tags.map((tag) => (
+                  <span class="home-tag">{tag}</span>
+                ))}
+              </div>
+            </>
+          </article>
+        ))
+      }
+    </div>
+    <p class="home-inclusive">
+      Digital art, Second Life photography and everything in between are
+      welcome, too. These are tag examples, not group recommendations.
+    </p>
+  </div>
+</section>

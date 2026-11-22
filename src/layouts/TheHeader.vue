@@ -4,6 +4,7 @@ import { Dialog, DialogPanel } from "@headlessui/vue";
 import { Bars3Icon, XMarkIcon, SunIcon } from "@heroicons/vue/24/outline";
 import BaseBanner from "../components/BaseBanner.vue";
 import { useTimeCounter } from "../composables/useTimerCounter";
+import { homepageAppLink } from "../utils/homepageLinks";
 
 defineProps({
   currentPath: {
@@ -42,7 +43,7 @@ const { formated } = useTimeCounter({ endIsoTime: "2025-09-16" })
       </a>
     </template>
   </BaseBanner>
-  <header class="absolute inset-x-0 top-15 z-50">
+  <header class="absolute inset-x-0 z-50" :class="currentPath === '/' ? 'top-0' : 'top-15'">
     <nav
       class="flex items-center justify-between p-2 lg:pl-4 lg:pr-8"
       aria-label="Global"
@@ -60,7 +61,7 @@ const { formated } = useTimeCounter({ endIsoTime: "2025-09-16" })
       <div class="flex lg:hidden">
         <button
           type="button"
-          class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-400"
+          class="inline-flex items-center justify-center rounded-md p-2.5 text-gray-300 focus-visible:outline-2 focus-visible:outline-indigo-300"
           @click="mobileMenuOpen = true"
         >
           <span class="sr-only">Open main menu</span>
@@ -86,7 +87,9 @@ const { formated } = useTimeCounter({ endIsoTime: "2025-09-16" })
       </div>
       <div class="hidden lg:flex lg:flex-1 lg:justify-end space-x-2">
         <a
-          href="https://app.skedr.io/"
+          :href="currentPath === '/' ? homepageAppLink('navigation', true) : 'https://app.skedr.io/'"
+          :data-home-cta="currentPath === '/' ? '' : undefined"
+          data-placement="navigation"
           class="log-in text-sm font-semibold leading-6 text-white rounded-lg px-2 py-1 hover:bg-indigo-700"
         >
           Log in <span aria-hidden="true">&rarr;</span>
@@ -137,7 +140,9 @@ const { formated } = useTimeCounter({ endIsoTime: "2025-09-16" })
             </div>
             <div class="py-6">
               <a
-                href="https://app.skedr.io/"
+                :href="currentPath === '/' ? homepageAppLink('mobile-navigation', true) : 'https://app.skedr.io/'"
+                :data-home-cta="currentPath === '/' ? '' : undefined"
+                data-placement="mobile-navigation"
                 class="log-in -mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-white hover:bg-gray-800"
               >
                 Log in
@@ -149,4 +154,3 @@ const { formated } = useTimeCounter({ endIsoTime: "2025-09-16" })
     </Dialog>
   </header>
 </template>
-

@@ -1,0 +1,17 @@
+---
+import { homepageAppLink } from "../../utils/homepageLinks";
+interface Props {
+  placement: string;
+  label?: string;
+}
+const { placement, label = "Set up your first group" } = Astro.props;
+---
+
+<a
+  class="try-it-for-free home-button"
+  href={homepageAppLink(placement)}
+  data-home-cta
+  data-placement={placement}
+  data-audience="flickr_photographers"
+  >{label}<span aria-hidden="true"> →</span></a
+>

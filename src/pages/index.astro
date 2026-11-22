@@ -1,22 +1,57 @@
 ---
 import HeaderHome from "../components/headers/HeaderHome.astro";
 import Layout from "../layouts/Layout.astro";
-import HomeOurMission from "../components/home/HomeOurMission.astro";
+import HomeUseCases from "../components/home/HomeUseCases.astro";
+import HomePricing from "../components/home/HomePricing.astro";
+import "../styles/homepage.css";
+import Landscape from "../assets/posts/2024-07-25/Views_from_Lion_Rock_at_Sigiriya-Enric_Bisbe_Gil.jpg";
 import HomeFeatures from "../components/home/HomeFeatures.astro";
 import HomeCta from "../components/home/HomeCta.astro";
 import HomeTestimonials from "../components/home/HomeTestimonials.astro";
 
 const meta = {
-  title: "Automated sharing and scheduling for Flickr Groups",
+  image: new URL(Landscape.src, Astro.site).href,
+  title: "Spend less time sharing to Flickr groups | Skedr",
   description:
-    "Skedr helps you spend less time sharing photos to Flickr groups.",
+    "Connect Flickr, configure a group with tags, and sync a matching photo. Skedr simplifies group sharing for photographers and digital artists.",
 };
 ---
 
 <Layout meta={meta}>
   <HeaderHome />
   <HomeFeatures />
+  <HomeUseCases />
   <HomeTestimonials />
-  <HomeOurMission />
-  <HomeCta />
+  <HomePricing />
+  <HomeCta homepage />
 </Layout>
+
+<script>
+  document.addEventListener("click", (event) => {
+    const link =
+      event.target instanceof Element
+        ? event.target.closest<HTMLAnchorElement>("a[data-home-cta]")
+        : null;
+    if (!link) return;
+    try {
+      const analytics = (
+        window as Window & {
+          posthog?: {
+            capture: (
+              event: string,
+              properties: Record<string, string>,
+            ) => void;
+          };
+        }
+      ).posthog;
+      analytics?.capture("homepage_cta_clicked", {
+        page: "/",
+        placement: link.dataset.placement ?? "unknown",
+        audience: link.dataset.audience ?? "flickr_photographers",
+        destination: link.href,
+      });
+    } catch {
+      // Optional analytics must never prevent navigation.
+    }
+  });
+</script>
