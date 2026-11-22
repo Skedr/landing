@@ -58,3 +58,15 @@ test("blog tag", async ({ page }) => {
   await page.goto("/tags/flickr");
   await expect(page).toHaveScreenshot({ fullPage: true });
 });
+
+test("tag archives stay out of the search index", async ({ page, request }) => {
+  await page.goto("/tags/flickr");
+  await expect(page.locator('meta[name="robots"]')).toHaveAttribute(
+    "content",
+    "noindex, follow",
+  );
+
+  const sitemap = await (await request.get("/sitemap-0.xml")).text();
+  expect(sitemap).not.toContain("/tags/");
+  expect(sitemap).toContain("/blog/");
+});

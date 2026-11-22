@@ -5,11 +5,12 @@ interface Props {
     title: string;
     description: string;
     image?: string;
+    noindex?: boolean;
   };
 }
 
 const is404Page = Astro.props.pageNotFound ?? false;
-const { title, description, image } = Astro.props.meta;
+const { title, description, image, noindex } = Astro.props.meta;
 import TheFooter from "./TheFooter.astro";
 import Screenshot from "../assets/groups_page.png";
 import TheHeader from "./TheHeader.vue";
@@ -35,6 +36,7 @@ const currentPath = new URL(Astro.request.url).pathname;
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
     <meta name="description" content={description} />
+    {noindex && <meta name="robots" content="noindex, follow" />}
 
     <meta property="og:type" content="website" />
     <meta property="og:title" content={title} />
