@@ -3,9 +3,10 @@
   "type": "module",
   "license": "UNLICENSED",
   "version": "0.0.1",
+  "packageManager": "pnpm@12.6.0",
   "engines": {
-    "node": ">=22.0.0",
-    "npm": ">=10.9.2"
+    "node": ">=22.19.0",
+    "pnpm": "12.6.0"
   },
   "scripts": {
     "dev": "astro dev",
@@ -47,8 +48,5 @@
     "prettier": "^3.8.1",
     "prettier-plugin-astro": "^1.1.0",
     "rehype-figure": "^1.0.1"
-  },
-  "resolutions": {
-    "rollup": "npm:@rollup/wasm-node"
   }
 }
