@@ -15,11 +15,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
+    - uses: pnpm/action-setup@v4
     - uses: actions/setup-node@v4
       with:
-        node-version: lts/*
+        node-version-file: .node-version
+        cache: pnpm
     - name: Install dependencies
-      run: npm install -g pnpm && pnpm install
+      run: pnpm install --frozen-lockfile
+    - name: Verify Sharp image processing
+      run: pnpm exec node --input-type=module -e "import sharp from 'sharp'; await sharp({ create:{ width:1, height:1, channels:3, background:'white' } }).webp().toBuffer();"
     - name: Install Playwright Browsers
       run: pnpm exec playwright install --with-deps
     - name: Build to be able to preview

@@ -1,0 +1,13 @@
+# This is a single-package repository; no app/API packages are included.
+allowBuilds:
+  esbuild: true
+  sharp: true
+  fsevents: false
+
+# Preserve the existing Yarn Rollup WASM resolution, pinned to the version in
+# the previous npm lockfile rather than implicitly upgrading Rollup.
+overrides:
+  rollup: npm:@rollup/wasm-node@4.63.5
+
+# Builds must not silently resolve or install a different dependency tree.
+verifyDepsBeforeRun: error
