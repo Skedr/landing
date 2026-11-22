@@ -16,27 +16,31 @@ const {
 } = Astro.props;
 
 const allImages = import.meta.glob<{ default: ImageMetadata }>(
-  `../assets/posts/*/**`
+  `../assets/posts/*/**`,
 );
 
 const customCredits: string[] = [];
 let altText: { [key: string]: string } = {};
 
-const filteredImages = Object.keys(allImages).reduce((acc, key) => {
-  // Example condition: only include keys that start with 'a'
-  if (key.includes(folder) && key) {
-    acc[key] = allImages[key];
+const filteredImages = Object.keys(allImages).reduce<typeof allImages>(
+  (acc, key) => {
+    // Example condition: only include keys that start with 'a'
+    if (key.includes(folder) && key) {
+      acc[key] = allImages[key];
 
-    const matches = key.match(/([^\/]+)(?=\.\w+$)/);
-    if (matches) {
-      const [name, title] = matches[1].split(separator);
-      const credit = _.startCase(nameIsFirst ? name : title);
-      altText[key] = _.startCase(nameIsFirst ? title : name) + " by " + credit;
-      customCredits.push(credit);
+      const matches = key.match(/([^\/]+)(?=\.\w+$)/);
+      if (matches) {
+        const [name, title] = matches[1].split(separator);
+        const credit = _.startCase(nameIsFirst ? name : title);
+        altText[key] =
+          _.startCase(nameIsFirst ? title : name) + " by " + credit;
+        customCredits.push(credit);
+      }
     }
-  }
-  return acc;
-}, {});
+    return acc;
+  },
+  {},
+);
 
 const uniquePhotographers = new Set(customCredits);
 const credits = `Image credits: ${Array.from(uniquePhotographers).join(", ")}`;
@@ -44,73 +48,80 @@ const credits = `Image credits: ${Array.from(uniquePhotographers).join(", ")}`;
 
 <!-- Slider main container -->
 <div
+  data-gallery-main
   style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff"
   class={`swiper ${id}2`}
 >
   <div class="swiper-wrapper">
-    {
-      Object.keys(filteredImages).map((key) => (
-        <div class="swiper-slide">
-          <Image
-            src={filteredImages[key]()}
-            class="max-h-96 object-contain w-full"
-            alt={altText[key] ?? "alt"}
-            width="700"
-            height="400"
-          />
-        </div>
-      ))
-    }
+    {Object.keys(filteredImages).map((key) => (
+      <div class="swiper-slide">
+        <Image
+          src={filteredImages[key]()}
+          class="max-h-96 object-contain w-full"
+          alt={altText[key] ?? "alt"}
+          width="700"
+          height="400"
+        />
+      </div>
+    ))}
   </div>
   <div class="swiper-button-next"></div>
   <div class="swiper-button-prev"></div>
 </div>
-<div class={`swiper ${id}`}>
+<div data-gallery-thumbs class={`swiper ${id}`}>
   <div class="swiper-wrapper">
-    {
-      Object.keys(filteredImages).map((key) => (
-        <div class="swiper-slide">
-          <Image
-            src={filteredImages[key]()}
-            class="max-h-24 object-contain w-full"
-            alt={altText[key] ?? "alt"}
-            width="160"
-            height="100"
-          />
-        </div>
-      ))
-    }
+    {Object.keys(filteredImages).map((key) => (
+      <div class="swiper-slide">
+        <Image
+          src={filteredImages[key]()}
+          class="max-h-24 object-contain w-full"
+          alt={altText[key] ?? "alt"}
+          width="160"
+          height="100"
+        />
+      </div>
+    ))}
   </div>
 </div>
 <div class="text-sm">{credits}</div>
 
-<link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-/>
-<script
-  is:inline
-  src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script is:inline define:vars={{ id }}>
-  // core version + navigation, pagination modules:
+<script>
+  import Swiper from "swiper";
+  import { A11y, FreeMode, Navigation, Thumbs } from "swiper/modules";
+  import "swiper/css";
+  import "swiper/css/navigation";
+  import "swiper/css/thumbs";
+  import "swiper/css/free-mode";
 
-  // init Swiper:
-  var swiper = new Swiper(`.${id}`, {
-    loop: true,
-    spaceBetween: 10,
-    slidesPerView: 4,
-    freeMode: true,
-    watchSlidesProgress: true,
-  });
-  new Swiper(`.${id}2`, {
-    loop: true,
-    spaceBetween: 10,
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    thumbs: {
-      swiper: swiper,
-    },
-  });
+  // Use the installed version, not an unrelated CDN release. Scope each
+  // instance to its own elements for posts containing multiple galleries.
+  document
+    .querySelectorAll<HTMLElement>("[data-gallery-main]")
+    .forEach((main) => {
+      const thumbsElement = main.nextElementSibling;
+      if (
+        !(thumbsElement instanceof HTMLElement) ||
+        !thumbsElement.hasAttribute("data-gallery-thumbs")
+      )
+        return;
+
+      const thumbs = new Swiper(thumbsElement, {
+        modules: [FreeMode],
+        loop: true,
+        spaceBetween: 10,
+        slidesPerView: 4,
+        freeMode: true,
+        watchSlidesProgress: true,
+      });
+      new Swiper(main, {
+        modules: [Navigation, Thumbs, A11y],
+        loop: true,
+        spaceBetween: 10,
+        navigation: {
+          nextEl: main.querySelector<HTMLElement>(".swiper-button-next"),
+          prevEl: main.querySelector<HTMLElement>(".swiper-button-prev"),
+        },
+        thumbs: { swiper: thumbs },
+      });
+    });
 </script>

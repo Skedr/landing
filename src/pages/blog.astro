@@ -4,7 +4,9 @@ import Article from "../components/Article.astro";
 import { getCollection } from "astro:content";
 import SimpleHeader from "../components/headers/SimpleHeader.astro";
 
-const allPosts = await getCollection("posts");
+const allPosts = (await getCollection("posts")).sort(
+  (a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime(),
+);
 const image = "https://images.unsplash.com/photo-1517842645767-c639042777db";
 const meta = {
   title: "Discover articles on photography",
@@ -24,7 +26,9 @@ const meta = {
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
       <div class="mx-auto max-w-2xl lg:max-w-4xl">
         <div class="space-y-20 lg:space-y-20">
-          {allPosts.reverse().map((post) => <Article post={post} />)}
+          {allPosts.map((post) => (
+            <Article post={post} />
+          ))}
         </div>
       </div>
     </div>

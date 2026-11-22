@@ -15,7 +15,6 @@ import TheFooter from "./TheFooter.astro";
 import Screenshot from "../assets/groups_page.png";
 import TheHeader from "./TheHeader.vue";
 import Posthog from "../components/posthog.astro";
-import BaseBanner from "../components/BaseBanner.vue";
 
 import "../styles/global.css";
 
@@ -60,10 +59,12 @@ const currentPath = new URL(Astro.request.url).pathname;
     <Posthog />
 
     <!-- Google Tag Manager -->
-    {
-      import.meta.env.NODE_ENV !== "test" && (
-        <script is:inline id="gtm-js" data-id={gtmId}>
-          const id = document.getElementById("gtm-js").getAttribute("data-id");
+    {import.meta.env.NODE_ENV !== "test" && <script
+      is:inline
+      id="gtm-js"
+      data-id={gtmId}
+    >
+      const id = document.getElementById("gtm-js").getAttribute("data-id");
 
       (function (w, d, s, l, i) {
         w[l] = w[l] || [];
@@ -74,10 +75,8 @@ const currentPath = new URL(Astro.request.url).pathname;
         j.async = true;
         j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
         f.parentNode.insertBefore(j, f);
-          })(window, document, "script", "dataLayer", id);
-        </script>
-      )
-    }
+      })(window, document, "script", "dataLayer", id);
+    </script>}
     <!-- End Google Tag Manager -->
   </head>
   <body class={is404Page ? "h-full" : "bg-gray-900"}>
@@ -87,15 +86,14 @@ const currentPath = new URL(Astro.request.url).pathname;
         src={gtmUrl}
         height="0"
         width="0"
-        style="display:none;visibility:hidden"></iframe>
+        style="display:none;visibility:hidden"
+      ></iframe>
     </noscript>
     <!-- End Google Tag Manager (noscript) -->
 
-    {
-      !is404Page ? (
-        <TheHeader client:load currentPath={currentPath} />
-      ) : undefined
-    }
+    {!is404Page ? (
+      <TheHeader client:load currentPath={currentPath} />
+    ) : undefined}
     <main class={is404Page ? "relative isolate min-h-full" : ""}>
       <slot />
     </main>

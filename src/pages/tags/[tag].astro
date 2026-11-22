@@ -5,14 +5,16 @@ import Layout from "../../layouts/Layout.astro";
 import SimpleHeader from "../../components/headers/SimpleHeader.astro";
 
 export async function getStaticPaths() {
-  const allPosts = await getCollection("posts");
+  const allPosts = (await getCollection("posts")).sort(
+    (a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime(),
+  );
   const uniqueTags = [
     ...new Set(allPosts.map((post) => post.data.tags).flat()),
   ];
 
   return uniqueTags.map((tag) => {
     const filteredPosts = allPosts.filter((post) =>
-      post.data.tags.includes(tag)
+      post.data.tags.includes(tag),
     );
     return {
       params: { tag },
@@ -46,7 +48,9 @@ function capitalizeFirstLetter(str: string) {
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
       <div class="mx-auto max-w-2xl lg:max-w-4xl">
         <div class="space-y-20 lg:space-y-20">
-          {posts.map((post) => <Article post={post} />)}
+          {posts.map((post) => (
+            <Article post={post} />
+          ))}
         </div>
       </div>
     </div>

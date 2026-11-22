@@ -5,6 +5,7 @@ import sitemap from "@astrojs/sitemap";
 import rehypeFigure from "rehype-figure";
 import markdoc from "@astrojs/markdoc";
 import mdx from "@astrojs/mdx";
+import { unified } from "@astrojs/markdown-remark";
 
 // https://astro.build/config
 export default defineConfig({
@@ -24,10 +25,14 @@ export default defineConfig({
     plugins: [tailwindcss()],
   },
   site: "https://skedr.io",
+  // Keep the existing inline whitespace while migrating to Astro's Rust compiler.
+  compressHTML: true,
   image: {
     domains: ["images.unsplash.com"],
   },
   markdown: {
-    rehypePlugins: [rehypeFigure],
+    processor: unified({
+      rehypePlugins: [rehypeFigure],
+    }),
   },
 });
