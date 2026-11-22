@@ -1,4 +1,10 @@
 import { defineConfig, devices } from "@playwright/test";
+import { createRequire } from "node:module";
+import path from "node:path";
+
+const require = createRequire(import.meta.url);
+const astroPackage = require.resolve("astro/package.json");
+const astroCli = path.resolve(path.dirname(astroPackage), require(astroPackage).bin.astro);
 
 const config = "tests/conversational.astro.config.mjs";
 const variants = [
@@ -32,7 +38,9 @@ export default defineConfig({
     })),
   ),
   webServer: variants.map((variant) => ({
-    command: `${variant.env} npm run build -- --config ${config} && ${variant.env} npm run preview -- --config ${config} --host 127.0.0.1 --port ${variant.port}`,
+    // Astro 7 auto-backgrounds agent-launched previews unless lock tracking is
+    // disabled. Keep this child in the foreground so Playwright owns shutdown.
+    command: `${variant.env} pnpm run build --config ${config} && ${variant.env} ${JSON.stringify(process.execPath)} ${JSON.stringify(astroCli)} preview --ignore-lock --config ${config} --host 127.0.0.1 --port ${variant.port}`,
     url: `http://127.0.0.1:${variant.port}`,
     timeout: 180_000,
     reuseExistingServer: false,

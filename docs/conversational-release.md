@@ -36,6 +36,12 @@ checks from clean checkout, installs all three browser engines, uses `npm ci`,
 requires no Flickr/model/AWS secret and never updates screenshots. Hosted workflow
 execution/branch protection was NOT RUN/NOT CHANGED.
 
+For the current pnpm/Astro 7 checkout, install with `pnpm install --frozen-lockfile`
+and run `pnpm exec playwright test -c playwright.conversational.config.ts`.
+The workflow uses pnpm rather than the historical npm lockfile. Preview children
+use the installed Astro CLI and `--ignore-lock`, keeping them foreground-owned by
+Playwright even when Astro detects an agent. Both flag variants remain isolated.
+
 ## Preservation evidence
 
 Before and after verification, `git diff --binary | shasum -a 256` was exactly:
