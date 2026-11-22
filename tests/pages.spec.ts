@@ -1,6 +1,7 @@
 import { test, expect, type Page } from "@playwright/test";
 
 test("homepage", async ({ page }) => {
+  await page.route(/psthg\.skedr\.io|googletagmanager\.com/, route => route.abort());
   await page.goto("/");
 
   await expect(page).toHaveScreenshot({
