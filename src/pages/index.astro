@@ -5,18 +5,20 @@ import HomeOurMission from "../components/home/HomeOurMission.astro";
 import HomeFeatures from "../components/home/HomeFeatures.astro";
 import HomeCta from "../components/home/HomeCta.astro";
 import HomeTestimonials from "../components/home/HomeTestimonials.astro";
+import HomeConversationalPreview from "../components/home/HomeConversationalPreview.astro";
+import { conversationalEnabled, conversationalMeta } from "../utils/conversationalLinks";
+const conversationalPreview = conversationalEnabled();
 
-const meta = {
+const manualMeta = {
   title: "Automated sharing and scheduling for Flickr Groups",
   description:
     "Skedr helps you spend less time sharing photos to Flickr groups.",
 };
+const meta = conversationalPreview ? conversationalMeta : manualMeta;
 ---
 
 <Layout meta={meta}>
-  <HeaderHome />
-  <HomeFeatures />
-  <HomeTestimonials />
-  <HomeOurMission />
-  <HomeCta />
+  {conversationalPreview ? <HomeConversationalPreview /> : <><HeaderHome /><HomeFeatures /></>}
+  <div class:list={{ "conversational-proof": conversationalPreview }}><HomeTestimonials /></div>
+  {!conversationalPreview && <><HomeOurMission /><HomeCta /></>}
 </Layout>

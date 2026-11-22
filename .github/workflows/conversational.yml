@@ -1,0 +1,29 @@
+name: Conversational artifact gate
+on:
+  pull_request:
+  push:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  artifact:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm exec playwright install --with-deps chromium firefox webkit
+      # Both production component trees build with only the external profile
+      # lookup fixture. No Flickr key, copied .env or snapshot updates.
+      - run: pnpm exec playwright test -c playwright.conversational.config.ts
+      - uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: conversational-browser-failure
+          path: test-results/conversational
+          retention-days: 7
