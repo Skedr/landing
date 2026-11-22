@@ -13,7 +13,7 @@ const { post: collection } = Astro.props;
 const { data: post } = collection;
 
 const images = import.meta.glob<{ default: ImageMetadata }>(
-  "/src/assets/**/*.{jpeg,jpg,png,gif}"
+  "/src/assets/**/*.{jpeg,jpg,png,gif}",
 );
 // if (!images[post.image]) {
 //   console.log("images found", images);
@@ -25,41 +25,34 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
 ---
 
 <article class="relative isolate flex flex-col gap-8 lg:flex-row">
-  <div
-    class="relative aspect-[16/9] sm:aspect-[2/1] lg:aspect-square lg:w-64 lg:shrink-0"
-  >
-    {
-      images[post.image] ? (
-        <Image
-          src={images[post.image]()}
-          alt={post.title}
-          class="absolute inset-0 h-full w-full rounded-2xl bg-gray-50 object-cover"
-        />
-      ) : (
-        <img
-          src={`${post.image}?auto=format&fit=crop&w=3603&q=80 `}
-          alt={post.title}
-          class="absolute inset-0 h-full w-full rounded-2xl bg-gray-50 object-cover"
-        />
-      )
-    }
-    <div
-      class="absolute inset-0 rounded-2xl ring-1 ring-inset ring-gray-900/10"
-    >
-    </div>
+  <div class="relative aspect-[16/9] sm:aspect-[2/1] lg:aspect-square lg:w-64 lg:shrink-0">
+    {images[post.image] ? (
+      <Image
+        src={images[post.image]()}
+        alt={post.title}
+        class="absolute inset-0 h-full w-full rounded-2xl bg-gray-50 object-cover"
+      />
+    ) : (
+      <img
+        src={`${post.image}?auto=format&fit=crop&w=3603&q=80 `}
+        alt={post.title}
+        class="absolute inset-0 h-full w-full rounded-2xl bg-gray-50 object-cover"
+      />
+    )}
+    <div class="absolute inset-0 rounded-2xl ring-1 ring-inset ring-gray-900/10"></div>
   </div>
   <div>
     <div class="flex items-center gap-x-4 text-xs">
       <time datetime={post.pubDate.toISOString()} class="text-gray-500">
         {post.pubDate.toLocaleDateString()}
       </time>
-      {post.tags.map((tag) => <Tag tag={tag} />)}
+      {post.tags.map((tag) => (
+        <Tag tag={tag} />
+      ))}
     </div>
     <div class="group relative max-w-xl">
-      <h2
-        class="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600"
-      >
-        <a href={`/blog/${collection.slug}`}>
+      <h2 class="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600">
+        <a href={`/blog/${collection.id}`}>
           <span class="absolute inset-0"></span>
           <Fragment set:text={stripHtml(post.title)} />
         </a>

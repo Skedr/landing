@@ -4,10 +4,10 @@ allowBuilds:
   sharp: true
   fsevents: false
 
-# Preserve the existing Yarn Rollup WASM resolution, pinned to the version in
-# the previous npm lockfile rather than implicitly upgrading Rollup.
+# Typography still pins a vulnerable 6.0.x selector parser. Stay on its major
+# version while applying the CPU-exhaustion security fix.
 overrides:
-  rollup: npm:@rollup/wasm-node@4.63.5
+  "@tailwindcss/typography>postcss-selector-parser": 6.1.5
 
 # Builds must not silently resolve or install a different dependency tree.
 verifyDepsBeforeRun: error
